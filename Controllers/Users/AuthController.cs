@@ -11,6 +11,7 @@ using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 
 namespace MedicalBilingMicroservice.Controllers.Users {
+    [Route ("api/[controller]")]
     public class AuthController : Controller {
         private readonly UserManager<AppUser> _userManager;
         private readonly IJwtFactory _jwtFactory;

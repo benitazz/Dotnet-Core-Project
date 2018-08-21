@@ -42,6 +42,7 @@ namespace MedicalBilingMicroservice
             services.AddMvc ().SetCompatibilityVersion (CompatibilityVersion.Version_2_1).AddFluentValidation ();
             // services.AddMvc ().AddFluentValidation (fv => fv.RegisterValidatorsFromAssemblyContaining<Startup> ());
             services.ConfigureSwaggerServices ();
+            services.ConfigureValidationServices();
 
              // Workaround: https://github.com/OData/WebApi/issues/1177
             services.AddMvcCore(options =>

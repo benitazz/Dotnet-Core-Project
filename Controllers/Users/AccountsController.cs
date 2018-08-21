@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace MedicalBilingMicroservice.Controllers.Users {
 
     [Route ("api/[controller]")]
-    public class AccountsController : ODataController {
+    public class AccountsController : Controller {
         private readonly UserManager<AppUser> _userManager;
         private readonly IMapper _mapper;
 
