@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNet.OData;
 using Microsoft.AspNetCore.Mvc;
 
 namespace switch_api.Controllers
@@ -12,6 +13,7 @@ namespace switch_api.Controllers
     {
         // GET api/values 
         [HttpGet]
+        [EnableQuery]
         public ActionResult<IEnumerable<string>> Get()
         {
             return new string[] { "value1", "value2" };

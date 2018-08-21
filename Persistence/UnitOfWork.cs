@@ -1,12 +1,13 @@
 using System.Threading.Tasks;
-using switch_api.Core;
+using MedicalBilingMicroservice.Core;
+using MedicalBilingMicroservice.Persistence;
 
-namespace switch_api.Persistence
+namespace MedicalBilingMicroservice.Persistence
 {
     public class UnitOfWork: IUnitOfWork
     {
-        private readonly SwitchDataContext switchApiDataContext;
-        public UnitOfWork(SwitchDataContext switchApiDataContext)
+        private readonly ApplicationDbContext switchApiDataContext;
+        public UnitOfWork(ApplicationDbContext switchApiDataContext)
         {
             this.switchApiDataContext = switchApiDataContext;
         }
