@@ -26,6 +26,7 @@ namespace MedicalBilingMicroservice.Controllers.Users {
             }
 
             var userIdentity = this._mapper.Map<ApplicationUser> (registrationResource);
+            userIdentity.UpdatedBy = "test";
             var result = await this._userManager.CreateAsync (userIdentity, registrationResource.Password);
 
             if (!result.Succeeded) {

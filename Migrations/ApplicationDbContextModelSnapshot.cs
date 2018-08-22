@@ -33,7 +33,7 @@ namespace switchapi.Migrations
 
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
+                        .HasColumnType("DATETIME")
                         .HasDefaultValueSql("GetDate()");
 
                     b.Property<string>("Description")
@@ -52,7 +52,7 @@ namespace switchapi.Migrations
 
                     b.Property<DateTime>("UpdatedDate")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
+                        .HasColumnType("DATETIME")
                         .HasDefaultValueSql("GetDate()");
 
                     b.HasKey("Id");
@@ -77,7 +77,7 @@ namespace switchapi.Migrations
 
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
+                        .HasColumnType("DATETIME")
                         .HasDefaultValueSql("GetDate()");
 
                     b.Property<string>("Email")
@@ -117,7 +117,7 @@ namespace switchapi.Migrations
 
                     b.Property<DateTime>("UpdatedDate")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
+                        .HasColumnType("DATETIME")
                         .HasDefaultValueSql("GetDate()");
 
                     b.Property<string>("UserName")

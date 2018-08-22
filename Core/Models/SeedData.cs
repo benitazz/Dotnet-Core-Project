@@ -45,8 +45,13 @@ namespace MedicalBilingMicroservic.Core.Models {
             foreach (var roleName in roles) {
                 var roleExist = await roleManager.RoleExistsAsync (roleName.Key);
                 if (!roleExist) {
-                    //create the roles and seed them to the database: Question 1
-                    roleResult = await roleManager.CreateAsync (new ApplicationRole (roleName.Key, roleName.Value, DateTime.Now));
+                   var role =  new ApplicationRole (roleName.Key,
+                             roleName.Value,
+                             DateTime.Now);
+                    role.CreatedBy = "Admin";
+                    role.UpdatedBy = "Admin";
+
+                    roleResult = await roleManager.CreateAsync (role);
                 }
             }
 
@@ -56,7 +61,8 @@ namespace MedicalBilingMicroservic.Core.Models {
                 Email = "admin@admin.admin",
                 FirstName = "Ben",
                 LastName = "Baloyi",
-                PhoneNumber = "0781881287"
+                PhoneNumber = "0781881287",
+                UpdatedBy = "Admin"
                 };
 
                 var result = await userManager.CreateAsync (user);

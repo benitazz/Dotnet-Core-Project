@@ -18,8 +18,8 @@ namespace switchapi.Migrations
                     ConcurrencyStamp = table.Column<string>(nullable: true),
                     Description = table.Column<string>(maxLength: 255, nullable: false),
                     CreatedBy = table.Column<string>(maxLength: 255, nullable: false),
-                    CreatedDate = table.Column<DateTime>(type: "Date", nullable: false, defaultValueSql: "GetDate()"),
-                    UpdatedDate = table.Column<DateTime>(type: "Date", nullable: false, defaultValueSql: "GetDate()"),
+                    CreatedDate = table.Column<DateTime>(type: "DATETIME", nullable: false, defaultValueSql: "GetDate()"),
+                    UpdatedDate = table.Column<DateTime>(type: "DATETIME", nullable: false, defaultValueSql: "GetDate()"),
                     UpdatedBy = table.Column<string>(maxLength: 255, nullable: false)
                 },
                 constraints: table =>
@@ -49,8 +49,8 @@ namespace switchapi.Migrations
                     FirstName = table.Column<string>(nullable: true),
                     LastName = table.Column<string>(nullable: true),
                     PracticeNumber = table.Column<string>(nullable: true),
-                    CreatedDate = table.Column<DateTime>(type: "Date", nullable: false, defaultValueSql: "GetDate()"),
-                    UpdatedDate = table.Column<DateTime>(type: "Date", nullable: false, defaultValueSql: "GetDate()"),
+                    CreatedDate = table.Column<DateTime>(type: "DATETIME", nullable: false, defaultValueSql: "GetDate()"),
+                    UpdatedDate = table.Column<DateTime>(type: "DATETIME", nullable: false, defaultValueSql: "GetDate()"),
                     UpdatedBy = table.Column<string>(maxLength: 255, nullable: false)
                 },
                 constraints: table =>

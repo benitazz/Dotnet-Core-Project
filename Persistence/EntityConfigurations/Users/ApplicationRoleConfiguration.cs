@@ -19,7 +19,7 @@ namespace MedicalBilingMicroservice.Persistence.EntityConfigurations.Users
 
             builder.Property(t => t.CreatedDate)
                 .IsRequired()
-                .HasColumnType("Date")
+                .HasColumnType("DATETIME")
                 .HasDefaultValueSql("GetDate()");
 
             builder.Property(t => t.UpdatedBy)
@@ -28,7 +28,7 @@ namespace MedicalBilingMicroservice.Persistence.EntityConfigurations.Users
 
             builder.Property(t => t.UpdatedDate)
                .IsRequired()
-               .HasColumnType("Date")
+               .HasColumnType("DATETIME")
                .HasDefaultValueSql("GetDate()");
         }
     }

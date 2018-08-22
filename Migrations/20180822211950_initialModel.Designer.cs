@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace switchapi.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20180822210037_initialModel")]
+    [Migration("20180822211950_initialModel")]
     partial class initialModel
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -35,7 +35,7 @@ namespace switchapi.Migrations
 
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
+                        .HasColumnType("DATETIME")
                         .HasDefaultValueSql("GetDate()");
 
                     b.Property<string>("Description")
@@ -54,7 +54,7 @@ namespace switchapi.Migrations
 
                     b.Property<DateTime>("UpdatedDate")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
+                        .HasColumnType("DATETIME")
                         .HasDefaultValueSql("GetDate()");
 
                     b.HasKey("Id");
@@ -79,7 +79,7 @@ namespace switchapi.Migrations
 
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
+                        .HasColumnType("DATETIME")
                         .HasDefaultValueSql("GetDate()");
 
                     b.Property<string>("Email")
@@ -119,7 +119,7 @@ namespace switchapi.Migrations
 
                     b.Property<DateTime>("UpdatedDate")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
+                        .HasColumnType("DATETIME")
                         .HasDefaultValueSql("GetDate()");
 
                     b.Property<string>("UserName")

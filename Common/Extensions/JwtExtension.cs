@@ -61,7 +61,7 @@ namespace MedicalBilingMicroservice.Common.Extensions
                 o.Password.RequireNonAlphanumeric = false;
                 o.Password.RequiredLength = 6;
             });
-            builder = new IdentityBuilder (builder.UserType, typeof (IdentityRole), builder.Services);
+            builder = new IdentityBuilder (builder.UserType, typeof (ApplicationRole), builder.Services);
             builder.AddEntityFrameworkStores<ApplicationDbContext> ().AddDefaultTokenProviders ();
 
             return services;
