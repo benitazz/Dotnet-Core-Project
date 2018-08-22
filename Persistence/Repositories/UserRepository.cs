@@ -5,7 +5,7 @@ using switch_api.Persistence;
 using switch_api.Persistence.Repositories;
 
 namespace MedicalBilingMicroservice.Persistence.Repositories {
-    public class UserRepository : Repository<AppUser>, IUserRepository {
+    public class UserRepository : Repository<ApplicationUser>, IUserRepository {
         public UserRepository (ApplicationDbContext switchDataContext) : base (switchDataContext) {
 
         }

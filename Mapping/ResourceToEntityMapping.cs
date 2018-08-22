@@ -5,7 +5,7 @@ using MedicalBilingMicroservice.Resources.ApiToDomainResource;
 namespace MedicalBilingMicroservice.Mapping {
     public class ResourceToEntityMapping : Profile {
         public ResourceToEntityMapping () {
-            CreateMap<RegistrationResource, AppUser> ()
+            CreateMap<RegistrationResource, ApplicationUser> ()
                 .ForMember (entity => entity.UserName,
                     map => map.MapFrom (resource => resource.Email));
         }

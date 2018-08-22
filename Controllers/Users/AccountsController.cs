@@ -11,10 +11,10 @@ namespace MedicalBilingMicroservice.Controllers.Users {
 
     [Route ("api/[controller]")]
     public class AccountsController : Controller {
-        private readonly UserManager<AppUser> _userManager;
+        private readonly UserManager<ApplicationUser> _userManager;
         private readonly IMapper _mapper;
 
-        public AccountsController (UserManager<AppUser> UserManager, IMapper mapper) {
+        public AccountsController (UserManager<ApplicationUser> UserManager, IMapper mapper) {
             _userManager = UserManager;
             this._mapper = mapper;
         }
@@ -25,7 +25,7 @@ namespace MedicalBilingMicroservice.Controllers.Users {
                 return BadRequest (ModelState);
             }
 
-            var userIdentity = this._mapper.Map<AppUser> (registrationResource);
+            var userIdentity = this._mapper.Map<ApplicationUser> (registrationResource);
             var result = await this._userManager.CreateAsync (userIdentity, registrationResource.Password);
 
             if (!result.Succeeded) {

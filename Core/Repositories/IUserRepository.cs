@@ -3,7 +3,7 @@ using switch_api.Core.Repositories;
 
 namespace MedicalBilingMicroservice.Core.Repositories
 {
-    public interface IUserRepository: IRepository<AppUser>
+    public interface IUserRepository: IRepository<ApplicationUser>
     {
          
     }

@@ -13,11 +13,11 @@ using Newtonsoft.Json;
 namespace MedicalBilingMicroservice.Controllers.Users {
     [Route ("api/[controller]")]
     public class AuthController : Controller {
-        private readonly UserManager<AppUser> _userManager;
+        private readonly UserManager<ApplicationUser> _userManager;
         private readonly IJwtFactory _jwtFactory;
         private readonly IOptions<JwtIssuerOptions> _jwtOptions;
 
-        public AuthController (UserManager<AppUser> userManager,
+        public AuthController (UserManager<ApplicationUser> userManager,
             IJwtFactory jwtFactory,
             IOptions<JwtIssuerOptions> jwtOptions) {
             this._userManager = userManager;

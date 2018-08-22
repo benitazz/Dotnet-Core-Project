@@ -1,0 +1,70 @@
+2018-08-22T07:58:44.888Z - info:   [03444] *** FOLDER: c:\Users\BaloyiBe\Documents\projects\angular projects\Dotnet-Core-Project ***
+2018-08-22T07:58:44.891Z - info:   [03444] VSTSVSCode/1.136.0 (VSCode 1.26.1; Windows_NT 10.0.15063; Node 8.9.3)
+2018-08-22T07:58:44.892Z - debug:  [03444] Looking for an External Context at c:\Users\BaloyiBe\Documents\projects\angular projects\Dotnet-Core-Project
+2018-08-22T07:58:44.892Z - debug:  [03444] Found an External Context at c:\Users\BaloyiBe\Documents\projects\angular projects\Dotnet-Core-Project
+2018-08-22T07:58:44.894Z - debug:  [03444] _isTeamServicesUrl: true
+2018-08-22T07:58:44.895Z - debug:  [03444] Parsing values from repositoryInfo as string url
+2018-08-22T07:58:45.059Z - debug:  [03444] Started ApplicationInsights telemetry
+2018-08-22T07:58:45.059Z - info:   [03444] Getting repository information with repositoryInfoClient
+2018-08-22T07:58:45.059Z - debug:  [03444] RemoteUrl = https://ubiquityfs.visualstudio.com/DefaultCollection/TYMEInField/TYMEInField%20Team/_versionControl?path=%24%2FTYMEInField%2FTYME%20In-Field%20Management%20Systems%2FCAN-Track%20Reference%20API%2FDevelopment
+2018-08-22T07:58:45.061Z - debug:  [03444] Getting repository information for a TFVC repository at https://ubiquityfs.visualstudio.com/DefaultCollection/TYMEInField/TYMEInField%20Team/_versionControl?path=%24%2FTYMEInField%2FTYME%20In-Field%20Management%20Systems%2FCAN-Track%20Reference%20API%2FDevelopment
+2018-08-22T07:58:45.062Z - debug:  [03444] _isTeamServicesUrl: true
+2018-08-22T07:58:45.062Z - debug:  [03444] Parsing values from repositoryInfo as string url
+2018-08-22T07:58:46.572Z - error:  [03444] Failed call with repositoryClient:  Unauthorized. Check your authentication credentials and try again. Error: Error: Failed Request: Unauthorized(401) - https://ubiquityfs.visualstudio.com/_apis/tfvc/branches
+2018-08-22T07:58:46.572Z - debug:  [03444] Error: Failed Request: Unauthorized(401) - https://ubiquityfs.visualstudio.com/_apis/tfvc/branches
+2018-08-22T07:59:38.139Z - info:   [05088] *** FOLDER: c:\Users\BaloyiBe\Documents\projects\angular projects\Dotnet-Core-Project ***
+2018-08-22T07:59:38.141Z - info:   [05088] VSTSVSCode/1.136.0 (VSCode 1.26.1; Windows_NT 10.0.15063; Node 8.9.3)
+2018-08-22T07:59:38.142Z - debug:  [05088] Looking for an External Context at c:\Users\BaloyiBe\Documents\projects\angular projects\Dotnet-Core-Project
+2018-08-22T07:59:38.143Z - debug:  [05088] Found an External Context at c:\Users\BaloyiBe\Documents\projects\angular projects\Dotnet-Core-Project
+2018-08-22T07:59:38.144Z - debug:  [05088] _isTeamServicesUrl: true
+2018-08-22T07:59:38.144Z - debug:  [05088] Parsing values from repositoryInfo as string url
+2018-08-22T07:59:38.291Z - debug:  [05088] Started ApplicationInsights telemetry
+2018-08-22T07:59:38.292Z - info:   [05088] Getting repository information with repositoryInfoClient
+2018-08-22T07:59:38.292Z - debug:  [05088] RemoteUrl = https://ubiquityfs.visualstudio.com/DefaultCollection/TYMEInField/TYMEInField%20Team/_versionControl?path=%24%2FTYMEInField%2FTYME%20In-Field%20Management%20Systems%2FCAN-Track%20Reference%20API%2FDevelopment
+2018-08-22T07:59:38.293Z - debug:  [05088] Getting repository information for a TFVC repository at https://ubiquityfs.visualstudio.com/DefaultCollection/TYMEInField/TYMEInField%20Team/_versionControl?path=%24%2FTYMEInField%2FTYME%20In-Field%20Management%20Systems%2FCAN-Track%20Reference%20API%2FDevelopment
+2018-08-22T07:59:38.294Z - debug:  [05088] _isTeamServicesUrl: true
+2018-08-22T07:59:38.294Z - debug:  [05088] Parsing values from repositoryInfo as string url
+2018-08-22T07:59:39.700Z - error:  [05088] Failed call with repositoryClient:  Unauthorized. Check your authentication credentials and try again. Error: Error: Failed Request: Unauthorized(401) - https://ubiquityfs.visualstudio.com/_apis/tfvc/branches
+2018-08-22T07:59:39.700Z - debug:  [05088] Error: Failed Request: Unauthorized(401) - https://ubiquityfs.visualstudio.com/_apis/tfvc/branches
+2018-08-22T08:01:06.473Z - info:   [15604] *** FOLDER: c:\Users\BaloyiBe\Documents\projects\angular projects\Dotnet-Core-Project ***
+2018-08-22T08:01:06.475Z - info:   [15604] VSTSVSCode/1.136.0 (VSCode 1.26.1; Windows_NT 10.0.15063; Node 8.9.3)
+2018-08-22T08:01:06.476Z - debug:  [15604] Looking for an External Context at c:\Users\BaloyiBe\Documents\projects\angular projects\Dotnet-Core-Project
+2018-08-22T08:01:06.476Z - debug:  [15604] Found an External Context at c:\Users\BaloyiBe\Documents\projects\angular projects\Dotnet-Core-Project
+2018-08-22T08:01:06.478Z - debug:  [15604] _isTeamServicesUrl: true
+2018-08-22T08:01:06.478Z - debug:  [15604] Parsing values from repositoryInfo as string url
+2018-08-22T08:01:06.577Z - debug:  [15604] Started ApplicationInsights telemetry
+2018-08-22T08:01:06.577Z - info:   [15604] Getting repository information with repositoryInfoClient
+2018-08-22T08:01:06.577Z - debug:  [15604] RemoteUrl = https://ubiquityfs.visualstudio.com/DefaultCollection/TYMEInField/TYMEInField%20Team/_versionControl?path=%24%2FTYMEInField%2FTYME%20In-Field%20Management%20Systems%2FCAN-Track%20Reference%20API%2FDevelopment
+2018-08-22T08:01:06.578Z - debug:  [15604] Getting repository information for a TFVC repository at https://ubiquityfs.visualstudio.com/DefaultCollection/TYMEInField/TYMEInField%20Team/_versionControl?path=%24%2FTYMEInField%2FTYME%20In-Field%20Management%20Systems%2FCAN-Track%20Reference%20API%2FDevelopment
+2018-08-22T08:01:06.578Z - debug:  [15604] _isTeamServicesUrl: true
+2018-08-22T08:01:06.579Z - debug:  [15604] Parsing values from repositoryInfo as string url
+2018-08-22T08:01:08.027Z - error:  [15604] Failed call with repositoryClient:  Unauthorized. Check your authentication credentials and try again. Error: Error: Failed Request: Unauthorized(401) - https://ubiquityfs.visualstudio.com/_apis/tfvc/branches
+2018-08-22T08:01:08.028Z - debug:  [15604] Error: Failed Request: Unauthorized(401) - https://ubiquityfs.visualstudio.com/_apis/tfvc/branches
+2018-08-22T08:13:28.562Z - info:   [0100] *** FOLDER: c:\Users\BaloyiBe\Documents\projects\angular projects\Dotnet-Core-Project ***
+2018-08-22T08:13:28.564Z - info:   [0100] VSTSVSCode/1.136.0 (VSCode 1.26.1; Windows_NT 10.0.15063; Node 8.9.3)
+2018-08-22T08:13:28.565Z - debug:  [0100] Looking for an External Context at c:\Users\BaloyiBe\Documents\projects\angular projects\Dotnet-Core-Project
+2018-08-22T08:13:28.566Z - debug:  [0100] Found an External Context at c:\Users\BaloyiBe\Documents\projects\angular projects\Dotnet-Core-Project
+2018-08-22T08:13:28.568Z - debug:  [0100] _isTeamServicesUrl: true
+2018-08-22T08:13:28.569Z - debug:  [0100] Parsing values from repositoryInfo as string url
+2018-08-22T08:13:28.682Z - debug:  [0100] Started ApplicationInsights telemetry
+2018-08-22T08:13:28.682Z - info:   [0100] Getting repository information with repositoryInfoClient
+2018-08-22T08:13:28.682Z - debug:  [0100] RemoteUrl = https://ubiquityfs.visualstudio.com/DefaultCollection/TYMEInField/TYMEInField%20Team/_versionControl?path=%24%2FTYMEInField%2FTYME%20In-Field%20Management%20Systems%2FCAN-Track%20Reference%20API%2FDevelopment
+2018-08-22T08:13:28.683Z - debug:  [0100] Getting repository information for a TFVC repository at https://ubiquityfs.visualstudio.com/DefaultCollection/TYMEInField/TYMEInField%20Team/_versionControl?path=%24%2FTYMEInField%2FTYME%20In-Field%20Management%20Systems%2FCAN-Track%20Reference%20API%2FDevelopment
+2018-08-22T08:13:28.684Z - debug:  [0100] _isTeamServicesUrl: true
+2018-08-22T08:13:28.684Z - debug:  [0100] Parsing values from repositoryInfo as string url
+2018-08-22T08:13:29.683Z - error:  [0100] Failed call with repositoryClient:  Unauthorized. Check your authentication credentials and try again. Error: Error: Failed Request: Unauthorized(401) - https://ubiquityfs.visualstudio.com/_apis/tfvc/branches
+2018-08-22T08:13:29.683Z - debug:  [0100] Error: Failed Request: Unauthorized(401) - https://ubiquityfs.visualstudio.com/_apis/tfvc/branches
+2018-08-22T09:57:24.672Z - info:   [17252] *** FOLDER: c:\Users\BaloyiBe\Documents\projects\angular projects\Dotnet-Core-Project ***
+2018-08-22T09:57:24.680Z - info:   [17252] VSTSVSCode/1.136.0 (VSCode 1.26.1; Windows_NT 10.0.15063; Node 8.9.3)
+2018-08-22T09:57:24.685Z - debug:  [17252] Looking for an External Context at c:\Users\BaloyiBe\Documents\projects\angular projects\Dotnet-Core-Project
+2018-08-22T09:57:24.687Z - debug:  [17252] Found an External Context at c:\Users\BaloyiBe\Documents\projects\angular projects\Dotnet-Core-Project
+2018-08-22T09:57:24.689Z - debug:  [17252] _isTeamServicesUrl: true
+2018-08-22T09:57:24.689Z - debug:  [17252] Parsing values from repositoryInfo as string url
+2018-08-22T09:57:24.910Z - debug:  [17252] Started ApplicationInsights telemetry
+2018-08-22T09:57:24.914Z - info:   [17252] Getting repository information with repositoryInfoClient
+2018-08-22T09:57:24.920Z - debug:  [17252] RemoteUrl = https://ubiquityfs.visualstudio.com/DefaultCollection/TYMEInField/TYMEInField%20Team/_versionControl?path=%24%2FTYMEInField%2FTYME%20In-Field%20Management%20Systems%2FCAN-Track%20Reference%20API%2FDevelopment
+2018-08-22T09:57:24.928Z - debug:  [17252] Getting repository information for a TFVC repository at https://ubiquityfs.visualstudio.com/DefaultCollection/TYMEInField/TYMEInField%20Team/_versionControl?path=%24%2FTYMEInField%2FTYME%20In-Field%20Management%20Systems%2FCAN-Track%20Reference%20API%2FDevelopment
+2018-08-22T09:57:24.930Z - debug:  [17252] _isTeamServicesUrl: true
+2018-08-22T09:57:24.932Z - debug:  [17252] Parsing values from repositoryInfo as string url
+2018-08-22T09:57:26.238Z - error:  [17252] Failed call with repositoryClient:  Unauthorized. Check your authentication credentials and try again. Error: Error: Failed Request: Unauthorized(401) - https://ubiquityfs.visualstudio.com/_apis/tfvc/branches
+2018-08-22T09:57:26.238Z - debug:  [17252] Error: Failed Request: Unauthorized(401) - https://ubiquityfs.visualstudio.com/_apis/tfvc/branches

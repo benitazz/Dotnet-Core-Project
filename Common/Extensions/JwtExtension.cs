@@ -53,7 +53,7 @@ namespace MedicalBilingMicroservice.Common.Extensions
             });
 
             // add identity
-            var builder = services.AddIdentityCore<AppUser> (o => {
+            var builder = services.AddIdentityCore<ApplicationUser> (o => {
                 // configure identity options
                 o.Password.RequireDigit = false;
                 o.Password.RequireLowercase = false;
