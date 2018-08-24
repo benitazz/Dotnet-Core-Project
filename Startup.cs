@@ -48,7 +48,11 @@ namespace MedicalBilingMicroservice
             services.AddAutoMapper();
             services.AddOData();
             services.AddIdentity<ApplicationUser, ApplicationRole>(
-             options => options.Stores.MaxLengthForKeys = 128)
+             options =>
+             {
+                 options.Stores.MaxLengthForKeys = 128;
+                 options.SignIn.RequireConfirmedEmail = true;
+             })
              .AddEntityFrameworkStores<ApplicationDbContext>()
              .AddDefaultUI()
              .AddDefaultTokenProviders();

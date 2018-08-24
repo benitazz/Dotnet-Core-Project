@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Identity;
 
 namespace MedicalBilingMicroservice.Core.Models.Entities.Users
@@ -27,5 +28,7 @@ namespace MedicalBilingMicroservice.Core.Models.Entities.Users
         public DateTime UpdatedDate { get; set; }
 
         public string UpdatedBy { get; set; }
+
+        public ICollection<ApplicationUserRole> UserRoles { get; set; }
     }
 }

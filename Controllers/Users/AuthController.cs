@@ -45,7 +45,6 @@ namespace MedicalBilingMicroservice.Controllers.Users {
                 new JsonSerializerSettings { Formatting = Formatting.Indented });
             return new OkObjectResult (jwt);
         }
-
         private async Task<ClaimsIdentity> GetClaimsIdentity (string userName, string password) {
             if (string.IsNullOrEmpty (userName) || string.IsNullOrEmpty (password))
                 return await Task.FromResult<ClaimsIdentity> (null);
