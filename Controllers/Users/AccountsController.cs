@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Web;
 using AutoMapper;
 using MedicalBilingMicroservice.Common.Helpers;
 using MedicalBilingMicroservice.Core.Models.Entities.Users;
@@ -58,44 +59,44 @@ namespace MedicalBilingMicroservice.Controllers.Users
             await _emailSender.SendEmailAsync(registrationResource.Email, callbackUrl, "Please confirm email");
 
             //  await _userManager.SignInAsync(user, isPersistent: false);
-           // _logger.LogInformation("User created a new account with password.");
+            // _logger.LogInformation("User created a new account with password.");
 
             return Ok("Account created");
         }
 
         [HttpGet]
-		[AllowAnonymous]
-		[Route("ConfirmEmail", Name="ConfirmEmail")]
-		public async Task<IActionResult> ConfirmEmail(string userId, string code)
-		{
-			if (userId == null || code == null)
-			{
-				ModelState.AddModelError("error", "You need to provide your user id and confirmation code");
-				return BadRequest(ModelState);
-			}
+        [AllowAnonymous]
+        [Route("ConfirmEmail", Name = "ConfirmEmail")]
+        public async Task<IActionResult> ConfirmEmail(string userId, string code)
+        {
+            if (userId == null || code == null)
+            {
+                ModelState.AddModelError("error", "You need to provide your user id and confirmation code");
+                return BadRequest(ModelState);
+            }
 
             var user = await this._userManager.FindByIdAsync(userId);
-			IdentityResult result = await this._userManager.ConfirmEmailAsync(user, code);
+            IdentityResult result = await this._userManager.ConfirmEmailAsync(user, code);
 
-			if (result.Succeeded)
-			{
-				// return Redirect(Url.Content("~/account/registrationcomplete"));
+            if (result.Succeeded)
+            {
+                // return Redirect(Url.Content("~/account/registrationcomplete"));
 
                 return Ok();
-			}
+            }
 
-			return new BadRequestObjectResult(Errors.AddErrorsToModelState(result, ModelState));
-		}
+            return new BadRequestObjectResult(Errors.AddErrorsToModelState(result, ModelState));
+        }
 
-		[HttpPost]
-		[Route("ResendConfirmationEmail", Name = "ResendConfirmationEmail")]
-		public async Task<IActionResult> ResendConfirmationEmail()
-		{
-			var user = await this._userManager.GetUserAsync(User);
-			string code = await this._userManager.GenerateEmailConfirmationTokenAsync(user);
-			var callbackUrl = Url.Link("ConfirmEmail", new { userId = user.Id, code = code });
+        [HttpPost]
+        [Route("ResendConfirmationEmail", Name = "ResendConfirmationEmail")]
+        public async Task<IActionResult> ResendConfirmationEmail()
+        {
+            var user = await this._userManager.GetUserAsync(User);
+            string code = await this._userManager.GenerateEmailConfirmationTokenAsync(user);
+            var callbackUrl = Url.Link("ConfirmEmail", new { userId = user.Id, code = code });
 
-			/*var notification = new AccountNotificationModel
+            /*var notification = new AccountNotificationModel
 			{
 				Code = code,
 				Url = callbackUrl,
@@ -105,10 +106,10 @@ namespace MedicalBilingMicroservice.Controllers.Users
 			};
 
 			string body = ViewRenderer.RenderView("~/Views/Mailer/NewAccount.cshtml", notification);*/
-			await this._emailSender.SendEmailAsync(user.Id, "Medical account confirmation", callbackUrl);
-			
-			return Ok();
-		}
+            await this._emailSender.SendEmailAsync(user.Id, "Medical account confirmation", callbackUrl);
+
+            return Ok();
+        }
 
 
         [HttpPost]
@@ -201,5 +202,114 @@ namespace MedicalBilingMicroservice.Controllers.Users
 
             return new BadRequestObjectResult(Errors.AddErrorsToModelState(result, ModelState));
         }
+
+
+        /// <summary>
+        /// Reset the user password
+        /// </summary>
+        /// <param name="resetPasswordResource">The code</param>
+        /// <returns></returns>
+        [HttpPost]
+        [AllowAnonymous]
+        [Route("ResetPassword", Name = "ResetPassword")]
+        public async Task<IActionResult> ResetPassword(ResetPasswordResource resetPasswordResource)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await this._userManager.FindByEmailAsync(resetPasswordResource.Email);
+                if (user == null)
+                {
+                    ModelState.AddModelError("", "No user found.");
+                    return BadRequest(ModelState);
+                }
+
+                IdentityResult result = await this._userManager.ResetPasswordAsync(user, resetPasswordResource.Code, resetPasswordResource.Password);
+                if (result.Succeeded)
+                {
+                    return Ok();
+                }
+
+                return new BadRequestObjectResult(Errors.AddErrorsToModelState(result, ModelState));
+
+                /*IHttpActionResult errorResult  = GetErrorResult(result);
+
+				if (errorResult != null)
+				{
+					return errorResult;
+				}*/
+            }
+
+            // If we got this far, something failed
+            return BadRequest(ModelState);
+        }
+
+        /// <summary>
+        /// If the user forget the password this action will send him a reset password mail
+        /// </summary>
+        /// <param name="model">The forgot password model</param>
+        /// <returns>IHttpActionResult</returns>
+        [HttpPost]
+        [AllowAnonymous]
+        [Route("ForgotPassword")]
+        public async Task<IActionResult> ForgotPassword(ForgotPasswordResource model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await this._userManager.FindByEmailAsync(model.Email);
+                if (user == null || !(await this._userManager.IsEmailConfirmedAsync(user)))
+                {
+                    ModelState.AddModelError("", "The user either does not exist or is not confirmed.");
+                    return BadRequest(ModelState);
+                }
+
+                string code = await this._userManager.GeneratePasswordResetTokenAsync(user);
+                // var callbackUrl = Url.Content("~/account/resetpassword?email=") + HttpUtility.UrlEncode(model.Email) + "&code=" + HttpUtility.UrlEncode(code);
+
+                /*var notification = new AccountNotificationModel
+				{
+					Url = callbackUrl,
+					DisplayName = user.UserName
+				};
+
+				string body = ViewRenderer.RenderView("~/Views/Mailer/PasswordReset.cshtml", notification);
+				await UserManager.SendEmailAsync(user.Id, "DurandalAuth reset password", body);*/
+
+                return Ok();
+            }
+
+            // If we got this far, something failed
+            return BadRequest(ModelState);
+        }
+
+
+        /*private IActionResult GetErrorResult(IdentityResult result)
+		{
+			if (result == null)
+			{
+				return InternalServerError();
+			}
+
+			if (!result.Succeeded)
+			{
+				if (result.Errors != null)
+				{
+					foreach (string error in result.Errors)
+					{
+						ModelState.AddModelError("", error);
+					}
+				}
+
+				if (ModelState.IsValid)
+				{
+					// No errors in ModelState, return empty BadRequest
+					return BadRequest();
+				}
+
+				return BadRequest(ModelState);
+			}
+
+			return null;
+		}*/
+
     }
 }
