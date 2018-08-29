@@ -1,3 +1,5 @@
+using System.Net;
+using System.Net.Mail;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.Extensions.Options;
@@ -17,7 +19,28 @@ namespace MedicalBilingMicroservice.Core.Models {
         }
 
         public async Task Execute (string apiKey, string subject, string message, string email) {
-            var client = new SendGridClient (apiKey);
+             string smtpAddress = "smtp.gmail.com";
+                int portNumber = 587;
+                bool enableSSL = true;
+                string emailFrom = "benitazz@gmail.com";
+                string password = "101Tuks@1";
+                string emailTo = "benitazz@live.co.za";
+                string body = message;
+                MailMessage mail = new MailMessage();
+                mail.From = new MailAddress(emailFrom);
+                mail.To.Add(emailTo);
+                mail.Subject = subject;
+                mail.Body = body;
+                mail.IsBodyHtml = true;
+                using (SmtpClient smtp = new SmtpClient(smtpAddress, portNumber))
+                {
+                    smtp.Credentials = new NetworkCredential(emailFrom, password);
+                    smtp.EnableSsl = enableSSL;
+                    smtp.Send(mail);
+                }
+
+
+           /* var client = new SendGridClient (apiKey);
             var from = new EmailAddress ("benitazz@gmail.com", "Example User");
             if (string.IsNullOrEmpty(subject)){
                  subject = "Sending with SendGrid is Fun";
@@ -27,7 +50,7 @@ namespace MedicalBilingMicroservice.Core.Models {
             var plainTextContent = message;
             var htmlContent = message;
             var msg = MailHelper.CreateSingleEmail (from, to, subject, plainTextContent, htmlContent);
-            var response = await client.SendEmailAsync (msg);
+            var response = await client.SendEmailAsync (msg);*/
 
             /*var client = new SendGridClient (apiKey);
             var msg = new SendGridMessage () {

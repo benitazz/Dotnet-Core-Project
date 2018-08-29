@@ -46,11 +46,11 @@ namespace MedicalBilingMicroservice.Controllers.Users {
             try {
                 var userIdentity = this._mapper.Map<ApplicationUser> (registrationResource);
                 userIdentity.UpdatedBy = registrationResource.Email;
-                var result = await this._userManager.CreateAsync (userIdentity, registrationResource.Password);
+               /* var result = await this._userManager.CreateAsync (userIdentity, registrationResource.Password);
 
                 if (!result.Succeeded) {
                     return new BadRequestObjectResult (Errors.AddErrorsToModelState (result, ModelState));
-                }
+                }*/
 
                 var code = await _userManager.GenerateEmailConfirmationTokenAsync (userIdentity);
                 var callbackUrl = Url.Action ("ConfirmaEmail", "Account", new { userid = userIdentity.Id, token = code }, Request.Scheme);
