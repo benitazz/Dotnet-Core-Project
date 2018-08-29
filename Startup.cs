@@ -44,6 +44,7 @@ namespace MedicalBilingMicroservice
             services.ConfigureServices();
             var jwtAppSettingOptions = Configuration.GetSection(nameof(JwtIssuerOptions));
             services.ConfigureJwtServices(jwtAppSettingOptions, this._signingKey);
+            services.Configure<AuthMessageSenderOptions>(Configuration.GetSection(nameof(AuthMessageSenderOptions)));
 
             services.AddAutoMapper();
             services.AddOData();

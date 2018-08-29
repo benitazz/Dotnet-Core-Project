@@ -25,9 +25,10 @@ namespace MedicalBilingMicroservice.Controllers.Users {
         private readonly IUserRepository _userRepository;
         private readonly IEmailSender _emailSender;
 
-        public AccountsController (UserManager<ApplicationUser> UserManager,
-            IMapper mapper, IUserRepository userRepository,
-            IEmailSender emailSender) {
+        public AccountsController (UserManager<ApplicationUser> UserManager
+                                , IMapper mapper
+                                , IUserRepository userRepository
+                                , IEmailSender emailSender) {
             _userManager = UserManager;
             this._mapper = mapper;
             this._userRepository = userRepository;
@@ -36,34 +37,39 @@ namespace MedicalBilingMicroservice.Controllers.Users {
 
         [HttpPost]
         [AllowAnonymous]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public async Task<IActionResult> Post ([FromBody] RegistrationResource registrationResource) {
             if (!ModelState.IsValid) {
                 return BadRequest (ModelState);
             }
 
-            var userIdentity = this._mapper.Map<ApplicationUser> (registrationResource);
-            userIdentity.UpdatedBy = registrationResource.Email;
-            var result = await this._userManager.CreateAsync (userIdentity, registrationResource.Password);
+            try {
+                var userIdentity = this._mapper.Map<ApplicationUser> (registrationResource);
+                userIdentity.UpdatedBy = registrationResource.Email;
+                var result = await this._userManager.CreateAsync (userIdentity, registrationResource.Password);
 
-            if (!result.Succeeded) {
-                return new BadRequestObjectResult (Errors.AddErrorsToModelState (result, ModelState));
+                if (!result.Succeeded) {
+                    return new BadRequestObjectResult (Errors.AddErrorsToModelState (result, ModelState));
+                }
+
+                var code = await _userManager.GenerateEmailConfirmationTokenAsync (userIdentity);
+                var callbackUrl = Url.Action ("ConfirmaEmail", "Account", new { userid = userIdentity.Id, token = code }, Request.Scheme);
+                await _emailSender.SendEmailAsync (registrationResource.Email, callbackUrl, "Please confirm email");
+
+                // await _userManager.SignInAsync(user, isPersistent: false);
+                // _logger.LogInformation("User created a new account with password.");
+
+                return Ok ("Account created");
+            } catch (Exception ex) {
+                return StatusCode (StatusCodes.Status500InternalServerError, ex.Message);
             }
-
-            var code = await _userManager.GenerateEmailConfirmationTokenAsync (userIdentity);
-            var callbackUrl = Url.Action ("ConfirmaEmail", "Account", new { userid = userIdentity.Id, token = code }, Request.Scheme);
-            await _emailSender.SendEmailAsync (registrationResource.Email, callbackUrl, "Please confirm email");
-
-            //  await _userManager.SignInAsync(user, isPersistent: false);
-            // _logger.LogInformation("User created a new account with password.");
-
-            return Ok ("Account created");
         }
 
         [HttpGet]
         [AllowAnonymous]
         [Route ("ConfirmEmail", Name = "ConfirmEmail")]
         public async Task<IActionResult> ConfirmEmail (string userId, string code) {
+
             if (userId == null || code == null) {
                 ModelState.AddModelError ("error", "You need to provide your user id and confirmation code");
                 return BadRequest (ModelState);
@@ -134,7 +140,7 @@ namespace MedicalBilingMicroservice.Controllers.Users {
                 var userResources = _mapper.Map<IList<RegistrationResource>> (users);
                 return Ok (userResources);
             } catch (Exception ex) {
-               return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+                return StatusCode (StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
 
