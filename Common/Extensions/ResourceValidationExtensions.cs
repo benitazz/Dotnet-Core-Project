@@ -8,6 +8,7 @@ namespace MedicalBilingMicroservice.Common.Extensions {
         public static IServiceCollection ConfigureValidationServices (this IServiceCollection services) {
             services.AddTransient<IValidator<CredentialsResource>, CredentialsResourceValidator> ();
             services.AddTransient<IValidator<RegistrationResource>, RegistratinResourceValidator> ();
+            services.AddTransient<IValidator<UserInfoResource>, UserInfoResourceValidation> ();
             return services;
         }
     }

@@ -1,0 +1,31 @@
+<XmlSummary>
+    <MyMembers name="updateComment">
+        <response code="200">Success - Returns the updated item.</response>
+        <response code="400">Bad Request - Invalid object.</response>
+        <response code="404">Not Found - The item does not exist for the specified Id.</response> 
+        <response code="500">Server Error - exception message if there was any internal server error like network connectivity issue or any server issue.</response> 
+    </MyMembers>
+
+    <MyMembers name="deleteComment">
+         <response code="200">Returns the Id of the deleted item.</response>
+         <response code="404">Not Found - The item does not exist for the specified Id.</response> 
+         <response code="500">Server Error - exception message if there was any internal server error like network connectivity issue.</response> 
+    </MyMembers>
+
+    <MyMembers name="createComment">
+        <response code="201">Created - Returns the newly created item</response>
+        <response code="400">Bad Request - Invalid object.</response>
+        <response code="500">Server Error - the exception message if there was any internal server error like network connectivity issue or any server issue.</response> 
+     </MyMembers>
+
+     <MyMembers name="getComment">
+        <response code="200">Success - Returns the item for the specified Id.</response>
+        <response code="404">Not Found - The item does not exist for the specified Id.</response> 
+        <response code="500">Server Error - the exception message if there was any internal server error like network connectivity issue or any server issue.</response> 
+     </MyMembers>
+
+     <MyMembers name="getAllComment">
+        <response code="200">Success - Returns the list of items.</response>
+        <response code="500">Server Error - the exception message if there was any internal server error like network connectivity issue or any server issue.</response> 
+     </MyMembers>
+</XmlSummary>

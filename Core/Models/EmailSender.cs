@@ -19,29 +19,11 @@ namespace MedicalBilingMicroservice.Core.Models {
         }
 
         public async Task Execute (string apiKey, string subject, string message, string email) {
-             string smtpAddress = "smtp.gmail.com";
-                int portNumber = 587;
-                bool enableSSL = true;
-                string emailFrom = "benitazz@gmail.com";
-                string password = "101Tuks@1";
-                string emailTo = "benitazz@live.co.za";
-                string body = message;
-                MailMessage mail = new MailMessage();
-                mail.From = new MailAddress(emailFrom);
-                mail.To.Add(emailTo);
-                mail.Subject = subject;
-                mail.Body = body;
-                mail.IsBodyHtml = true;
-                using (SmtpClient smtp = new SmtpClient(smtpAddress, portNumber))
-                {
-                    smtp.Credentials = new NetworkCredential(emailFrom, password);
-                    smtp.EnableSsl = enableSSL;
-                    smtp.Send(mail);
-                }
+          
 
 
            /* var client = new SendGridClient (apiKey);
-            var from = new EmailAddress ("benitazz@gmail.com", "Example User");
+            var from = new EmailAddress ("", "Example User");
             if (string.IsNullOrEmpty(subject)){
                  subject = "Sending with SendGrid is Fun";
             }

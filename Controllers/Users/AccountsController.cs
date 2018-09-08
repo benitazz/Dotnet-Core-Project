@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using AutoMapper;
@@ -8,13 +7,14 @@ using MedicalBilingMicroservice.Common.Helpers;
 using MedicalBilingMicroservice.Core.Models.Entities.Users;
 using MedicalBilingMicroservice.Core.Repositories;
 using MedicalBilingMicroservice.Resources.ApiToDomainResource;
+using MedicalBilingMicroservice.Resources.DomainToApiResource;
 using MedicalBilingMicroservicet.Resources.ApiToDomainResource;
+using Microsoft.AspNet.OData;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace MedicalBilingMicroservice.Controllers.Users {
 
@@ -25,10 +25,7 @@ namespace MedicalBilingMicroservice.Controllers.Users {
         private readonly IUserRepository _userRepository;
         private readonly IEmailSender _emailSender;
 
-        public AccountsController (UserManager<ApplicationUser> UserManager
-                                , IMapper mapper
-                                , IUserRepository userRepository
-                                , IEmailSender emailSender) {
+        public AccountsController (UserManager<ApplicationUser> UserManager, IMapper mapper, IUserRepository userRepository, IEmailSender emailSender) {
             _userManager = UserManager;
             this._mapper = mapper;
             this._userRepository = userRepository;
@@ -37,6 +34,7 @@ namespace MedicalBilingMicroservice.Controllers.Users {
 
         [HttpPost]
         [AllowAnonymous]
+        //[ApiVersionNeutral]
         //[ValidateAntiForgeryToken]
         public async Task<IActionResult> Post ([FromBody] RegistrationResource registrationResource) {
             if (!ModelState.IsValid) {
@@ -46,15 +44,24 @@ namespace MedicalBilingMicroservice.Controllers.Users {
             try {
                 var userIdentity = this._mapper.Map<ApplicationUser> (registrationResource);
                 userIdentity.UpdatedBy = registrationResource.Email;
-               /* var result = await this._userManager.CreateAsync (userIdentity, registrationResource.Password);
+                var result = await this._userManager.CreateAsync (userIdentity, registrationResource.Password);
 
                 if (!result.Succeeded) {
                     return new BadRequestObjectResult (Errors.AddErrorsToModelState (result, ModelState));
-                }*/
+                }
 
                 var code = await _userManager.GenerateEmailConfirmationTokenAsync (userIdentity);
-                var callbackUrl = Url.Action ("ConfirmaEmail", "Account", new { userid = userIdentity.Id, token = code }, Request.Scheme);
-                await _emailSender.SendEmailAsync (registrationResource.Email, callbackUrl, "Please confirm email");
+                string codeHtmlVersion = HttpUtility.UrlEncode (code);
+
+                var callbackUrl = Request.Scheme +
+                    "://localhost:5000/api/Accounts/ConfirmEmail?userId=" +
+                    userIdentity.Id + "&code=" + codeHtmlVersion;
+
+                var htmlBody = "Hi " + userIdentity.Email +
+                    "   You have been sent this email because you created an account on our website.  " +
+                    "Please click on <a href =\"" + callbackUrl + "\">this link</a> to confirm your email address is correct. ";
+
+                await _emailSender.SendEmailAsync (registrationResource.Email, "Please confirm email", htmlBody);
 
                 // await _userManager.SignInAsync(user, isPersistent: false);
                 // _logger.LogInformation("User created a new account with password.");
@@ -127,17 +134,37 @@ namespace MedicalBilingMicroservice.Controllers.Users {
             return new BadRequestObjectResult (Errors.AddErrorsToModelState (result, ModelState));
         }
 
+        /// <summary>
+        ///     Get user info
+        ///     401 if not authenticated
+        /// </summary>
+        /// <returns>The user info</returns>
+        // [HostAuthentication(DefaultAuthenticationTypes.ExternalBearer)]
+        [HttpGet]
+        [Route ("UserInfo")]
+        public async Task<IActionResult> GetUserInfo (string userId) {
+            try {
+                var user = await this._userRepository.GetUserById (userId);
+
+                if (user == null) {
+                    return NotFound ();
+                }
+
+                var userResource = this._mapper.Map<ApplicationUser, ApplicationUserResource> (user);
+                return Ok (userResource);
+            } catch (Exception ex) {
+                return StatusCode (StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+
         [HttpGet]
         [AllowAnonymous]
+        [EnableQuery]
         [Route ("AllUsers", Name = "AllUsers")]
-        public IActionResult GetAll () {
-            // https://stackoverflow.com/questions/51004516/net-core-2-1-identity-get-all-users-with-their-associated-roles
-
+        public async Task<IActionResult> GetAll () {
             try {
-                var users = this._userManager.Users.Include (u => u.UserRoles).ThenInclude (ur => ur.Role).ToList ();
-
-                //var users = this._userRepository.GetAll();
-                var userResources = _mapper.Map<IList<RegistrationResource>> (users);
+                var users = await this._userRepository.GetAllUsers ();
+                var userResources = this._mapper.Map<List<ApplicationUser>, List<ApplicationUserResource>> (users);;
                 return Ok (userResources);
             } catch (Exception ex) {
                 return StatusCode (StatusCodes.Status500InternalServerError, ex.Message);
@@ -267,34 +294,29 @@ namespace MedicalBilingMicroservice.Controllers.Users {
             return BadRequest (ModelState);
         }
 
-        /*private IActionResult GetErrorResult(IdentityResult result)
-		{
-			if (result == null)
-			{
-				return InternalServerError();
-			}
+        private IActionResult GetErrorResult (IdentityResult result) {
+            /*if (result == null)
+            {
+            	return InternalServerError();
+            }*/
 
-			if (!result.Succeeded)
-			{
-				if (result.Errors != null)
-				{
-					foreach (string error in result.Errors)
-					{
-						ModelState.AddModelError("", error);
-					}
-				}
+            if (!result.Succeeded) {
+                if (result.Errors != null) {
+                    foreach (var error in result.Errors) {
+                        ModelState.AddModelError ("", error.Description);
+                    }
+                }
 
-				if (ModelState.IsValid)
-				{
-					// No errors in ModelState, return empty BadRequest
-					return BadRequest();
-				}
+                if (ModelState.IsValid) {
+                    // No errors in ModelState, return empty BadRequest
+                    return BadRequest ();
+                }
 
-				return BadRequest(ModelState);
-			}
+                return BadRequest (ModelState);
+            }
 
-			return null;
-		}*/
+            return null;
+        }
 
     }
 }

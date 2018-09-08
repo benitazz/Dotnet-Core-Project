@@ -5,13 +5,14 @@ using MedicalBilingMicroservice.Common.Helpers;
 using MedicalBilingMicroservice.Core.Models.Auth;
 using MedicalBilingMicroservice.Core.Models.Entities.Users;
 using MedicalBilingMicroservice.Resources.ApiToDomainResource;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 
 namespace MedicalBilingMicroservice.Controllers.Users {
-    [Route ("api/[controller]")]
+    [Route ("api/Auth")]
     public class AuthController : Controller {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly IJwtFactory _jwtFactory;
@@ -26,13 +27,14 @@ namespace MedicalBilingMicroservice.Controllers.Users {
         }
 
         // POST api/auth/login
-        [HttpPost ("login")]
+        [HttpPost]
+        [Route ("Login", Name = "Login")]
         public async Task<IActionResult> Post ([FromBody] CredentialsResource credentials) {
             if (!ModelState.IsValid) {
                 return BadRequest (ModelState);
             }
 
-            var identity = await GetClaimsIdentity (credentials.UserName, credentials.Password);
+            var identity = await GetClaimsIdentity (credentials.Username, credentials.Password);
             if (identity == null) {
                 return BadRequest (Errors.AddErrorToModelState ("login_failure", "Invalid username or password.", ModelState));
             }
@@ -40,10 +42,11 @@ namespace MedicalBilingMicroservice.Controllers.Users {
             var jwt = await Tokens.GenerateJwt (
                 identity,
                 _jwtFactory,
-                credentials.UserName,
+                credentials.Username,
                 _jwtOptions,
                 new JsonSerializerSettings { Formatting = Formatting.Indented });
-            return new OkObjectResult (jwt);
+
+            return Ok(jwt);
         }
         private async Task<ClaimsIdentity> GetClaimsIdentity (string userName, string password) {
             if (string.IsNullOrEmpty (userName) || string.IsNullOrEmpty (password))
