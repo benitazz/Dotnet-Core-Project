@@ -4,14 +4,16 @@ using MedicalBilingMicroservice.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace switchapi.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180925035045_dateTime2")]
+    partial class dateTime2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -55,13 +57,13 @@ namespace switchapi.Migrations
                     b.ToTable("FileStatuses");
 
                     b.HasData(
-                        new { Id = 1, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 9, 25, 3, 54, 38, 174, DateTimeKind.Utc), Description = "Successfully uploaded the file", Name = "Uploaded", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 9, 25, 3, 54, 38, 175, DateTimeKind.Utc) },
-                        new { Id = 2, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 9, 25, 3, 54, 38, 175, DateTimeKind.Utc), Description = "The manager rejected the file", Name = "Rejected", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 9, 25, 3, 54, 38, 175, DateTimeKind.Utc) },
-                        new { Id = 3, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 9, 25, 3, 54, 38, 175, DateTimeKind.Utc), Description = "Ready to submit to the Fund", Name = "Approved", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 9, 25, 3, 54, 38, 175, DateTimeKind.Utc) },
-                        new { Id = 4, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 9, 25, 3, 54, 38, 175, DateTimeKind.Utc), Description = "File successfully submitted to the Fund", Name = "Submitted", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 9, 25, 3, 54, 38, 175, DateTimeKind.Utc) },
-                        new { Id = 5, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 9, 25, 3, 54, 38, 175, DateTimeKind.Utc), Description = "Not all invoices were paid", Name = "Partially Paid", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 9, 25, 3, 54, 38, 175, DateTimeKind.Utc) },
-                        new { Id = 6, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 9, 25, 3, 54, 38, 175, DateTimeKind.Utc), Description = "All invoices were successfully paid", Name = "Paid", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 9, 25, 3, 54, 38, 175, DateTimeKind.Utc) },
-                        new { Id = 7, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 9, 25, 3, 54, 38, 175, DateTimeKind.Utc), Description = "File Overdue", Name = "Overdue", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 9, 25, 3, 54, 38, 175, DateTimeKind.Utc) }
+                        new { Id = 1, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 9, 25, 3, 50, 45, 621, DateTimeKind.Utc), Description = "Successfully uploaded the file", Name = "Uploaded", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 9, 25, 3, 50, 45, 621, DateTimeKind.Utc) },
+                        new { Id = 2, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 9, 25, 3, 50, 45, 621, DateTimeKind.Utc), Description = "The manager rejected the file", Name = "Rejected", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 9, 25, 3, 50, 45, 621, DateTimeKind.Utc) },
+                        new { Id = 3, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 9, 25, 3, 50, 45, 621, DateTimeKind.Utc), Description = "Ready to submit to the Fund", Name = "Approved", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 9, 25, 3, 50, 45, 621, DateTimeKind.Utc) },
+                        new { Id = 4, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 9, 25, 3, 50, 45, 621, DateTimeKind.Utc), Description = "File successfully submitted to the Fund", Name = "Submitted", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 9, 25, 3, 50, 45, 621, DateTimeKind.Utc) },
+                        new { Id = 5, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 9, 25, 3, 50, 45, 621, DateTimeKind.Utc), Description = "Not all invoices were paid", Name = "Partially Paid", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 9, 25, 3, 50, 45, 621, DateTimeKind.Utc) },
+                        new { Id = 6, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 9, 25, 3, 50, 45, 621, DateTimeKind.Utc), Description = "All invoices were successfully paid", Name = "Paid", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 9, 25, 3, 50, 45, 621, DateTimeKind.Utc) },
+                        new { Id = 7, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 9, 25, 3, 50, 45, 621, DateTimeKind.Utc), Description = "File Overdue", Name = "Overdue", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 9, 25, 3, 50, 45, 621, DateTimeKind.Utc) }
                     );
                 });
 
@@ -99,15 +101,6 @@ namespace switchapi.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("InvoiceStatuses");
-
-                    b.HasData(
-                        new { Id = 1, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 9, 25, 5, 54, 38, 176, DateTimeKind.Local), Description = "Pending", Name = "Pending", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 9, 25, 5, 54, 38, 176, DateTimeKind.Local) },
-                        new { Id = 2, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 9, 25, 5, 54, 38, 176, DateTimeKind.Local), Description = "Approved", Name = "Approved", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 9, 25, 5, 54, 38, 176, DateTimeKind.Local) },
-                        new { Id = 3, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 9, 25, 5, 54, 38, 176, DateTimeKind.Local), Description = "Payment rejected", Name = "Rejected", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 9, 25, 5, 54, 38, 176, DateTimeKind.Local) },
-                        new { Id = 4, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 9, 25, 5, 54, 38, 176, DateTimeKind.Local), Description = "Invoice submitted to the fund", Name = "Submitted", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 9, 25, 5, 54, 38, 176, DateTimeKind.Local) },
-                        new { Id = 5, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 9, 25, 5, 54, 38, 176, DateTimeKind.Local), Description = "Invoice paid", Name = "Paid", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 9, 25, 5, 54, 38, 176, DateTimeKind.Local) },
-                        new { Id = 6, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 9, 25, 5, 54, 38, 176, DateTimeKind.Local), Description = "Invoice Overdue", Name = "Overdue", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 9, 25, 5, 54, 38, 176, DateTimeKind.Local) }
-                    );
                 });
 
             modelBuilder.Entity("MedicalBilingMicroservice.Core.Models.Entities.Users.ApplicationRole", b =>

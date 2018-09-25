@@ -1,5 +1,6 @@
+using MedicalBilingBackEnd.Common.Extensions;
+using MedicalBilingBackEnd.Core.Models.Entities.Lookups;
 using MedicalBilingMicroservice.Core.Models.Entities.Users;
-using MedicalBilingMicroservice.Persistence.EntityConfigurations.Users;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -16,6 +17,10 @@ namespace MedicalBilingMicroservice.Persistence
         IdentityRoleClaim<string>,
         IdentityUserToken<string>>
     {
+
+        public DbSet<FileStatus> FileStatuses { get; set; }
+        public DbSet<InvoiceStatus> InvoiceStatuses { get; set; }
+
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
 
@@ -24,9 +29,7 @@ namespace MedicalBilingMicroservice.Persistence
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.ApplyConfiguration(new ApplicationRoleConfiguration());
-            modelBuilder.ApplyConfiguration(new ApplicationUserConfiguration());
-            modelBuilder.ApplyConfiguration(new ApplicationUserRoleConfiguration());
+            modelBuilder.Seed();  
         }
     }
 }
