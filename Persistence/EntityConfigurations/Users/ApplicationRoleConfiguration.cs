@@ -7,9 +7,7 @@ namespace MedicalBilingMicroservice.Persistence.EntityConfigurations.Users
     public class ApplicationRoleConfiguration : IEntityTypeConfiguration<ApplicationRole>
     {
         public void Configure(EntityTypeBuilder<ApplicationRole> builder)
-        {
-            // builder.ToTable("tbl_AssetDevices");
-            
+        {         
             builder.Property(t => t.Description)
                 .IsRequired()
                 .HasMaxLength(255);

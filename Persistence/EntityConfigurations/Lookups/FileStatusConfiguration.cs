@@ -24,9 +24,9 @@ namespace MedicalBilingBackEnd.Persistence.EntityConfigurations.Lookups
                     Name = Constants.Uploaded,
                     Description = "Successfully uploaded the file",
                     CreatedBy = Constants.Administrator,
-                    CreatedDate = DateTime.UtcNow,
+                    CreatedDate = DateTime.Now,
                     UpdatedBy = Constants.Administrator,
-                    UpdatedDate = DateTime.UtcNow
+                    UpdatedDate = DateTime.Now
                 },
                 new FileStatus
                 {
@@ -34,9 +34,9 @@ namespace MedicalBilingBackEnd.Persistence.EntityConfigurations.Lookups
                     Name = Constants.Rejected,
                     Description = "The manager rejected the file",
                     CreatedBy = Constants.Administrator,
-                    CreatedDate = DateTime.UtcNow,
+                    CreatedDate = DateTime.Now,
                     UpdatedBy = Constants.Administrator,
-                    UpdatedDate = DateTime.UtcNow
+                    UpdatedDate = DateTime.Now
                 },
                 new FileStatus
                 {
@@ -44,9 +44,9 @@ namespace MedicalBilingBackEnd.Persistence.EntityConfigurations.Lookups
                     Name = Constants.Approved,
                     Description = "Ready to submit to the Fund",
                     CreatedBy = Constants.Administrator,
-                    CreatedDate = DateTime.UtcNow,
+                    CreatedDate = DateTime.Now,
                     UpdatedBy = Constants.Administrator,
-                    UpdatedDate = DateTime.UtcNow
+                    UpdatedDate = DateTime.Now
                 },
                 new FileStatus
                 {
@@ -54,9 +54,9 @@ namespace MedicalBilingBackEnd.Persistence.EntityConfigurations.Lookups
                     Name = Constants.Submitted,
                     Description = "File successfully submitted to the Fund",
                     CreatedBy = Constants.Administrator,
-                    CreatedDate = DateTime.UtcNow,
+                    CreatedDate = DateTime.Now,
                     UpdatedBy = Constants.Administrator,
-                    UpdatedDate = DateTime.UtcNow
+                    UpdatedDate = DateTime.Now
                 },
                 new FileStatus
                 {
@@ -64,9 +64,9 @@ namespace MedicalBilingBackEnd.Persistence.EntityConfigurations.Lookups
                     Name = Constants.PartiallyPaid,
                     Description = "Not all invoices were paid",
                     CreatedBy = Constants.Administrator,
-                    CreatedDate = DateTime.UtcNow,
+                    CreatedDate = DateTime.Now,
                     UpdatedBy = Constants.Administrator,
-                    UpdatedDate = DateTime.UtcNow
+                    UpdatedDate = DateTime.Now
                 },
                 new FileStatus
                 {
@@ -74,9 +74,9 @@ namespace MedicalBilingBackEnd.Persistence.EntityConfigurations.Lookups
                     Name = Constants.Paid,
                     Description = "All invoices were successfully paid",
                     CreatedBy = Constants.Administrator,
-                    CreatedDate = DateTime.UtcNow,
+                    CreatedDate = DateTime.Now,
                     UpdatedBy = Constants.Administrator,
-                    UpdatedDate = DateTime.UtcNow
+                    UpdatedDate = DateTime.Now
                 },
                 new FileStatus
                 {
@@ -84,9 +84,9 @@ namespace MedicalBilingBackEnd.Persistence.EntityConfigurations.Lookups
                     Name = Constants.Overdue,
                     Description = "File Overdue",
                     CreatedBy = Constants.Administrator,
-                    CreatedDate = DateTime.UtcNow,
+                    CreatedDate = DateTime.Now,
                     UpdatedBy = Constants.Administrator,
-                    UpdatedDate = DateTime.UtcNow
+                    UpdatedDate = DateTime.Now
                 }
             );
         }

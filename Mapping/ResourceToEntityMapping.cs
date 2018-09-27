@@ -9,6 +9,5 @@ namespace MedicalBilingMicroservice.Mapping {
                 .ForMember (entity => entity.UserName,
                     map => map.MapFrom (resource => resource.Email));
         }
-
     }
 }

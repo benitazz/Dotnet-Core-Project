@@ -1,3 +1,5 @@
+using MedicalBilingBackEnd.Core.Repositories.Lookups;
+using MedicalBilingBackEnd.Persistence.Repositories.Lookups;
 using MedicalBilingMicroservice.Common.Auth;
 using MedicalBilingMicroservice.Core;
 using MedicalBilingMicroservice.Core.Repositories;
@@ -11,6 +13,8 @@ namespace MedicalBilingMicroservice.Common.Extensions {
             services.AddSingleton<IJwtFactory, JwtFactory> ();
             services.AddScoped<IUnitOfWork, UnitOfWork> ();
             services.AddScoped<IUserRepository, UserRepository> ();
+            services.AddScoped<IFileStatusRepository, FileStatusRepository>();
+            services.AddScoped<IInvoiceStatusRepository, InvoiceStatusRepository>();
             return services;
         }
     }
