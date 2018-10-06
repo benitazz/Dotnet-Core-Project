@@ -4,14 +4,16 @@ using MedicalBilingMicroservice.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace switchapi.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181006080604_tariffs")]
+    partial class tariffs
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -55,13 +57,13 @@ namespace switchapi.Migrations
                     b.ToTable("FileStatuses");
 
                     b.HasData(
-                        new { Id = 1, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 963, DateTimeKind.Local), Description = "Successfully uploaded the file", Name = "Uploaded", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 964, DateTimeKind.Local) },
-                        new { Id = 2, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 964, DateTimeKind.Local), Description = "The manager rejected the file", Name = "Rejected", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 964, DateTimeKind.Local) },
-                        new { Id = 3, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 964, DateTimeKind.Local), Description = "Ready to submit to the Fund", Name = "Approved", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 964, DateTimeKind.Local) },
-                        new { Id = 4, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 964, DateTimeKind.Local), Description = "File successfully submitted to the Fund", Name = "Submitted", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 964, DateTimeKind.Local) },
-                        new { Id = 5, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 964, DateTimeKind.Local), Description = "Not all invoices were paid", Name = "Partially Paid", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 964, DateTimeKind.Local) },
-                        new { Id = 6, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 964, DateTimeKind.Local), Description = "All invoices were successfully paid", Name = "Paid", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 964, DateTimeKind.Local) },
-                        new { Id = 7, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 964, DateTimeKind.Local), Description = "File Overdue", Name = "Overdue", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 964, DateTimeKind.Local) }
+                        new { Id = 1, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 19, DateTimeKind.Local), Description = "Successfully uploaded the file", Name = "Uploaded", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 20, DateTimeKind.Local) },
+                        new { Id = 2, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 20, DateTimeKind.Local), Description = "The manager rejected the file", Name = "Rejected", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 20, DateTimeKind.Local) },
+                        new { Id = 3, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 20, DateTimeKind.Local), Description = "Ready to submit to the Fund", Name = "Approved", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 20, DateTimeKind.Local) },
+                        new { Id = 4, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 20, DateTimeKind.Local), Description = "File successfully submitted to the Fund", Name = "Submitted", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 20, DateTimeKind.Local) },
+                        new { Id = 5, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 20, DateTimeKind.Local), Description = "Not all invoices were paid", Name = "Partially Paid", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 20, DateTimeKind.Local) },
+                        new { Id = 6, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 20, DateTimeKind.Local), Description = "All invoices were successfully paid", Name = "Paid", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 20, DateTimeKind.Local) },
+                        new { Id = 7, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 20, DateTimeKind.Local), Description = "File Overdue", Name = "Overdue", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 20, DateTimeKind.Local) }
                     );
                 });
 
@@ -101,12 +103,12 @@ namespace switchapi.Migrations
                     b.ToTable("InvoiceStatuses");
 
                     b.HasData(
-                        new { Id = 1, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 965, DateTimeKind.Local), Description = "Pending", Name = "Pending", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 965, DateTimeKind.Local) },
-                        new { Id = 2, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 965, DateTimeKind.Local), Description = "Approved", Name = "Approved", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 965, DateTimeKind.Local) },
-                        new { Id = 3, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 965, DateTimeKind.Local), Description = "Payment rejected", Name = "Rejected", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 965, DateTimeKind.Local) },
-                        new { Id = 4, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 965, DateTimeKind.Local), Description = "Invoice submitted to the fund", Name = "Submitted", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 965, DateTimeKind.Local) },
-                        new { Id = 5, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 965, DateTimeKind.Local), Description = "Invoice paid", Name = "Paid", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 965, DateTimeKind.Local) },
-                        new { Id = 6, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 965, DateTimeKind.Local), Description = "Invoice Overdue", Name = "Overdue", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 965, DateTimeKind.Local) }
+                        new { Id = 1, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 21, DateTimeKind.Local), Description = "Pending", Name = "Pending", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 21, DateTimeKind.Local) },
+                        new { Id = 2, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 21, DateTimeKind.Local), Description = "Approved", Name = "Approved", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 21, DateTimeKind.Local) },
+                        new { Id = 3, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 21, DateTimeKind.Local), Description = "Payment rejected", Name = "Rejected", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 21, DateTimeKind.Local) },
+                        new { Id = 4, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 21, DateTimeKind.Local), Description = "Invoice submitted to the fund", Name = "Submitted", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 21, DateTimeKind.Local) },
+                        new { Id = 5, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 21, DateTimeKind.Local), Description = "Invoice paid", Name = "Paid", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 21, DateTimeKind.Local) },
+                        new { Id = 6, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 21, DateTimeKind.Local), Description = "Invoice Overdue", Name = "Overdue", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 21, DateTimeKind.Local) }
                     );
                 });
 
@@ -182,15 +184,15 @@ namespace switchapi.Migrations
                     b.ToTable("TariffTypes");
 
                     b.HasData(
-                        new { Id = 1, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 967, DateTimeKind.Local), Description = "Chiropractor Tariffs", Name = "Chiropractor", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 967, DateTimeKind.Local) },
-                        new { Id = 2, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 967, DateTimeKind.Local), Description = "Radiologists Tariffs", Name = "Radiologist", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 967, DateTimeKind.Local) },
-                        new { Id = 3, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 967, DateTimeKind.Local), Description = "Dentists tarrifs", Name = "Dentist", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 967, DateTimeKind.Local) },
-                        new { Id = 4, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 967, DateTimeKind.Local), Description = "Physiotherapist tariffs", Name = "Physiotherapist", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 967, DateTimeKind.Local) },
-                        new { Id = 5, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 967, DateTimeKind.Local), Description = "Private Ambulance Tariffs", Name = "Private Ambulance", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 967, DateTimeKind.Local) },
-                        new { Id = 6, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 967, DateTimeKind.Local), Description = "General Practioner Tariffs", Name = "General Practioner", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 967, DateTimeKind.Local) },
-                        new { Id = 7, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 967, DateTimeKind.Local), Description = "Renal Care Tariffs", Name = "Renal Care", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 967, DateTimeKind.Local) },
-                        new { Id = 8, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 967, DateTimeKind.Local), Description = "Social Worker Tariffs", Name = "Social Worker", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 967, DateTimeKind.Local) },
-                        new { Id = 9, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 967, DateTimeKind.Local), Description = "Wound Care Tariffs", Name = "Wound Care", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 967, DateTimeKind.Local) }
+                        new { Id = 1, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 23, DateTimeKind.Local), Description = "Chiropractor Tariffs", Name = "Chiropractor", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 23, DateTimeKind.Local) },
+                        new { Id = 2, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 23, DateTimeKind.Local), Description = "Radiologists Tariffs", Name = "Radiologist", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 23, DateTimeKind.Local) },
+                        new { Id = 3, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 23, DateTimeKind.Local), Description = "Dentists tarrifs", Name = "Dentist", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 23, DateTimeKind.Local) },
+                        new { Id = 4, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 23, DateTimeKind.Local), Description = "Physiotherapist tariffs", Name = "Physiotherapist", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 23, DateTimeKind.Local) },
+                        new { Id = 5, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 23, DateTimeKind.Local), Description = "Private Ambulance Tariffs", Name = "Private Ambulance", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 23, DateTimeKind.Local) },
+                        new { Id = 6, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 23, DateTimeKind.Local), Description = "General Practioner Tariffs", Name = "General Practioner", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 23, DateTimeKind.Local) },
+                        new { Id = 7, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 23, DateTimeKind.Local), Description = "Renal Care Tariffs", Name = "Renal Care", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 23, DateTimeKind.Local) },
+                        new { Id = 8, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 23, DateTimeKind.Local), Description = "Social Worker Tariffs", Name = "Social Worker", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 23, DateTimeKind.Local) },
+                        new { Id = 9, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 23, DateTimeKind.Local), Description = "Wound Care Tariffs", Name = "Wound Care", UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 6, 4, 23, DateTimeKind.Local) }
                     );
                 });
 
@@ -257,39 +259,21 @@ namespace switchapi.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("CreatedBy")
-                        .IsRequired()
-                        .HasMaxLength(255);
+                    b.Property<string>("CreatedBy");
 
-                    b.Property<DateTime>("CreatedDate")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("DATETIME2")
-                        .HasDefaultValueSql("GetDate()");
+                    b.Property<DateTime>("CreatedDate");
 
-                    b.Property<string>("Description")
-                        .HasMaxLength(255);
+                    b.Property<string>("Description");
 
-                    b.Property<decimal>("Percentage")
-                        .HasConversion(new ValueConverter<decimal, decimal>(v => default(decimal), v => default(decimal), new ConverterMappingHints(precision: 38, scale: 17)))
-                        .HasColumnType("DECIMAL(5,2)");
+                    b.Property<double>("Percentage");
 
-                    b.Property<string>("UpdatedBy")
-                        .IsRequired()
-                        .HasMaxLength(255);
+                    b.Property<string>("UpdatedBy");
 
-                    b.Property<DateTime>("UpdatedDate")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("DATETIME2")
-                        .HasDefaultValueSql("GetDate()");
+                    b.Property<DateTime>("UpdatedDate");
 
                     b.HasKey("Id");
 
                     b.ToTable("Vats");
-
-                    b.HasData(
-                        new { Id = 1, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 969, DateTimeKind.Local), Description = "14% Percent VAT", Percentage = 0.14m, UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 969, DateTimeKind.Local) },
-                        new { Id = 2, CreatedBy = "Administrator", CreatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 969, DateTimeKind.Local), Description = "15% Percent VAT", Percentage = 0.15m, UpdatedBy = "Administrator", UpdatedDate = new DateTime(2018, 10, 6, 10, 13, 5, 969, DateTimeKind.Local) }
-                    );
                 });
 
             modelBuilder.Entity("MedicalBilingMicroservice.Core.Models.Entities.Users.ApplicationRole", b =>

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
+using MedicalBilingBackEnd.Common.Attributes;
 using MedicalBilingBackEnd.Core.Models.Entities.Lookups;
 using MedicalBilingBackEnd.Core.Repositories.Lookups;
 using MedicalBilingBackEnd.Resources.DomainToApiResource.Lookups;
@@ -9,7 +10,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MedicalBilingBackEnd.Controllers.Lookups
 {
-    [Route("api/[controller]")]
+    [Route("api/lookups/[controller]")]
+    [SwaggerGroup("/api/lookups/InvoiceStatuses")]
     public class InvoiceStatusesController : Controller
     {
         private readonly IMapper _mapper;
@@ -53,7 +55,7 @@ namespace MedicalBilingBackEnd.Controllers.Lookups
             }
             catch (Exception ex)
             {
-                return StatusCode(500);
+                return StatusCode(500, ex.Message);
             }
         }
     }

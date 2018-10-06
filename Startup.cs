@@ -2,6 +2,7 @@
 using System.Text;
 using AutoMapper;
 using FluentValidation.AspNetCore;
+using MedicalBilingBackEnd.Common.Extensions;
 using MedicalBilingMicroservic.Core.Models;
 using MedicalBilingMicroservice.Common.Extensions;
 using MedicalBilingMicroservice.Core.Models;
@@ -22,72 +23,85 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.Net.Http.Headers;
 
-namespace MedicalBilingMicroservice {
-    public class Startup {
+namespace MedicalBilingMicroservice
+{
+    public class Startup
+    {
         private const string SecretKey = "iNivDmHLpUA223sqsfhqGbMRdRj1PVkH"; // todo: get this from somewhere secure
-        private readonly SymmetricSecurityKey _signingKey = new SymmetricSecurityKey (Encoding.ASCII.GetBytes (SecretKey));
+        private readonly SymmetricSecurityKey _signingKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(SecretKey));
 
-        public Startup (IConfiguration configuration) {
+        public Startup(IConfiguration configuration)
+        {
             Configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices (IServiceCollection services) {
+        public void ConfigureServices(IServiceCollection services)
+        {
 
-            services.AddDbContext<ApplicationDbContext> (options => options.UseSqlServer (Configuration.GetConnectionString ("Default")));
-            services.ConfigureServices ();
-            var jwtAppSettingOptions = Configuration.GetSection (nameof (JwtIssuerOptions));
-            services.ConfigureJwtServices (jwtAppSettingOptions, this._signingKey);
-            services.Configure<AuthMessageSenderOptions> (Configuration.GetSection (nameof (AuthMessageSenderOptions)));
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Default")));
+            services.ConfigureServices();
+            var jwtAppSettingOptions = Configuration.GetSection(nameof(JwtIssuerOptions));
+            services.ConfigureJwtServices(jwtAppSettingOptions, this._signingKey);
+            services.Configure<AuthMessageSenderOptions>(Configuration.GetSection(nameof(AuthMessageSenderOptions)));
 
-            services.AddAutoMapper ();
-            services.AddOData ();
-            services.AddIdentity<ApplicationUser, ApplicationRole> (
-                    options => {
+            services.AddAutoMapper();
+            services.AddOData();
+            services.AddIdentity<ApplicationUser, ApplicationRole>(
+                    options =>
+                    {
                         options.Stores.MaxLengthForKeys = 128;
                         options.SignIn.RequireConfirmedEmail = true;
                     })
-                .AddEntityFrameworkStores<ApplicationDbContext> ()
-                .AddDefaultUI ()
-                .AddDefaultTokenProviders ();
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultUI()
+                .AddDefaultTokenProviders();
 
-            services.AddCors (options => {
-                options.AddPolicy ("AllowAll",
-                    builder => {
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll",
+                    builder =>
+                    {
                         builder
-                            .AllowAnyOrigin ()
-                            .AllowAnyMethod ()
-                            .AllowAnyHeader ();
+                            .AllowAnyOrigin()
+                            .AllowAnyMethod()
+                            .AllowAnyHeader();
                     });
             });
 
-            services.AddMvc ().SetCompatibilityVersion (CompatibilityVersion.Version_2_1).AddFluentValidation ();
-            services.AddSingleton<IEmailSender, EmailSender> ();
-            services.Configure<AuthMessageSenderOptions> (Configuration);
+            /* services.AddMvc (c =>
+                c.Conventions.Add(new ApiExplorerGroupPerVersionConvention())*/
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1).AddFluentValidation();
+            services.AddSingleton<IEmailSender, EmailSender>();
+            services.Configure<AuthMessageSenderOptions>(Configuration);
 
-            services.ConfigureSwaggerServices ();
-            services.ConfigureValidationServices ();
+            services.ConfigureSwaggerServices();
+            services.ConfigureValidationServices();
 
             // Workaround: https://github.com/OData/WebApi/issues/1177
-            services.AddMvcCore (options => {
-                foreach (var outputFormatter in options.OutputFormatters.OfType<ODataOutputFormatter> ().Where (_ => _.SupportedMediaTypes.Count == 0)) {
-                    outputFormatter.SupportedMediaTypes.Add (new MediaTypeHeaderValue ("application/prs.odatatestxx-odata"));
+            services.AddMvcCore(options =>
+            {
+                foreach (var outputFormatter in options.OutputFormatters.OfType<ODataOutputFormatter>().Where(_ => _.SupportedMediaTypes.Count == 0))
+                {
+                    outputFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("application/prs.odatatestxx-odata"));
                 }
-                foreach (var inputFormatter in options.InputFormatters.OfType<ODataInputFormatter> ().Where (_ => _.SupportedMediaTypes.Count == 0)) {
-                    inputFormatter.SupportedMediaTypes.Add (new MediaTypeHeaderValue ("application/prs.odatatestxx-odata"));
+                foreach (var inputFormatter in options.InputFormatters.OfType<ODataInputFormatter>().Where(_ => _.SupportedMediaTypes.Count == 0))
+                {
+                    inputFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("application/prs.odatatestxx-odata"));
                 }
             });
 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure (IApplicationBuilder app,
+        public void Configure(IApplicationBuilder app,
             IHostingEnvironment env,
             ApplicationDbContext context,
             RoleManager<ApplicationRole> roleManager,
-            UserManager<ApplicationUser> userManager) {
+            UserManager<ApplicationUser> userManager)
+        {
 
             /*if (env.IsDevelopment())
             {
@@ -98,33 +112,35 @@ namespace MedicalBilingMicroservice {
                 app.UseHsts();
             }*/
 
-            app.UseDeveloperExceptionPage ();
+            app.UseDeveloperExceptionPage();
 
-            app.SwaggerUiConfiguration ();
-            app.UseSwaggerUI (c => {
+            app.SwaggerUiConfiguration();
+            app.UseSwaggerUI(c =>
+            {
                 /*c.SwaggerEndpoint ("/swagger/v2/swagger.json", "BulkPayment API V2");
                 c.DocExpansion (DocExpansion.None);*/
-                c.ShowExtensions ();
-                c.EnableFilter ();
-                c.InjectStylesheet (@"/swagger-ui/Swagger-ui-style.css");
+                c.ShowExtensions();
+                c.EnableFilter();
+                c.InjectStylesheet(@"/swagger-ui/Swagger-ui-style.css");
             });
 
             //app.UseHttpsRedirection();
-            app.UseStaticFiles ();
-            app.UseCors ("AllowAll");
+            app.UseStaticFiles();
+            app.UseCors("AllowAll");
 
-            app.UseAuthentication ();
-            app.UseMvc (routes => {
-                routes.Select ().Expand ().Filter ().OrderBy ().MaxTop (null).Count ();
-                var odataBuilder = new ODataConventionModelBuilder (app.ApplicationServices);
-                routes.MapODataServiceRoute ("odata", "odata", odataBuilder.GetEdmModel ());
+            app.UseAuthentication();
+            app.UseMvc(routes =>
+            {
+                routes.Select().Expand().Filter().OrderBy().MaxTop(null).Count();
+                var odataBuilder = new ODataConventionModelBuilder(app.ApplicationServices);
+                routes.MapODataServiceRoute("odata", "odata", odataBuilder.GetEdmModel());
                 /*routes.MapODataServiceRoute ("odata", "api",
                     b => b.AddService (OdataServiceLifetime.Singleton, sp => odataBuilder.GetEdmModel ())
                     .AddService<ODataUriResolver> (OdataServiceLifetime.Singleton, sp => new CaseInsensitiveResolver ()));*/
-                routes.EnableDependencyInjection ();
+                routes.EnableDependencyInjection();
             });
 
-            seedData.Initialize (context, userManager, roleManager).Wait ();
+            seedData.Initialize(context, userManager, roleManager).Wait();
         }
     }
 }

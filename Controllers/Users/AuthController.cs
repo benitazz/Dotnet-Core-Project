@@ -1,5 +1,6 @@
 using System.Security.Claims;
 using System.Threading.Tasks;
+using MedicalBilingBackEnd.Common.Attributes;
 using MedicalBilingMicroservice.Common.Auth;
 using MedicalBilingMicroservice.Common.Helpers;
 using MedicalBilingMicroservice.Core.Models.Auth;
@@ -12,7 +13,8 @@ using Newtonsoft.Json;
 
 namespace MedicalBilingMicroservice.Controllers.Users
 {
-    [Route("api/Auth")]
+    [Route("api/users/Auth")]
+    [SwaggerGroup("/api/users/Auth")]
     public class AuthController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;

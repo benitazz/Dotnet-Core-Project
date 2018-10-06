@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Web;
 using AutoMapper;
+using MedicalBilingBackEnd.Common.Attributes;
 using MedicalBilingMicroservice.Common.Helpers;
 using MedicalBilingMicroservice.Core.Models.Entities.Users;
 using MedicalBilingMicroservice.Core.Repositories;
@@ -19,7 +20,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace MedicalBilingMicroservice.Controllers.Users
 {
 
-    [Route("api/[controller]")]
+    [Route("api/users/[controller]")]
+    [SwaggerGroup("/api/users/Accounts")]
     public class AccountsController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;

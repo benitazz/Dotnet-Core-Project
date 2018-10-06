@@ -1,5 +1,6 @@
 using MedicalBilingBackEnd.Common.Extensions;
 using MedicalBilingBackEnd.Core.Models.Entities.Lookups;
+using MedicalBilingBackEnd.Core.Models.Entities.Tariffs;
 using MedicalBilingMicroservice.Core.Models.Entities.Users;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -20,6 +21,10 @@ namespace MedicalBilingMicroservice.Persistence
 
         public DbSet<FileStatus> FileStatuses { get; set; }
         public DbSet<InvoiceStatus> InvoiceStatuses { get; set; }
+        public DbSet<Vat> Vats { get; set; }
+        public DbSet<Tariff> Tariffs { get; set; }
+        public DbSet<TariffType> TariffTypes { get; set; }
+        public DbSet<TariffUnitCost> TariffUnitCosts { get; set; }
 
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
@@ -29,7 +34,7 @@ namespace MedicalBilingMicroservice.Persistence
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Seed();  
+            modelBuilder.Seed();
         }
     }
 }

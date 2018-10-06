@@ -10,7 +10,7 @@ namespace switch_api.Persistence.Repositories
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
-        private readonly DbContext dbContext;
+        protected readonly DbContext dbContext;
         private readonly DbSet<TEntity> entities;
 
         public Repository(DbContext dbContext)
