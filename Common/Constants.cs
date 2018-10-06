@@ -12,5 +12,18 @@ namespace MedicalBilingBackEnd.Common
         public const string PartiallyPaid = "Partially Paid";
         public const string Overdue = "Overdue";
         public const string Pending = "Pending";
+
+        public const string Chiropractor = "Chiropractor";
+        public const string Radiologist = "Radiologist";
+        public const string Dentist = "Dentist";
+
+        public const string Physiotherapist = "Physiotherapist";
+        public const string PrivateAmbulance = "Private Ambulance";
+        public const string GeneralPractioner = "General Practioner";
+        public const string RenalCare = "Renal Care";
+        public const string SocialWorker = "Social Worker";
+        public const string WoundCare = "Wound Care";
+
+
     }
 }

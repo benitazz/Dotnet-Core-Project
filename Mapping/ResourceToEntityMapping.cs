@@ -1,6 +1,7 @@
 using AutoMapper;
 using MedicalBilingBackEnd.Core.Models.Entities.Lookups;
 using MedicalBilingBackEnd.Core.Models.Entities.Tariffs;
+using MedicalBilingBackEnd.Resources.ApiToDomainResource.Lookups;
 using MedicalBilingBackEnd.Resources.DomainToApiResource.Lookups;
 using MedicalBilingMicroservice.Core.Models.Entities.Users;
 using MedicalBilingMicroservice.Resources.ApiToDomainResource;
@@ -12,7 +13,7 @@ namespace MedicalBilingMicroservice.Mapping {
                 .ForMember (entity => entity.UserName,
                     map => map.MapFrom (resource => resource.Email));
             
-             CreateMap<LookupResource, Lookup> ();
+             CreateMap<SaveLookupResource, TariffType> ();
         }
     }
 }

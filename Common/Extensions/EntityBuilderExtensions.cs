@@ -7,7 +7,7 @@ namespace MedicalBilingBackEnd.Common.Extensions
 {
     public static class EntityBuilderExtensions
     {
-        public static void ConfigureEntity<T>(this EntityTypeBuilder<T> builder) where T: EntityBase
+        public static void ConfigureEntity<T>(this EntityTypeBuilder<T> builder) where T : EntityBase
         {
             builder.Property(t => t.CreatedBy)
                    .IsRequired()
@@ -26,9 +26,13 @@ namespace MedicalBilingBackEnd.Common.Extensions
                    .IsRequired()
                    .HasColumnType("DATETIME2")
                    .HasDefaultValueSql("GetDate()");
+
+            builder.Property(t => t.IsDeleted)
+                   .IsRequired()
+                   .HasDefaultValueSql("0");
         }
 
-        public static void ConfigureLookup<T>(this EntityTypeBuilder<T> builder) where T: Lookup
+        public static void ConfigureLookup<T>(this EntityTypeBuilder<T> builder) where T : Lookup
         {
             ConfigureEntity(builder);
 
@@ -38,8 +42,16 @@ namespace MedicalBilingBackEnd.Common.Extensions
                    .IsRequired()
                    .HasMaxLength(255);
 
+            builder.Property(t => t.NormalizedName)
+                   .IsRequired()
+                   .HasMaxLength(255);
+
             builder.Property(t => t.Description)
                    .HasMaxLength(255);
+
+            builder.Property(t => t.NormalizedDescription)
+                  .IsRequired()
+                  .HasMaxLength(255);
         }
     }
 }

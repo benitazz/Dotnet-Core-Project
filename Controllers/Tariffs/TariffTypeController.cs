@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
 using MedicalBilingBackEnd.Common.Attributes;
+using MedicalBilingBackEnd.Common.Extensions;
 using MedicalBilingBackEnd.Core.Models.Entities.Tariffs;
 using MedicalBilingBackEnd.Core.Repositories.Tariffs;
 using MedicalBilingBackEnd.Resources.ApiToDomainResource.Lookups;
 using MedicalBilingBackEnd.Resources.DomainToApiResource.Lookups;
 using MedicalBilingMicroservice.Core;
+using Microsoft.AspNet.OData;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -39,6 +41,7 @@ namespace MedicalBilingBackEnd.Controllers.Lookups
         /// <returns></returns>
         ///  <include file='../../wwwroot/comments.xml' path='XmlSummary/MyMembers[@name="getComment"]/*' />
         [HttpGet("{id}")]
+        [EnableQuery]
         [ProducesResponseType(typeof(LookupResource), StatusCodes.Status200OK)]
         public async Task<IActionResult> Get(int id)
         {
@@ -66,6 +69,7 @@ namespace MedicalBilingBackEnd.Controllers.Lookups
         /// <returns></returns>
         ///  <include file='../../wwwroot/comments.xml' path='XmlSummary/MyMembers[@name="getAllComment"]/*' />
         [HttpGet]
+        [EnableQuery]
         [ProducesResponseType(typeof(List<LookupResource>), StatusCodes.Status200OK)]
         public async Task<IActionResult> GetAll()
         {
@@ -110,7 +114,7 @@ namespace MedicalBilingBackEnd.Controllers.Lookups
                 if (databaseKiosk != null)
                 {
                     return StatusCode(StatusCodes.Status409Conflict,
-                     $"The traffic type with the same already exists");
+                     $"The traffic type with the same name already exists");
                 }
 
                 var tariffType = this._mapper.Map<SaveLookupResource, TariffType>(saveLookupResource);
@@ -118,18 +122,20 @@ namespace MedicalBilingBackEnd.Controllers.Lookups
                 tariffType.UpdatedDate = DateTime.Now;
                 tariffType.UpdatedBy = "Admin";
                 tariffType.CreatedBy = "Admin";
-                // tariffType.IsActive = true;
+                tariffType.NormalizedName = tariffType.Name.ToUpperCaseRemoveWhiteSpace();
+                tariffType.NormalizedDescription = tariffType.Description.ToUpperCaseRemoveWhiteSpace();
                 this._repository.Add(tariffType);
                 await this._unitOfWork.CompletedAsync();
 
                 // tariffType = await _repository.Get(tariffType.Id);
                 var results = this._mapper.Map<TariffType, LookupResource>(tariffType);
 
-                return Ok(results);
+                return Created(tariffType.Id.ToString(), results);
+                //return StatusCode(StatusCodes.Status201Created, results);
             }
             catch (System.Exception ex)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.ToString());
             }
         }
 
@@ -158,14 +164,50 @@ namespace MedicalBilingBackEnd.Controllers.Lookups
                     return NotFound();
                 }
 
+                var otherTariffType = await _repository.GetTariffTypeByName(saveLookupResource.Name, id);
+                if (otherTariffType != null)
+                {
+                    return Conflict("The item with that name already exist.");
+                }
+
                 tariffType = this._mapper.Map<SaveLookupResource, TariffType>(saveLookupResource, tariffType);
                 // tariffType.UpdatedBy = "";
-                //kioskType.IsActive = true;
                 tariffType.UpdatedDate = DateTime.Now;
                 await this._unitOfWork.CompletedAsync();
 
                 var results = this._mapper.Map<TariffType, LookupResource>(tariffType);
                 return Ok(results);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// Deletes the tariff type by Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        ///  <include file='../../wwwroot/comments.xml' path='XmlSummary/MyMembers[@name="deleteComment"]/*' />
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            try
+            {
+                var tariffType = await this._repository.Get(id);
+
+                if (tariffType == null)
+                {
+                    return NotFound();
+                }
+
+                this._repository.Remove(tariffType);
+
+                /*tariffType.IsDeleted = true;
+                tariffType.UpdatedDate = DateTime.Now;*/
+                await this._unitOfWork.CompletedAsync();
+                return Ok(id);
             }
             catch (Exception ex)
             {
