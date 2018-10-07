@@ -1,4 +1,6 @@
 using FluentValidation;
+using MedicalBilingBackEnd.Resources.ApiToDomainResource.Lookups;
+using MedicalBilingBackEnd.Resources.Validations.Lookups;
 using MedicalBilingMicroservice.Resources.ApiToDomainResource;
 using MedicalBilingMicroservice.Resources.Validations;
 using Microsoft.Extensions.DependencyInjection;
@@ -9,6 +11,7 @@ namespace MedicalBilingMicroservice.Common.Extensions {
             services.AddTransient<IValidator<CredentialsResource>, CredentialsResourceValidator> ();
             services.AddTransient<IValidator<RegistrationResource>, RegistratinResourceValidator> ();
             services.AddTransient<IValidator<UserInfoResource>, UserInfoResourceValidation> ();
+            services.AddTransient<IValidator<SaveLookupResource>, SaveLookupValidator>();
             return services;
         }
     }

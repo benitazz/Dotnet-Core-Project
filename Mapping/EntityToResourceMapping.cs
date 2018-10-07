@@ -1,5 +1,7 @@
 using System.Linq;
 using AutoMapper;
+using MedicalBilingBackEnd.Core.Models.Entities.Tariffs;
+using MedicalBilingBackEnd.Resources.DomainToApiResource.Lookups;
 using MedicalBilingMicroservice.Core.Models.Entities.Users;
 using MedicalBilingMicroservice.Resources.DomainToApiResource;
 
@@ -22,6 +24,8 @@ namespace MedicalBilingMicroservice.Mapping
                                Description = (userRole != null && userRole.Role != null) ? userRole.Role.Description : null
                            }
                        )));
+
+            CreateMap<Vat, VatTypeResource>();
 
             /*CreateMap<ApplicationUser, ApplicationUserResource> ()
                 .ForMember (userResource => userResource.Roles,

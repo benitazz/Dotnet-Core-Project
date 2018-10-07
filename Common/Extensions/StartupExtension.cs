@@ -19,9 +19,12 @@ namespace MedicalBilingMicroservice.Common.Extensions
             services.AddSingleton<IJwtFactory, JwtFactory>();
             services.AddScoped<IInvoiceStatusRepository, InvoiceStatusRepository>();
             services.AddScoped<ITariffTypeRepository, TariffTypeRepository>();
+            services.AddScoped<ITariffRepository, TariffRepository>();
+            services.AddScoped<ITariffUnitCostRepository, TariffUnitCostRepository>();
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IVatRepository, VatRepository>();
 
             return services;
         }
