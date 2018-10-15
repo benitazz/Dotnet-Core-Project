@@ -1,3 +1,4 @@
+using MedicalBilingBackEnd.Common.Helpers.FileHelpers;
 using MedicalBilingBackEnd.Core.Repositories.Lookups;
 using MedicalBilingBackEnd.Core.Repositories.Tariffs;
 using MedicalBilingBackEnd.Persistence.Repositories.Lookups;
@@ -25,6 +26,8 @@ namespace MedicalBilingMicroservice.Common.Extensions
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IVatRepository, VatRepository>();
+
+            services.AddSingleton<IFileHelper, FileHelper>();
 
             return services;
         }

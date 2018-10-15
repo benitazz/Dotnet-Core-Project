@@ -1,15 +1,21 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using MedicalBilingBackEnd.Common.Attributes;
+using MedicalBilingBackEnd.Common.Helpers.FileHelpers;
 using MedicalBilingBackEnd.Core.Models.Entities.Tariffs;
 using MedicalBilingBackEnd.Core.Repositories.Tariffs;
+using MedicalBilingBackEnd.Mapping.CsvMapping;
+using MedicalBilingBackEnd.Resources.ApiToDomainResource.FileUploads;
 using MedicalBilingBackEnd.Resources.ApiToDomainResource.Tariffs;
 using MedicalBilingMicroservice.Core;
 using Microsoft.AspNet.OData;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using TinyCsvParser;
+using TinyCsvParser.Tokenizer;
 
 namespace MedicalBilingBackEnd.Controllers.Tariffs
 {
@@ -20,15 +26,18 @@ namespace MedicalBilingBackEnd.Controllers.Tariffs
         private readonly IMapper _mapper;
         private readonly ITariffRepository _repository;
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IFileHelper _fileHelper;
 
         public TariffController(
             IMapper mapper,
             ITariffRepository repository,
-            IUnitOfWork unitOfWork)
+            IUnitOfWork unitOfWork,
+            IFileHelper fileHelper)
         {
             this._mapper = mapper;
             this._repository = repository;
             this._unitOfWork = unitOfWork;
+            this._fileHelper = fileHelper;
         }
 
         /// <summary>
@@ -89,5 +98,37 @@ namespace MedicalBilingBackEnd.Controllers.Tariffs
             }
         }
 
+        /// <summary>
+        /// Upload tariff file
+        /// </summary>
+        /// <param name="tariffFileResource"></param>
+        /// <returns></returns>
+        /// <include file='../../wwwroot/comments.xml' path='XmlSummary/MyMembers[@name="createComment"]/*' />
+        [HttpPost]
+        [ProducesResponseType(typeof(TariffFileResource), StatusCodes.Status201Created)]
+        public async Task<IActionResult> Post([FromBody]TariffFileResource tariffFileResource)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var decodedFileData = this._fileHelper.DecodeBase64String(tariffFileResource.Base64EncodedData);
+            var fileHash = this._fileHelper.CalculateCrypto(decodedFileData);
+
+            /*var stringBuilder = new StringBuilder()
+                .AppendLine("FirstName,LastName")
+                .Append(decodedFileData);*/
+
+            var csvParserOptions = new CsvParserOptions(false, new QuotedStringTokenizer(','));
+            var csvReaderOptions = new CsvReaderOptions(new[] { "\n" });
+            var csvMapper = new TariffMapping();
+            var csvParser = new CsvParser<Tariff>(csvParserOptions, csvMapper);
+            var result = csvParser
+                  .ReadFromString(csvReaderOptions, decodedFileData).ToList();
+
+            var tt = result.All(x => x.IsValid);
+            return Ok();
+        }
     }
 }

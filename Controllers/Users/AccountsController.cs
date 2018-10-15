@@ -43,6 +43,7 @@ namespace MedicalBilingMicroservice.Controllers.Users
 
         [HttpPost]
         [AllowAnonymous]
+        [Route("Register", Name = "Register")]
         //[ApiVersionNeutral]
         //[ValidateAntiForgeryToken]
         public async Task<IActionResult> Post([FromBody] RegistrationResource registrationResource)
