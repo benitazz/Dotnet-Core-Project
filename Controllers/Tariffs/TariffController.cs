@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using CsvHelper;
 using MedicalBilingBackEnd.Common.Attributes;
 using MedicalBilingBackEnd.Common.Helpers.FileHelpers;
 using MedicalBilingBackEnd.Core.Models.Entities.Tariffs;
@@ -116,19 +118,29 @@ namespace MedicalBilingBackEnd.Controllers.Tariffs
             var decodedFileData = this._fileHelper.DecodeBase64String(tariffFileResource.Base64EncodedData);
             var fileHash = this._fileHelper.CalculateCrypto(decodedFileData);
 
-            /*var stringBuilder = new StringBuilder()
-                .AppendLine("FirstName,LastName")
-                .Append(decodedFileData);*/
+            try
+            {
+                using (TextReader textReader = new StringReader(decodedFileData))
+                {
+                    textReader.ReadLine();
+                    using (var csv = new CsvReader(textReader))
+                    {
 
-            var csvParserOptions = new CsvParserOptions(false, new QuotedStringTokenizer(','));
-            var csvReaderOptions = new CsvReaderOptions(new[] { "\n" });
-            var csvMapper = new TariffMapping();
-            var csvParser = new CsvParser<Tariff>(csvParserOptions, csvMapper);
-            var result = csvParser
-                  .ReadFromString(csvReaderOptions, decodedFileData).ToList();
+                        csv.Configuration.HasHeaderRecord = false;
+                        var map = new TariffMapping(tariffFileResource);
+                        csv.Configuration.RegisterClassMap(map);
+                        var tariffs = csv.GetRecords<Tariff>().ToList();
+                        this._repository.AddRange(tariffs);
+                        await this._unitOfWork.CompletedAsync();
+                    }
+                }
 
-            var tt = result.All(x => x.IsValid);
-            return Ok();
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
         }
     }
 }

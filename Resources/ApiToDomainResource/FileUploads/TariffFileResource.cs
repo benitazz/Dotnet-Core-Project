@@ -4,8 +4,9 @@ namespace MedicalBilingBackEnd.Resources.ApiToDomainResource.FileUploads
 {
     public class TariffFileResource: FileUploadResource
     {
-        public DateTime From { get; set; }
-
+        public DateTime ValidFrom { get; set; }
+        public DateTime ValidTo { get; set; }
         public int VatId { get; set; }
+        public int TariffTypeId { get; set; }
     }
 }

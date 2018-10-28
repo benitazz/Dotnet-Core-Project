@@ -9,6 +9,7 @@ using MedicalBilingMicroservice.Core.Repositories;
 using MedicalBilingMicroservice.Persistence;
 using MedicalBilingMicroservice.Persistence.Repositories;
 using Microsoft.Extensions.DependencyInjection;
+using MedicalBilingBackEnd.Common.Helpers;
 
 namespace MedicalBilingMicroservice.Common.Extensions
 {
@@ -28,6 +29,7 @@ namespace MedicalBilingMicroservice.Common.Extensions
             services.AddScoped<IVatRepository, VatRepository>();
 
             services.AddSingleton<IFileHelper, FileHelper>();
+            services.AddTransient<UserResolverService>();
 
             return services;
         }
