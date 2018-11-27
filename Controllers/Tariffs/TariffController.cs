@@ -125,7 +125,6 @@ namespace MedicalBilingBackEnd.Controllers.Tariffs
                     textReader.ReadLine();
                     using (var csv = new CsvReader(textReader))
                     {
-
                         csv.Configuration.HasHeaderRecord = false;
                         var map = new TariffMapping(tariffFileResource);
                         csv.Configuration.RegisterClassMap(map);

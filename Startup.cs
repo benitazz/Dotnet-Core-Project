@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using AutoMapper;
 using FluentValidation.AspNetCore;
@@ -12,6 +13,7 @@ using MedicalBilingMicroservice.Persistence;
 using Microsoft.AspNet.OData.Builder;
 using Microsoft.AspNet.OData.Extensions;
 using Microsoft.AspNet.OData.Formatter;
+using Microsoft.AspNet.OData.Routing.Conventions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -22,6 +24,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.Net.Http.Headers;
+using Microsoft.OData;
+using Microsoft.OData.UriParser;
 
 namespace MedicalBilingMicroservice
 {
@@ -129,15 +133,22 @@ namespace MedicalBilingMicroservice
             app.UseCors("AllowAll");
 
             app.UseAuthentication();
-            app.UseMvc(routes =>
+            app.UseMvc(configuration =>
             {
-                routes.Select().Expand().Filter().OrderBy().MaxTop(null).Count();
+                configuration.Select().Expand().Filter().OrderBy().MaxTop(null).Count();
                 var odataBuilder = new ODataConventionModelBuilder(app.ApplicationServices);
-                routes.MapODataServiceRoute("odata", "odata", odataBuilder.GetEdmModel());
+                configuration.MapODataServiceRoute("odata", "odata", odataBuilder.GetEdmModel());
                 /*routes.MapODataServiceRoute ("odata", "api",
-                    b => b.AddService (OdataServiceLifetime.Singleton, sp => odataBuilder.GetEdmModel ())
+                    builder => b.AddService (OdataServiceLifetime.Singleton, sp => odataBuilder.GetEdmModel ())
                     .AddService<ODataUriResolver> (OdataServiceLifetime.Singleton, sp => new CaseInsensitiveResolver ()));*/
-                routes.EnableDependencyInjection();
+
+                /*configuration.MapODataServiceRoute("odata", "odata",
+                    builder =>
+                        builder.AddService(Microsoft.OData.ServiceLifetime.Singleton, sp => odataBuilder.GetEdmModel())
+                            .AddService<IEnumerable<IODataRoutingConvention>>(Microsoft.OData.ServiceLifetime.Singleton, sp =>
+                                ODataRoutingConventions.CreateDefaultWithAttributeRouting("odata", configuration))
+                            .AddService<ODataUriResolver>(Microsoft.OData.ServiceLifetime.Singleton, sp => new CaseInsensitiveResolver()));*/
+                configuration.EnableDependencyInjection();
             });
 
             seedData.Initialize(context, userManager, roleManager).Wait();
