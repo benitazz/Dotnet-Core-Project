@@ -18,7 +18,7 @@ namespace MedicalBilingBackEnd.Controllers.Lookups
         private readonly IInvoiceStatusRepository _invoiceStatusRepository;
 
         public InvoiceStatusesController(IMapper mapper,
-            IInvoiceStatusRepository invoiceStatusRepository)
+                                         IInvoiceStatusRepository invoiceStatusRepository)
         {
             this._mapper = mapper;
             this._invoiceStatusRepository = invoiceStatusRepository;

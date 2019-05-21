@@ -23,7 +23,8 @@ namespace MedicalBilingMicroservice.Controllers.Users
         private readonly RoleManager<ApplicationRole> _roleManager;
         private readonly IMapper _mapper;
 
-        public RolesController(RoleManager<ApplicationRole> UserManager, IMapper mapper)
+        public RolesController(RoleManager<ApplicationRole> UserManager, 
+                               IMapper mapper)
         {
             this._roleManager = UserManager;
             this._mapper = mapper;

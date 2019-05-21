@@ -15,7 +15,8 @@ namespace MedicalBilingMicroservice.Common.Auth {
             ThrowIfInvalidOptions (_jwtOptions);
         }
 
-        public async Task<string> GenerateEncodedToken (string userName, ClaimsIdentity identity) {
+        public async Task<string> GenerateEncodedToken (string userName, 
+                                                        ClaimsIdentity identity) {
             var claims = new [] {
                 new Claim (JwtRegisteredClaimNames.Sub, userName),
                 new Claim (JwtRegisteredClaimNames.Jti, await _jwtOptions.JtiGenerator ()),

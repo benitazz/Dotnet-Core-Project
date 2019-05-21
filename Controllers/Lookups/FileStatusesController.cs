@@ -18,7 +18,7 @@ namespace MedicalBilingBackEnd.Controllers.Lookups
         private readonly IFileStatusRepository _fileStatusRepository;
 
         public FileStatusesController(IMapper mapper,
-            IFileStatusRepository fileStatusRepository)
+                                      IFileStatusRepository fileStatusRepository)
         {
             this._mapper = mapper;
             this._fileStatusRepository = fileStatusRepository;

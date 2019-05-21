@@ -1,0 +1,33 @@
+@{
+    Layout = "_Layout.cshtml";
+    var registration = ViewData.Model as MedicalBilingMicroservice.Core.Models.Views.Registration;    
+ }
+
+<div>
+    <p>Hi <b>@registration.Email</b>,</p>
+    <!-- 
+    <p>You have been sent this email because you created an account on our website.<br />
+    Please click on <a href =@registration.CallbackUrl>this link</a> to confirm your email address is correct.</p> -->
+
+    <p>Let's confirm your email address:<br />
+    By clicking on the following link, you are confirming your email address.
+    </p>
+    
+    <div class="row">
+        <div class="col-sm-8 col-md-6 col-lg-8">
+            <div class="text-center">
+                <a class="btn btn-primary" href =@registration.CallbackUrl>Confirm Email Address</a>
+            </div>
+        </div>
+    </div>
+  
+    <br />
+    <p>
+    Thanks<br />
+    Subelo System Administrator
+    </p>
+</div>
+
+
+
+

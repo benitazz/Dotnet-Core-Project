@@ -30,11 +30,10 @@ namespace MedicalBilingBackEnd.Controllers.Tariffs
         private readonly IUnitOfWork _unitOfWork;
         private readonly IFileHelper _fileHelper;
 
-        public TariffController(
-            IMapper mapper,
-            ITariffRepository repository,
-            IUnitOfWork unitOfWork,
-            IFileHelper fileHelper)
+        public TariffController(IMapper mapper,
+                                ITariffRepository repository,
+                                IUnitOfWork unitOfWork,
+                                IFileHelper fileHelper)
         {
             this._mapper = mapper;
             this._repository = repository;

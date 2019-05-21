@@ -21,10 +21,9 @@ namespace MedicalBilingBackEnd.Controllers.Tariffs
         private readonly ITariffUnitCostRepository _repository;
         private readonly IUnitOfWork _unitOfWork;
 
-        public TariffUnitCostController(
-            IMapper mapper,
-            ITariffUnitCostRepository repository,
-            IUnitOfWork unitOfWork)
+        public TariffUnitCostController(IMapper mapper,
+                                        ITariffUnitCostRepository repository,
+                                        IUnitOfWork unitOfWork)
         {
             this._mapper = mapper;
             this._repository = repository;

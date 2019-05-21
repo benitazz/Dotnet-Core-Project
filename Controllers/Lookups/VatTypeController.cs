@@ -19,9 +19,8 @@ namespace MedicalBilingBackEnd.Controllers.Lookups
         private readonly IMapper _mapper;
         private readonly IVatRepository _repository;
 
-        public VatTypeController(
-            IMapper mapper,
-            IVatRepository repository)
+        public VatTypeController(IMapper mapper,
+                                 IVatRepository repository)
         {
             this._mapper = mapper;
             this._repository = repository;

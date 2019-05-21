@@ -24,10 +24,9 @@ namespace MedicalBilingBackEnd.Controllers.Lookups
         private readonly ITariffTypeRepository _repository;
         private readonly IUnitOfWork _unitOfWork;
 
-        public TariffTypeController(
-            IMapper mapper,
-            ITariffTypeRepository repository,
-            IUnitOfWork unitOfWork)
+        public TariffTypeController(IMapper mapper,
+                                    ITariffTypeRepository repository,
+                                    IUnitOfWork unitOfWork)
         {
             this._mapper = mapper;
             this._repository = repository;

@@ -21,10 +21,9 @@ namespace MedicalBilingMicroservice.Controllers.Users
         private readonly IJwtFactory _jwtFactory;
         private readonly IOptions<JwtIssuerOptions> _jwtOptions;
 
-        public AuthController(
-            UserManager<ApplicationUser> userManager,
-            IJwtFactory jwtFactory,
-            IOptions<JwtIssuerOptions> jwtOptions)
+        public AuthController( UserManager<ApplicationUser> userManager,
+                               IJwtFactory jwtFactory,
+                               IOptions<JwtIssuerOptions> jwtOptions)
         {
             this._userManager = userManager;
             this._jwtFactory = jwtFactory;
