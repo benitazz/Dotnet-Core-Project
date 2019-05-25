@@ -8,8 +8,12 @@ using MedicalBilingMicroservice.Common.Auth;
 using MedicalBilingMicroservice.Common.Helpers.RenderViews;
 using MedicalBilingMicroservice.Core;
 using MedicalBilingMicroservice.Core.Repositories;
+using MedicalBilingMicroservice.Core.Repositories.Doctors;
+using MedicalBilingMicroservice.Core.Repositories.Tariffs;
 using MedicalBilingMicroservice.Persistence;
 using MedicalBilingMicroservice.Persistence.Repositories;
+using MedicalBilingMicroservice.Persistence.Repositories.Doctors;
+using MedicalBilingMicroservice.Persistence.Repositories.Tariffs;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace MedicalBilingMicroservice.Common.Extensions {
@@ -17,7 +21,11 @@ namespace MedicalBilingMicroservice.Common.Extensions {
         public static IServiceCollection ConfigureServices (this IServiceCollection services) {
             services.AddScoped<IFileStatusRepository, FileStatusRepository> ();
             services.AddSingleton<IJwtFactory, JwtFactory> ();
+
             services.AddScoped<IInvoiceStatusRepository, InvoiceStatusRepository> ();
+            services.AddScoped<IMedicalItemRepository, MedicalItemRepository> ();
+            services.AddScoped<IPublicationRepository, PublicationRepository> ();
+            services.AddScoped<IPractionerRepository, PractionerRepository> ();
             services.AddScoped<ITariffTypeRepository, TariffTypeRepository> ();
             services.AddScoped<ITariffRepository, TariffRepository> ();
             services.AddScoped<ITariffUnitCostRepository, TariffUnitCostRepository> ();

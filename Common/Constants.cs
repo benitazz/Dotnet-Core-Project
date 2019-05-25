@@ -1,7 +1,5 @@
-namespace MedicalBilingBackEnd.Common
-{
-    public class Constants
-    {
+namespace MedicalBilingBackEnd.Common {
+    public class Constants {
         public const string Administrator = "Administrator";
 
         public const string Uploaded = "Uploaded";
@@ -23,7 +21,9 @@ namespace MedicalBilingBackEnd.Common
         public const string RenalCare = "Renal Care";
         public const string SocialWorker = "Social Worker";
         public const string WoundCare = "Wound Care";
-
-
+        public const string DateTime2Type = "DATETIME2";
+        public const string DefaultSqlDate = "GetDate()";
+        public const string MoneyFormat = "DECIMAL (19, 4)";
+        public const string PercentageFormat = "DECIMAL (5, 2)";
     }
 }

@@ -19,22 +19,20 @@ using Microsoft.AspNetCore.Mvc;
 using TinyCsvParser;
 using TinyCsvParser.Tokenizer;
 
-namespace MedicalBilingBackEnd.Controllers.Tariffs
-{
-    [Route("api/tariffs/[controller]")]
-    [SwaggerGroup("/api/tariffs/Tariffs")]
-    public class TariffController : Controller
-    {
+namespace MedicalBilingBackEnd.Controllers.Tariffs {
+    [Route ("api/tariffs/[controller]")]
+    [SwaggerGroup ("/api/tariffs/Tariffs")]
+    [ApiExplorerSettings (GroupName = "Values")]
+    public class TariffController : Controller {
         private readonly IMapper _mapper;
         private readonly ITariffRepository _repository;
         private readonly IUnitOfWork _unitOfWork;
         private readonly IFileHelper _fileHelper;
 
-        public TariffController(IMapper mapper,
-                                ITariffRepository repository,
-                                IUnitOfWork unitOfWork,
-                                IFileHelper fileHelper)
-        {
+        public TariffController (IMapper mapper,
+            ITariffRepository repository,
+            IUnitOfWork unitOfWork,
+            IFileHelper fileHelper) {
             this._mapper = mapper;
             this._repository = repository;
             this._unitOfWork = unitOfWork;
@@ -47,26 +45,21 @@ namespace MedicalBilingBackEnd.Controllers.Tariffs
         /// <param name="id"></param>
         /// <returns></returns>
         ///  <include file='../../wwwroot/comments.xml' path='XmlSummary/MyMembers[@name="getComment"]/*' />
-        [HttpGet("{id}")]
+        [HttpGet ("{id}")]
         [EnableQuery]
-        [ProducesResponseType(typeof(TariffResource), StatusCodes.Status200OK)]
-        public async Task<IActionResult> Get(int id)
-        {
-            try
-            {
-                var tariff = await this._repository.Get(id);
+        [ProducesResponseType (typeof (TariffResource), StatusCodes.Status200OK)]
+        public async Task<IActionResult> Get (int id) {
+            try {
+                var tariff = await this._repository.Get (id);
 
-                if (tariff == null)
-                {
-                    return NotFound();
+                if (tariff == null) {
+                    return NotFound ();
                 }
 
-                var mappedResource = this._mapper.Map<Tariff, TariffResource>(tariff);
-                return Ok(mappedResource);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, ex);
+                var mappedResource = this._mapper.Map<Tariff, TariffResource> (tariff);
+                return Ok (mappedResource);
+            } catch (Exception ex) {
+                return StatusCode (StatusCodes.Status500InternalServerError, ex);
             }
         }
 
@@ -77,25 +70,20 @@ namespace MedicalBilingBackEnd.Controllers.Tariffs
         ///  <include file='../../wwwroot/comments.xml' path='XmlSummary/MyMembers[@name="getAllComment"]/*' />
         [HttpGet]
         [EnableQuery]
-        [ProducesResponseType(typeof(List<TariffResource>), StatusCodes.Status200OK)]
-        public async Task<IActionResult> GetAll()
-        {
-            try
-            {
-                var tariffs = await this._repository.GetAll();
+        [ProducesResponseType (typeof (List<TariffResource>), StatusCodes.Status200OK)]
+        public async Task<IActionResult> GetAll () {
+            try {
+                var tariffs = await this._repository.GetAll ();
 
-                if (tariffs == null)
-                {
+                if (tariffs == null) {
                     // return NotFound();
-                    return Ok(new List<TariffResource>());
+                    return Ok (new List<TariffResource> ());
                 }
 
-                var mappedResource = this._mapper.Map<List<Tariff>, List<TariffResource>>(tariffs);
-                return Ok(mappedResource);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+                var mappedResource = this._mapper.Map<List<Tariff>, List<TariffResource>> (tariffs);
+                return Ok (mappedResource);
+            } catch (Exception ex) {
+                return StatusCode (StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
 
@@ -106,38 +94,31 @@ namespace MedicalBilingBackEnd.Controllers.Tariffs
         /// <returns></returns>
         /// <include file='../../wwwroot/comments.xml' path='XmlSummary/MyMembers[@name="createComment"]/*' />
         [HttpPost]
-        [ProducesResponseType(typeof(TariffFileResource), StatusCodes.Status201Created)]
-        public async Task<IActionResult> Post([FromBody]TariffFileResource tariffFileResource)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
+        [ProducesResponseType (typeof (TariffFileResource), StatusCodes.Status201Created)]
+        public async Task<IActionResult> Post ([FromBody] TariffFileResource tariffFileResource) {
+            if (!ModelState.IsValid) {
+                return BadRequest (ModelState);
             }
 
-            var decodedFileData = this._fileHelper.DecodeBase64String(tariffFileResource.Base64EncodedData);
-            var fileHash = this._fileHelper.CalculateCrypto(decodedFileData);
+            var decodedFileData = this._fileHelper.DecodeBase64String (tariffFileResource.Base64EncodedData);
+            var fileHash = this._fileHelper.CalculateCrypto (decodedFileData);
 
-            try
-            {
-                using (TextReader textReader = new StringReader(decodedFileData))
-                {
-                    textReader.ReadLine();
-                    using (var csv = new CsvReader(textReader))
-                    {
+            try {
+                using (TextReader textReader = new StringReader (decodedFileData)) {
+                    textReader.ReadLine ();
+                    using (var csv = new CsvReader (textReader)) {
                         csv.Configuration.HasHeaderRecord = false;
-                        var map = new TariffMapping(tariffFileResource);
-                        csv.Configuration.RegisterClassMap(map);
-                        var tariffs = csv.GetRecords<Tariff>().ToList();
-                        this._repository.AddRange(tariffs);
-                        await this._unitOfWork.CompletedAsync();
+                        var map = new TariffMapping (tariffFileResource);
+                        csv.Configuration.RegisterClassMap (map);
+                        var tariffs = csv.GetRecords<Tariff> ().ToList ();
+                        this._repository.AddRange (tariffs);
+                        await this._unitOfWork.CompletedAsync ();
                     }
                 }
 
-                return Ok();
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+                return Ok ();
+            } catch (Exception ex) {
+                return StatusCode (StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
     }
