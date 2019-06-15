@@ -1,12 +1,11 @@
 using MedicalBilingMicroservice.Core.Models.Entities.Tariffs;
 using MedicalBilingMicroservice.Core.Repositories.Tariffs;
-using Microsoft.EntityFrameworkCore;
 using switch_api.Persistence.Repositories;
 
 namespace MedicalBilingMicroservice.Persistence.Repositories.Tariffs {
-    public class MedicalItemRepository : Repository<MedicalItem>, IMedicalItemRepository
+    public class MedicalItemCodeRepository : Repository<MedicalItemCode>, IMedicalItemCodeRepository
     {
-        public MedicalItemRepository(ApplicationDbContext dbContext) : base(dbContext)
+        public MedicalItemCodeRepository(ApplicationDbContext dbContext) : base(dbContext)
         {
         }
     }

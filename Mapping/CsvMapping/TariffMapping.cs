@@ -14,29 +14,29 @@ namespace MedicalBilingBackEnd.Mapping.CsvMapping
         public
         TariffMapping(TariffFileResource tariffFileResource)
         {
-            Map(m => m.Code);
-            Map(m => m.TariffTypeId).ConvertUsing(row => tariffFileResource.TariffTypeId);
+            /*Map(m => m.Code);
+            Map(m => m.TariffTypeId).ConvertUsing(row => tariffFileResource.TariffTypeId);*/
             Map(m => m.CreatedDate).ConvertUsing(row => DateTime.Now);
             Map(m => m.UpdatedDate).ConvertUsing(row => DateTime.Now);
             Map(m => m.CreatedBy).ConvertUsing((IReaderRow row) => "Administrator");
             Map(m => m.UpdatedBy).ConvertUsing((IReaderRow row) => "Administrator");
-            Map(m => m.TariffUnitCostS).ConvertUsing(row =>
+           /*Map(m => m.TariffUnitCostS).ConvertUsing(row =>
          {
              var list = new List<TariffUnitCost>();
              list.Add(new TariffUnitCost
              {
-                 VatId = tariffFileResource.VatId,
+                 // VatId = tariffFileResource.VatId,
                  ValidFrom = tariffFileResource.ValidFrom,
                  ValidTo = tariffFileResource.ValidTo,
                  ActualAmount = GetActualAmount(row.GetField(1), tariffFileResource.VatId),
-                 VatAmount = double.Parse(row.GetField(1)),
+                 //VatAmount = double.Parse(row.GetField(1)),
                  CreatedDate = DateTime.Now,
                  UpdatedDate = DateTime.Now,
                  CreatedBy = "Administrator",
                  UpdatedBy = "Administrator"
              });
              return list;
-         });
+         });*/
             /*/MapProperty(0, x => x.Code);
             MapProperty(1, x => x.TariffTypeId);
             MapProperty(2, x => x.TariffUnitCostS);*/

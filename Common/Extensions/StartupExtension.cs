@@ -23,7 +23,8 @@ namespace MedicalBilingMicroservice.Common.Extensions {
             services.AddSingleton<IJwtFactory, JwtFactory> ();
 
             services.AddScoped<IInvoiceStatusRepository, InvoiceStatusRepository> ();
-            services.AddScoped<IMedicalItemRepository, MedicalItemRepository> ();
+            services.AddScoped<IMedicalItemCodeRepository, MedicalItemCodeRepository> ();
+            services.AddScoped<IMedicalItemTypeRepository, MedicalItemTypeRepository>();
             services.AddScoped<IPublicationRepository, PublicationRepository> ();
             services.AddScoped<IPractionerRepository, PractionerRepository> ();
             services.AddScoped<ITariffTypeRepository, TariffTypeRepository> ();

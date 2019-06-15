@@ -9,7 +9,7 @@ namespace MedicalBilingBackEnd.Common.Extensions {
     public static class ModelBuilderExtensions {
         public static void Seed (this ModelBuilder modelBuilder) {
             // MSP's
-            modelBuilder.ApplyConfiguration (new PractionerConfiguration());
+            modelBuilder.ApplyConfiguration (new PractionerConfiguration ());
 
             // Users
             modelBuilder.ApplyConfiguration (new ApplicationRoleConfiguration ());
@@ -23,7 +23,8 @@ namespace MedicalBilingBackEnd.Common.Extensions {
             modelBuilder.ApplyConfiguration (new VatConfiguration ());
 
             //Tariffs
-            modelBuilder.ApplyConfiguration (new MedicalItemConfiguration ());
+            modelBuilder.ApplyConfiguration (new MedicalItemCodeConfiguration ());
+            modelBuilder.ApplyConfiguration (new MedicalItemTypeConfiguration ());
             modelBuilder.ApplyConfiguration (new PublicationConfiguration ());
             modelBuilder.ApplyConfiguration (new TariffConfiguration ());
             modelBuilder.ApplyConfiguration (new TariffUnitCostConfiguration ());

@@ -8,11 +8,8 @@ namespace MedicalBilingBackEnd.Core.Models.Entities.Tariffs
         public DateTime ValidFrom { get; set; }
         public DateTime ValidTo { get; set; }
         public Double ActualAmount { get; set; }
-        public Double VatAmount { get; set; }
-        public int TariffId { get; set; }
-        public Tariff Tariff { get; set; }
-        public int VatId { get; set; }
-        public Vat Vat { get; set; }
-        public string ItemDescription { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+
     }
 }

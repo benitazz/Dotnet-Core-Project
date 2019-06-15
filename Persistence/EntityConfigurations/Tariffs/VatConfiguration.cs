@@ -10,10 +10,10 @@ namespace MedicalBilingBackEnd.Persistence.EntityConfigurations.Tariffs {
         public void Configure (EntityTypeBuilder<Vat> builder) {
             builder.ConfigureEntity ();
 
-            builder.Property (t => t.Percentage)
+            builder.Property (vat => vat.Percentage)
                 .HasColumnType (Constants.PercentageFormat);
 
-            builder.Property (t => t.Description)
+            builder.Property (vat => vat.Description)
                 .HasMaxLength (255);
 
             this.SeedTariffTypes (builder);

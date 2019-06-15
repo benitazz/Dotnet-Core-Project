@@ -9,21 +9,21 @@ namespace MedicalBilingBackEnd.Persistence.EntityConfigurations.Tariffs {
         public void Configure (EntityTypeBuilder<TariffUnitCost> builder) {
             builder.ConfigureEntity ();
 
-            builder.Property (t => t.ValidFrom)
+            builder.Property (tariffUnitCost => tariffUnitCost.ValidFrom)
                 .IsRequired ()
                 .HasColumnType (Constants.DateTime2Type)
                 .HasDefaultValueSql (Constants.DefaultSqlDate);
 
-            builder.Property (t => t.ValidTo)
+            builder.Property (tariffUnitCost => tariffUnitCost.ValidTo)
                 .IsRequired ()
                 .HasColumnType (Constants.DateTime2Type)
                 .HasDefaultValueSql (Constants.DefaultSqlDate);
 
-            builder.Property (t => t.ActualAmount)
+            builder.Property (tariffUnitCost => tariffUnitCost.ActualAmount)
                 .HasColumnType (Constants.MoneyFormat);
 
-            builder.Property (t => t.VatAmount)
-                .HasColumnType (Constants.MoneyFormat);
+            /*builder.Property (tariffUnitCost => tariffUnitCost.VatAmount)
+                .HasColumnType (Constants.MoneyFormat);*/
         }
     }
 }

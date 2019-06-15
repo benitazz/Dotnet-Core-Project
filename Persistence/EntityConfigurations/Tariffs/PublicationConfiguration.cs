@@ -8,7 +8,12 @@ namespace MedicalBilingMicroservice.Persistence.EntityConfigurations.Tariffs {
     public class PublicationConfiguration : IEntityTypeConfiguration<Publication> {
         public void Configure (EntityTypeBuilder<Publication> builder) {
             builder.ConfigureLookup ();
-            this.SeedPublications(builder);
+
+            builder.Property (t => t.PublicationNo)
+                .IsRequired ()
+                .HasMaxLength (15);
+
+            this.SeedPublications (builder);
         }
 
         private void SeedPublications (EntityTypeBuilder<Publication> modelBuilder) {
@@ -22,7 +27,8 @@ namespace MedicalBilingMicroservice.Persistence.EntityConfigurations.Tariffs {
                         CreatedBy = Constants.Administrator,
                         CreatedDate = DateTime.Now,
                         UpdatedBy = Constants.Administrator,
-                        UpdatedDate = DateTime.Now
+                        UpdatedDate = DateTime.Now,
+                        PublicationNo = "11111"
                 },
                 new Publication {
                     Id = 2,
@@ -33,7 +39,8 @@ namespace MedicalBilingMicroservice.Persistence.EntityConfigurations.Tariffs {
                         CreatedBy = Constants.Administrator,
                         CreatedDate = DateTime.Now,
                         UpdatedBy = Constants.Administrator,
-                        UpdatedDate = DateTime.Now
+                        UpdatedDate = DateTime.Now,
+                        PublicationNo = "11111"
                 },
                 new Publication {
                     Id = 3,
@@ -44,7 +51,8 @@ namespace MedicalBilingMicroservice.Persistence.EntityConfigurations.Tariffs {
                         CreatedBy = Constants.Administrator,
                         CreatedDate = DateTime.Now,
                         UpdatedBy = Constants.Administrator,
-                        UpdatedDate = DateTime.Now
+                        UpdatedDate = DateTime.Now,
+                        PublicationNo = "11111"
                 },
                 new Publication {
                     Id = 4,
@@ -55,7 +63,8 @@ namespace MedicalBilingMicroservice.Persistence.EntityConfigurations.Tariffs {
                         CreatedBy = Constants.Administrator,
                         CreatedDate = DateTime.Now,
                         UpdatedBy = Constants.Administrator,
-                        UpdatedDate = DateTime.Now
+                        UpdatedDate = DateTime.Now,
+                        PublicationNo = "11111"
                 },
                 new Publication {
                     Id = 5,
@@ -66,7 +75,8 @@ namespace MedicalBilingMicroservice.Persistence.EntityConfigurations.Tariffs {
                         CreatedBy = Constants.Administrator,
                         CreatedDate = DateTime.Now,
                         UpdatedBy = Constants.Administrator,
-                        UpdatedDate = DateTime.Now
+                        UpdatedDate = DateTime.Now,
+                        PublicationNo = "11111"
                 },
                 new Publication {
                     Id = 6,
@@ -77,7 +87,8 @@ namespace MedicalBilingMicroservice.Persistence.EntityConfigurations.Tariffs {
                         CreatedBy = Constants.Administrator,
                         CreatedDate = DateTime.Now,
                         UpdatedBy = Constants.Administrator,
-                        UpdatedDate = DateTime.Now
+                        UpdatedDate = DateTime.Now,
+                        PublicationNo = "11111"
                 },
                 new Publication {
                     Id = 7,
@@ -88,7 +99,8 @@ namespace MedicalBilingMicroservice.Persistence.EntityConfigurations.Tariffs {
                         CreatedBy = Constants.Administrator,
                         CreatedDate = DateTime.Now,
                         UpdatedBy = Constants.Administrator,
-                        UpdatedDate = DateTime.Now
+                        UpdatedDate = DateTime.Now,
+                        PublicationNo = "11111"
                 },
                 new Publication {
                     Id = 8,
@@ -99,7 +111,8 @@ namespace MedicalBilingMicroservice.Persistence.EntityConfigurations.Tariffs {
                         CreatedBy = Constants.Administrator,
                         CreatedDate = DateTime.Now,
                         UpdatedBy = Constants.Administrator,
-                        UpdatedDate = DateTime.Now
+                        UpdatedDate = DateTime.Now,
+                        PublicationNo = "11111"
                 },
                 new Publication {
                     Id = 9,
@@ -110,7 +123,8 @@ namespace MedicalBilingMicroservice.Persistence.EntityConfigurations.Tariffs {
                         CreatedBy = Constants.Administrator,
                         CreatedDate = DateTime.Now,
                         UpdatedBy = Constants.Administrator,
-                        UpdatedDate = DateTime.Now
+                        UpdatedDate = DateTime.Now,
+                        PublicationNo = "11111"
                 }
             );
         }
