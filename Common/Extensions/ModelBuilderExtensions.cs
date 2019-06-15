@@ -24,7 +24,10 @@ namespace MedicalBilingBackEnd.Common.Extensions {
 
             //Tariffs
             modelBuilder.ApplyConfiguration (new MedicalItemCodeConfiguration ());
+            modelBuilder.ApplyConfiguration (new MedicalItemCodeDescriptionConfiguration ());
             modelBuilder.ApplyConfiguration (new MedicalItemTypeConfiguration ());
+            modelBuilder.ApplyConfiguration (new MedicalItemCodePublicationConfiguration ());
+            modelBuilder.ApplyConfiguration (new SectionTypeConfiguration ());
             modelBuilder.ApplyConfiguration (new PublicationConfiguration ());
             modelBuilder.ApplyConfiguration (new TariffConfiguration ());
             modelBuilder.ApplyConfiguration (new TariffUnitCostConfiguration ());
