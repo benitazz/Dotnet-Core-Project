@@ -10,6 +10,6 @@ namespace MedicalBilingMicroservice.Core.Models.Entities.Doctors
         public string Surname { get; set; }
         public bool IsHospital { get; set; }
         public int PublicationId { get; set; }
-        public Publication Publication { get; set; }
+        public PublicationType Publication { get; set; }
      }
 }

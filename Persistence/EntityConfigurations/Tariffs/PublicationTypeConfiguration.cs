@@ -5,8 +5,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace MedicalBilingMicroservice.Persistence.EntityConfigurations.Tariffs {
-    public class PublicationConfiguration : IEntityTypeConfiguration<Publication> {
-        public void Configure (EntityTypeBuilder<Publication> builder) {
+    public class PublicationTypeConfiguration : IEntityTypeConfiguration<PublicationType> {
+        public void Configure (EntityTypeBuilder<PublicationType> builder) {
             builder.ConfigureLookup ();
 
             builder.Property (t => t.PublicationNo)
@@ -16,9 +16,9 @@ namespace MedicalBilingMicroservice.Persistence.EntityConfigurations.Tariffs {
             this.SeedPublications (builder);
         }
 
-        private void SeedPublications (EntityTypeBuilder<Publication> modelBuilder) {
+        private void SeedPublications (EntityTypeBuilder<PublicationType> modelBuilder) {
             modelBuilder.HasData (
-                new Publication {
+                new PublicationType {
                     Id = 1,
                         Name = Constants.Chiropractor,
                         NormalizedName = Constants.Chiropractor.ToUpper (),
@@ -30,7 +30,7 @@ namespace MedicalBilingMicroservice.Persistence.EntityConfigurations.Tariffs {
                         UpdatedDate = DateTime.Now,
                         PublicationNo = "11111"
                 },
-                new Publication {
+                new PublicationType {
                     Id = 2,
                         Name = Constants.Radiologist,
                         NormalizedName = Constants.Radiologist.ToUpper (),
@@ -42,7 +42,7 @@ namespace MedicalBilingMicroservice.Persistence.EntityConfigurations.Tariffs {
                         UpdatedDate = DateTime.Now,
                         PublicationNo = "11111"
                 },
-                new Publication {
+                new PublicationType {
                     Id = 3,
                         Name = Constants.Dentist,
                         NormalizedName = Constants.Dentist.ToUpper (),
@@ -54,7 +54,7 @@ namespace MedicalBilingMicroservice.Persistence.EntityConfigurations.Tariffs {
                         UpdatedDate = DateTime.Now,
                         PublicationNo = "11111"
                 },
-                new Publication {
+                new PublicationType {
                     Id = 4,
                         Name = Constants.Physiotherapist,
                         NormalizedName = Constants.Physiotherapist.ToUpper (),
@@ -66,7 +66,7 @@ namespace MedicalBilingMicroservice.Persistence.EntityConfigurations.Tariffs {
                         UpdatedDate = DateTime.Now,
                         PublicationNo = "11111"
                 },
-                new Publication {
+                new PublicationType {
                     Id = 5,
                         Name = Constants.PrivateAmbulance,
                         NormalizedName = "PRIVATEAMBULANCE",
@@ -78,7 +78,7 @@ namespace MedicalBilingMicroservice.Persistence.EntityConfigurations.Tariffs {
                         UpdatedDate = DateTime.Now,
                         PublicationNo = "11111"
                 },
-                new Publication {
+                new PublicationType {
                     Id = 6,
                         Name = Constants.GeneralPractioner,
                         NormalizedName = "GENERALPRACTIONER",
@@ -90,7 +90,7 @@ namespace MedicalBilingMicroservice.Persistence.EntityConfigurations.Tariffs {
                         UpdatedDate = DateTime.Now,
                         PublicationNo = "11111"
                 },
-                new Publication {
+                new PublicationType {
                     Id = 7,
                         Name = Constants.RenalCare,
                         NormalizedName = "RENALCARE",
@@ -102,7 +102,7 @@ namespace MedicalBilingMicroservice.Persistence.EntityConfigurations.Tariffs {
                         UpdatedDate = DateTime.Now,
                         PublicationNo = "11111"
                 },
-                new Publication {
+                new PublicationType {
                     Id = 8,
                         Name = Constants.SocialWorker,
                         NormalizedName = "SOCIALWORKER",
@@ -114,7 +114,7 @@ namespace MedicalBilingMicroservice.Persistence.EntityConfigurations.Tariffs {
                         UpdatedDate = DateTime.Now,
                         PublicationNo = "11111"
                 },
-                new Publication {
+                new PublicationType {
                     Id = 9,
                         Name = Constants.WoundCare,
                         NormalizedName = "WOUNDCARE",

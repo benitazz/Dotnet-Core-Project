@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using switch_api.Persistence.Repositories;
 
 namespace MedicalBilingMicroservice.Persistence.Repositories.Tariffs {
-    public class PublicationRepository : Repository<Publication>, IPublicationRepository {
-        public PublicationRepository (ApplicationDbContext dbContext) : base (dbContext) { }
+    public class PublicationTypeRepository : Repository<PublicationType>, IPublicationTypeRepository {
+        public PublicationTypeRepository (ApplicationDbContext dbContext) : base (dbContext) { }
     }
 }

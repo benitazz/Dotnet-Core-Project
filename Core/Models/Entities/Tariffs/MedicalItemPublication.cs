@@ -5,8 +5,8 @@ namespace MedicalBilingMicroservice.Core.Models.Entities.Tariffs {
         public int Id { get; set; }
         public int MedicalItemDescriptionId { get; set; }
         public MedicalItemDescription MedicalItemDescription { get; set; }
-        public int PublicationId { get; set; }
-        public Publication Publication { get; set; }
+        public int PublicationTypeId { get; set; }
+        public PublicationType PublicationType { get; set; }
         public int SectionTypeId { get; set; }
         public SectionType SectionType { get; set; }
     }

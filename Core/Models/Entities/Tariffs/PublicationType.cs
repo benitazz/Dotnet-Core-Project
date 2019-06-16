@@ -1,7 +1,7 @@
 using System;
 using MedicalBilingBackEnd.Core.Models.Entities.Lookups;
 
-public class Publication : Lookup {
+public class PublicationType : Lookup {
     public string PublicationNo { get; set; }
 
 }
