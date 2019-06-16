@@ -12,6 +12,7 @@ namespace MedicalBilingMicroservice.Persistence.EntityConfigurations.Tariffs {
             SeedPractitionerType (builder);
         }
 
+
         private void SeedPractitionerType (EntityTypeBuilder<PractitionerType> modelBuilder) {
             modelBuilder.HasData (
                 new PractitionerType {

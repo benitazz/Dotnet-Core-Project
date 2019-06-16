@@ -1,7 +1,6 @@
 using MedicalBilingBackEnd.Common.Extensions;
 using MedicalBilingBackEnd.Core.Models.Entities.Lookups;
 using MedicalBilingBackEnd.Core.Models.Entities.Tariffs;
-using MedicalBilingMicroservice.Core.Models.Entities.Doctors;
 using MedicalBilingMicroservice.Core.Models.Entities.Tariffs;
 using MedicalBilingMicroservice.Core.Models.Entities.Users;
 using Microsoft.AspNetCore.Identity;
@@ -18,8 +17,10 @@ namespace MedicalBilingMicroservice.Persistence {
             public DbSet<MedicalItemType> MedicalItemTypes { get; set; }
             public DbSet<MedicalItemDescription> MedicalItemDescriptions { get; set; }
             public DbSet<MedicalItemPublication> MedicalItemPublications { get; set; }
-            public DbSet<Practioner> Practioners { get; set; }
             public DbSet<PractitionerType> PractitionerTypes { get; set; }
+            public DbSet<PractitionerGroupType> PractitionerGroupTypes { get; set; }
+            public DbSet<PractitionerPractitionerType> PractitionerPractitionerTypes { get; set; }
+            public DbSet<Practitioner> Practitioners { get; set; }
             public DbSet<PublicationType> PublicationTypes { get; set; }
             public DbSet<Tariff> Tariffs { get; set; }
             public DbSet<TariffType> TariffTypes { get; set; }
