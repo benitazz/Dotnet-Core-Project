@@ -23,10 +23,10 @@ namespace MedicalBilingMicroservice.Common.Extensions {
             services.AddSingleton<IJwtFactory, JwtFactory> ();
 
             services.AddScoped<IInvoiceStatusRepository, InvoiceStatusRepository> ();
-            services.AddScoped<IMedicalItemCodeRepository, MedicalItemCodeRepository> ();
+            services.AddScoped<IMedicalItemRepository, MedicalItemRepository> ();
             services.AddScoped<IMedicalItemTypeRepository, MedicalItemTypeRepository> ();
-            services.AddScoped<IMedicalItemCodeDescriptionRepository, MedicalItemCodeDescriptionRepository> ();
-            services.AddScoped<IMedicalItemCodePublicationRepository, MedicalItemCodePublicationRepository> ();
+            services.AddScoped<IMedicalItemDescriptionRepository, MedicalItemDescriptionRepository> ();
+            services.AddScoped<IMedicalItemPublicationRepository, MedicalItemPublicationRepository> ();
             services.AddScoped<IPublicationRepository, PublicationRepository> ();
             services.AddScoped<IPractionerRepository, PractionerRepository> ();
             services.AddScoped<ISectionTypeRepository, SectionTypeRepository> ();
@@ -36,7 +36,7 @@ namespace MedicalBilingMicroservice.Common.Extensions {
 
             services.AddScoped<IUnitOfWork, UnitOfWork> ();
             services.AddScoped<IUserRepository, UserRepository> ();
-            services.AddScoped<IVatRepository, VatRepository> ();
+            services.AddScoped<IVatTypeRepository, VatTypeRepository> ();
             services.AddScoped<IViewRenderService, ViewRenderService> ();
 
             services.AddSingleton<IFileHelper, FileHelper> ();

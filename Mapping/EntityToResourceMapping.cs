@@ -25,7 +25,7 @@ namespace MedicalBilingMicroservice.Mapping
                            }
                        )));
 
-            CreateMap<Vat, VatTypeResource>();
+            CreateMap<VatType, VatTypeResource>();
 
             /*CreateMap<ApplicationUser, ApplicationUserResource> ()
                 .ForMember (userResource => userResource.Roles,

@@ -6,22 +6,22 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace MedicalBilingBackEnd.Persistence.EntityConfigurations.Tariffs {
-    public class VatConfiguration : IEntityTypeConfiguration<Vat> {
-        public void Configure (EntityTypeBuilder<Vat> builder) {
+    public class VatTypeConfiguration : IEntityTypeConfiguration<VatType> {
+        public void Configure (EntityTypeBuilder<VatType> builder) {
             builder.ConfigureEntity ();
 
-            builder.Property (vat => vat.Percentage)
+            builder.Property (vatType => vatType.Percentage)
                 .HasColumnType (Constants.PercentageFormat);
 
-            builder.Property (vat => vat.Description)
+            builder.Property (vatType => vatType.Description)
                 .HasMaxLength (255);
 
             this.SeedTariffTypes (builder);
         }
 
-        private void SeedTariffTypes (EntityTypeBuilder<Vat> modelBuilder) {
+        private void SeedTariffTypes (EntityTypeBuilder<VatType> modelBuilder) {
             modelBuilder.HasData (
-                new Vat {
+                new VatType {
                     Id = 1,
                         Description = "14% Percent VAT",
                         Percentage = 0.14,
@@ -30,7 +30,7 @@ namespace MedicalBilingBackEnd.Persistence.EntityConfigurations.Tariffs {
                         UpdatedBy = Constants.Administrator,
                         UpdatedDate = DateTime.Now
                 },
-                new Vat {
+                new VatType {
                     Id = 2,
                         Description = "15% Percent VAT",
                         Percentage = 0.15,

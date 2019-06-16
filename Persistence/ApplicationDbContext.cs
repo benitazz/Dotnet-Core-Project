@@ -14,18 +14,17 @@ namespace MedicalBilingMicroservice.Persistence {
 
             public DbSet<FileStatus> FileStatuses { get; set; }
             public DbSet<InvoiceStatus> InvoiceStatuses { get; set; }
-            public DbSet<MedicalItemCode> MedicalItemCodes { get; set; }
+            public DbSet<MedicalItem> MedicalItems { get; set; }
             public DbSet<MedicalItemType> MedicalItemTypes { get; set; }
-            public DbSet<MedicalItemCodeDescription> MedicalItemCodeDescriptions { get; set; }
-            public DbSet<MedicalItemCodePublication> MedicalItemCodePublications { get; set; }
+            public DbSet<MedicalItemDescription> MedicalItemDescriptions { get; set; }
+            public DbSet<MedicalItemPublication> MedicalItemPublications { get; set; }
             public DbSet<Practioner> Practioners { get; set; }
             public DbSet<Publication> Publications { get; set; }
             public DbSet<Tariff> Tariffs { get; set; }
             public DbSet<TariffType> TariffTypes { get; set; }
             public DbSet<TariffUnitCost> TariffUnitCosts { get; set; }
-            public DbSet<Vat> Vats { get; set; }
+            public DbSet<VatType> VatTypes { get; set; }
             public DbSet<SectionType> SectionTypes { get; set; }
-
             public ApplicationDbContext (DbContextOptions options) : base (options) {
 
             }

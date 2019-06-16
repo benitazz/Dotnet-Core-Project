@@ -3,7 +3,7 @@ using switch_api.Core.Repositories;
 
 namespace MedicalBilingBackEnd.Core.Repositories.Lookups
 {
-    public interface IVatRepository:  IRepository<Vat>
+    public interface IVatTypeRepository:  IRepository<VatType>
     {
          
     }

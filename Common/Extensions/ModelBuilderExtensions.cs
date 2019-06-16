@@ -20,13 +20,13 @@ namespace MedicalBilingBackEnd.Common.Extensions {
             modelBuilder.ApplyConfiguration (new FileStatusConfiguration ());
             modelBuilder.ApplyConfiguration (new InvoiceStatusConfiguration ());
             modelBuilder.ApplyConfiguration (new TariffTypeConfiguration ());
-            modelBuilder.ApplyConfiguration (new VatConfiguration ());
+            modelBuilder.ApplyConfiguration (new VatTypeConfiguration ());
 
             //Tariffs
-            modelBuilder.ApplyConfiguration (new MedicalItemCodeConfiguration ());
-            modelBuilder.ApplyConfiguration (new MedicalItemCodeDescriptionConfiguration ());
+            modelBuilder.ApplyConfiguration (new MedicalItemConfiguration ());
+            modelBuilder.ApplyConfiguration (new MedicalItemDescriptionConfiguration ());
             modelBuilder.ApplyConfiguration (new MedicalItemTypeConfiguration ());
-            modelBuilder.ApplyConfiguration (new MedicalItemCodePublicationConfiguration ());
+            modelBuilder.ApplyConfiguration (new MedicalItemPublicationConfiguration ());
             modelBuilder.ApplyConfiguration (new SectionTypeConfiguration ());
             modelBuilder.ApplyConfiguration (new PublicationConfiguration ());
             modelBuilder.ApplyConfiguration (new TariffConfiguration ());

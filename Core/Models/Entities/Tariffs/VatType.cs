@@ -2,7 +2,7 @@ using System;
 
 namespace MedicalBilingBackEnd.Core.Models.Entities.Tariffs
 {
-    public class Vat: EntityBase
+    public class VatType: EntityBase
     {
         public int Id { get; set; }
         public Double Percentage { get; set; }

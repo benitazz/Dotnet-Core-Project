@@ -5,15 +5,14 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace MedicalBilingMicroservice.Persistence.EntityConfigurations.Tariffs {
-    public class MedicalItemCodeConfiguration : IEntityTypeConfiguration<MedicalItemCode> {
-        public void Configure (EntityTypeBuilder<MedicalItemCode> builder) {
-            builder.ToTable("MedicalItemCodes");
+    public class MedicalItemConfiguration : IEntityTypeConfiguration<MedicalItem> {
+        public void Configure (EntityTypeBuilder<MedicalItem> builder) {
             builder.ConfigureEntity ();
 
-            builder.Property (medicalItemCode => medicalItemCode.Code)
+            builder.Property (medicalItem => medicalItem.Code)
                 .HasMaxLength (10);
 
-            builder.Property (medicalItemCode => medicalItemCode.Name)
+            builder.Property (medicalItem => medicalItem.Name)
                 .HasMaxLength (255);
 
             /* builder.Property (medicalItem => medicalItem.ValidFrom)

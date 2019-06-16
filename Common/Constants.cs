@@ -25,5 +25,7 @@ namespace MedicalBilingBackEnd.Common {
         public const string DefaultSqlDate = "GetDate()";
         public const string MoneyFormat = "DECIMAL (19, 4)";
         public const string PercentageFormat = "DECIMAL (5, 2)";
+        public const string Coida = "Coida";
+        public const string NoneCoid = "NoneCoid";
     }
 }

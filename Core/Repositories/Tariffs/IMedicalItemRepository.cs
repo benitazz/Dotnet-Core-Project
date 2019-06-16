@@ -2,7 +2,7 @@ using MedicalBilingMicroservice.Core.Models.Entities.Tariffs;
 using switch_api.Core.Repositories;
 
 namespace MedicalBilingMicroservice.Core.Repositories.Tariffs {
-    public interface IMedicalItemCodeRepository : IRepository<MedicalItemCode> {
+    public interface IMedicalItemRepository : IRepository<MedicalItem> {
 
     }
 }

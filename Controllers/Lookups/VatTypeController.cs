@@ -17,10 +17,10 @@ namespace MedicalBilingBackEnd.Controllers.Lookups
     public class VatTypeController : Controller
     {
         private readonly IMapper _mapper;
-        private readonly IVatRepository _repository;
+        private readonly IVatTypeRepository _repository;
 
         public VatTypeController(IMapper mapper,
-                                 IVatRepository repository)
+                                 IVatTypeRepository repository)
         {
             this._mapper = mapper;
             this._repository = repository;
@@ -46,7 +46,7 @@ namespace MedicalBilingBackEnd.Controllers.Lookups
                     return NotFound();
                 }
 
-                var mappedResource = this._mapper.Map<Vat, VatTypeResource>(vatType);
+                var mappedResource = this._mapper.Map<VatType, VatTypeResource>(vatType);
                 return Ok(mappedResource);
             }
             catch (Exception ex)
@@ -74,7 +74,7 @@ namespace MedicalBilingBackEnd.Controllers.Lookups
                     return Ok(new List<VatTypeResource>());
                 }
 
-                var mappedResource = this._mapper.Map<List<Vat>, List<VatTypeResource>>(vatTypes);
+                var mappedResource = this._mapper.Map<List<VatType>, List<VatTypeResource>>(vatTypes);
                 return Ok(mappedResource);
             }
             catch (Exception ex)

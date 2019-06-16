@@ -3,10 +3,7 @@ using MedicalBilingMicroservice.Core.Repositories.Tariffs;
 using switch_api.Persistence.Repositories;
 
 namespace MedicalBilingMicroservice.Persistence.Repositories.Tariffs {
-    public class MedicalItemCodeRepository : Repository<MedicalItemCode>, IMedicalItemCodeRepository
-    {
-        public MedicalItemCodeRepository(ApplicationDbContext dbContext) : base(dbContext)
-        {
-        }
+    public class MedicalItemPublicationRepository : Repository<MedicalItemPublication>, IMedicalItemPublicationRepository {
+        public MedicalItemPublicationRepository (ApplicationDbContext dbContext) : base (dbContext) { }
     }
 }

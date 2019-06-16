@@ -6,9 +6,9 @@ using switch_api.Persistence.Repositories;
 
 namespace MedicalBilingBackEnd.Persistence.Repositories.Lookups
 {
-    public class VatRepository : Repository<Vat>, IVatRepository
+    public class VatTypeRepository : Repository<VatType>, IVatTypeRepository
     {
-        public VatRepository(ApplicationDbContext dbContext) : base(dbContext)
+        public VatTypeRepository(ApplicationDbContext dbContext) : base(dbContext)
         {
         }
     }

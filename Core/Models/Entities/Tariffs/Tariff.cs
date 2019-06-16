@@ -7,7 +7,7 @@ namespace MedicalBilingBackEnd.Core.Models.Entities.Tariffs {
         public int Id { get; set; }
         public int MedicalItemId { get; set; }
         public Double RecommendedUnit { get; set; }
-        public MedicalItemCode MedicalItem { get; set; }
+        public MedicalItem MedicalItem { get; set; }
         public DateTime ValidFrom { get; set; }
         public DateTime ValidTo { get; set; }
         public int TariffUnitCostId { get; set; }
