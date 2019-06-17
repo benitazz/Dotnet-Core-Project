@@ -5,7 +5,7 @@ namespace MedicalBilingMicroservice.Core.Models.Entities.Tariffs {
         public int Id { get; set; }
         public int PractitionerId { get; set; }
         public Practitioner Practitioner { get; set; }
-        public int PractionerTypeId { get; set; }
+        public int PractitionerTypeId { get; set; }
         public PractitionerType PractitionerType { get; set; }
 
     }
