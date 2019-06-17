@@ -1,10 +1,9 @@
 using System;
-using System.Collections.Generic;
 using MedicalBilingMicroservice.Core.Models.Entities.Tariffs;
 
-namespace MedicalBilingBackEnd.Core.Models.Entities.Tariffs {
+namespace MedicalBilingBackEnd.Core.Models.Entities.Tariffs
+{
     public class Tariff : EntityBase {
-        public int Id { get; set; }
         public int MedicalItemId { get; set; }
         public Double RecommendedUnit { get; set; }
         public MedicalItem MedicalItem { get; set; }

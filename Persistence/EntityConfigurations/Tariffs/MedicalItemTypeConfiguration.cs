@@ -9,25 +9,23 @@ namespace MedicalBilingMicroservice.Persistence.EntityConfigurations.Tariffs {
     public class MedicalItemTypeConfiguration : IEntityTypeConfiguration<MedicalItemType> {
 
         public void Configure (EntityTypeBuilder<MedicalItemType> builder) {
-            builder.ConfigureEntity ();
+            builder.ConfigureLookup ();
 
-            builder.Property (t => t.Code)
+            builder.Property (t => t.Name)
                 .IsRequired ()
                 .HasMaxLength (10);
 
-            builder.Property (t => t.Description)
-                .IsRequired ()
-                .HasMaxLength (255);
-
-            SeedPublicationType(builder);
+            SeedPublicationType (builder);
         }
 
         private void SeedPublicationType (EntityTypeBuilder<MedicalItemType> modelBuilder) {
             modelBuilder.HasData (
                 new MedicalItemType {
                     Id = 1,
-                        Code = "-",
+                        Name = "-",
                         Description = "Unknown",
+                        NormalizedName ="-",
+                        NormalizedDescription ="UNKNOWN",
                         IsDeleted = false,
                         CreatedBy = Constants.Administrator,
                         CreatedDate = DateTime.Now,
@@ -36,8 +34,10 @@ namespace MedicalBilingMicroservice.Persistence.EntityConfigurations.Tariffs {
                 },
                 new MedicalItemType {
                     Id = 2,
-                        Code = "IT",
+                        Name = "IT",
+                        NormalizedName = "IT",
                         Description = "Treatment or Procedure Code",
+                        NormalizedDescription ="TREATMENTORPROCEDURECODE",
                         IsDeleted = true,
                         CreatedBy = Constants.Administrator,
                         CreatedDate = DateTime.Now,
@@ -46,8 +46,10 @@ namespace MedicalBilingMicroservice.Persistence.EntityConfigurations.Tariffs {
                 },
                 new MedicalItemType {
                     Id = 3,
-                        Code = "ID",
+                        Name = "ID",
+                        NormalizedName ="ID",
                         Description = "Drug or Pharmaceutical Item (NAPPI)",
+                        NormalizedDescription = "DRUGORPHARMACEUTICALITEM(NAPPI)",
                         IsDeleted = true,
                         CreatedBy = Constants.Administrator,
                         CreatedDate = DateTime.Now,
@@ -56,8 +58,10 @@ namespace MedicalBilingMicroservice.Persistence.EntityConfigurations.Tariffs {
                 },
                 new MedicalItemType {
                     Id = 4,
-                        Code = "M",
+                        Name = "M",
+                        NormalizedName = "M",
                         Description = "Modifier",
+                        NormalizedDescription = "MODIFIER",
                         IsDeleted = false,
                         CreatedBy = Constants.Administrator,
                         CreatedDate = DateTime.Now,
@@ -66,8 +70,10 @@ namespace MedicalBilingMicroservice.Persistence.EntityConfigurations.Tariffs {
                 },
                 new MedicalItemType {
                     Id = 5,
-                        Code = "R",
+                        Name = "R",
+                        NormalizedName = "R",
                         Description = "Rule",
+                        NormalizedDescription = "RULE",
                         IsDeleted = false,
                         CreatedBy = Constants.Administrator,
                         CreatedDate = DateTime.Now,
@@ -76,8 +82,10 @@ namespace MedicalBilingMicroservice.Persistence.EntityConfigurations.Tariffs {
                 },
                 new MedicalItemType {
                     Id = 6,
-                        Code = "N",
+                        Name = "N",
+                        NormalizedName = "N",
                         Description = "Note",
+                        NormalizedDescription = "NOTE",
                         IsDeleted = false,
                         CreatedBy = Constants.Administrator,
                         CreatedDate = DateTime.Now,
