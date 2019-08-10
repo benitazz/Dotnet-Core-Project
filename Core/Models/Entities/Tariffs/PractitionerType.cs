@@ -1,7 +1,7 @@
 using MedicalBilingBackEnd.Core.Models.Entities.Lookups;
 
 namespace MedicalBilingMicroservice.Core.Models.Entities.Tariffs {
-    public class PractitionerType : Lookup {
+    public class PractitionerType : LookupBase {
 
     }
 }

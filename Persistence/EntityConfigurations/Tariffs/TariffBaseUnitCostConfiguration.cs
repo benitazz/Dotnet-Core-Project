@@ -5,8 +5,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace MedicalBilingBackEnd.Persistence.EntityConfigurations.Tariffs {
-    public class TariffUnitCostConfiguration : IEntityTypeConfiguration<TariffUnitCost> {
-        public void Configure (EntityTypeBuilder<TariffUnitCost> builder) {
+    public class TariffBaseUnitCostConfiguration : IEntityTypeConfiguration<TariffBaseUnitCost> {
+        public void Configure (EntityTypeBuilder<TariffBaseUnitCost> builder) {
             builder.ConfigureEntity ();
 
             builder.Property (tariffUnitCost => tariffUnitCost.ValidFrom)

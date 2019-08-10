@@ -4,13 +4,13 @@ using TinyCsvParser.TypeConverter;
 
 namespace MedicalBilingBackEnd.Mapping.CsvMapping
 {
-    public class TariffMappingConverter : ITypeConverter<TariffUnitCost>
+    public class TariffMappingConverter : ITypeConverter<TariffBaseUnitCost>
     {
-        public Type TargetType => typeof(TariffUnitCost);
+        public Type TargetType => typeof(TariffBaseUnitCost);
 
-        public bool TryConvert(string value, out TariffUnitCost result)
+        public bool TryConvert(string value, out TariffBaseUnitCost result)
         {
-            result = new TariffUnitCost
+            result = new TariffBaseUnitCost
             {
                 ActualAmount = double.Parse(value)
             };

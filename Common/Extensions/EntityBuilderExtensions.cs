@@ -31,7 +31,7 @@ namespace MedicalBilingBackEnd.Common.Extensions {
                             .HasDefaultValueSql ("0");
               }
 
-              public static void ConfigureLookup<T> (this EntityTypeBuilder<T> builder) where T : Lookup {
+              public static void ConfigureLookup<T> (this EntityTypeBuilder<T> builder) where T : LookupBase {
                      ConfigureEntity (builder);
 
                      builder.Property (t => t.Name)

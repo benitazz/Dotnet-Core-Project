@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MedicalBilingBackEnd.Core.Models.Entities.Lookups
 {
-    public abstract class Lookup: EntityBase
+    public abstract class LookupBase: EntityBase
     {
         public string Name { get; set; }
 

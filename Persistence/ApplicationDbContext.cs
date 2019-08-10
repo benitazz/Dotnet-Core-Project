@@ -17,7 +17,9 @@ namespace MedicalBilingMicroservice.Persistence {
             public DbSet<MedicalItemType> MedicalItemTypes { get; set; }
             public DbSet<MedicalItemPublication> MedicalItemPublications { get; set; }
             public DbSet<MedicalItemPublicationPeriod> MedicalItemPublicationPeriods { get; set; }
+            
             public DbSet<NappiCodeType> NappiCodeTypes { get; set; }
+
             public DbSet<PractitionerType> PractitionerTypes { get; set; }
             public DbSet<PractitionerGroupType> PractitionerGroupTypes { get; set; }
             public DbSet<PractitionerPractitionerType> PractitionerPractitionerTypes { get; set; }
@@ -25,7 +27,8 @@ namespace MedicalBilingMicroservice.Persistence {
             public DbSet<PublicationType> PublicationTypes { get; set; }
             public DbSet<Tariff> Tariffs { get; set; }
             public DbSet<TariffType> TariffTypes { get; set; }
-            public DbSet<TariffUnitCost> TariffUnitCosts { get; set; }
+            public DbSet<TariffBaseUnitCost> TariffBaseUnitCosts { get; set; }
+            public DbSet<TariffBaseUnitCostType> TariffBaseUnitCostTypes { get; set; }
             public DbSet<VatType> VatTypes { get; set; }
             public DbSet<SectionType> SectionTypes { get; set; }
             public ApplicationDbContext (DbContextOptions options) : base (options) {

@@ -2,7 +2,7 @@ using System;
 
 namespace MedicalBilingBackEnd.Core.Models.Entities.Tariffs
 {
-    public class TariffUnitCost: EntityBase
+    public class TariffBaseUnitCost: EntityBase
     {
         public DateTime ValidFrom { get; set; }
         public DateTime ValidTo { get; set; }

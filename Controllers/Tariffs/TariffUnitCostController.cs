@@ -18,11 +18,11 @@ namespace MedicalBilingBackEnd.Controllers.Tariffs
     public class TariffUnitCostController : Controller
     {
         private readonly IMapper _mapper;
-        private readonly ITariffUnitCostRepository _repository;
+        private readonly ITariffBaseUnitCostRepository _repository;
         private readonly IUnitOfWork _unitOfWork;
 
         public TariffUnitCostController(IMapper mapper,
-                                        ITariffUnitCostRepository repository,
+                                        ITariffBaseUnitCostRepository repository,
                                         IUnitOfWork unitOfWork)
         {
             this._mapper = mapper;
@@ -50,7 +50,7 @@ namespace MedicalBilingBackEnd.Controllers.Tariffs
                     return NotFound();
                 }
 
-                var mappedResource = this._mapper.Map<TariffUnitCost, TariffUnitCostResource>(tariffUnitCost);
+                var mappedResource = this._mapper.Map<TariffBaseUnitCost, TariffUnitCostResource>(tariffUnitCost);
                 return Ok(mappedResource);
             }
             catch (Exception ex)
@@ -79,7 +79,7 @@ namespace MedicalBilingBackEnd.Controllers.Tariffs
                     return Ok(new List<TariffUnitCostResource>());
                 }
 
-                var mappedResource = this._mapper.Map<List<TariffUnitCost>, List<TariffUnitCostResource>>(tariffUnitCosts);
+                var mappedResource = this._mapper.Map<List<TariffBaseUnitCost>, List<TariffUnitCostResource>>(tariffUnitCosts);
                 return Ok(mappedResource);
             }
             catch (Exception ex)

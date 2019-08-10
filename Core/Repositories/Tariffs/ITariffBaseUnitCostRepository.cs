@@ -3,7 +3,7 @@ using switch_api.Core.Repositories;
 
 namespace MedicalBilingBackEnd.Core.Repositories.Tariffs
 {
-    public interface ITariffUnitCostRepository: IRepository<TariffUnitCost>
+    public interface ITariffBaseUnitCostRepository: IRepository<TariffBaseUnitCost>
     {
          
     }

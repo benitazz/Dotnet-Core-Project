@@ -1,6 +1,6 @@
 namespace MedicalBilingBackEnd.Core.Models.Entities.Lookups
 {
-    public class FileStatus: Lookup
+    public class FileStatus: LookupBase
     {
         
     }

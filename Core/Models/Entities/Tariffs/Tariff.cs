@@ -10,7 +10,7 @@ namespace MedicalBilingBackEnd.Core.Models.Entities.Tariffs
         public DateTime ValidFrom { get; set; }
         public DateTime ValidTo { get; set; }
         public int TariffUnitCostId { get; set; }
-        public TariffUnitCost TariffUnitCost { get; set; }
+        public TariffBaseUnitCost TariffUnitCost { get; set; }
         /* public virtual ICollection<TariffUnitCost> TariffUnitCostS { get; set; }
          public Tariff () {
              this.TariffUnitCostS = new HashSet<TariffUnitCost> ();
