@@ -7,10 +7,11 @@ namespace MedicalBilingBackEnd.Common.Extensions {
        public static class EntityBuilderExtensions {
               public static void ConfigureEntity<T> (this EntityTypeBuilder<T> builder) where T : EntityBase {
                      builder.HasKey (t => t.Id);
-                     
+
                      builder.Property (t => t.CreatedBy)
                             .IsRequired ()
-                            .HasMaxLength (255);
+                            .HasMaxLength (255)
+                            .HasDefaultValueSql ("'Administrator'");
 
                      builder.Property (t => t.CreatedDate)
                             .IsRequired ()
@@ -19,7 +20,8 @@ namespace MedicalBilingBackEnd.Common.Extensions {
 
                      builder.Property (t => t.UpdatedBy)
                             .IsRequired ()
-                            .HasMaxLength (255);
+                            .HasMaxLength (255)
+                            .HasDefaultValueSql ("'Administrator'");
 
                      builder.Property (t => t.UpdatedDate)
                             .IsRequired ()

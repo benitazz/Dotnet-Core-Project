@@ -28,7 +28,10 @@ namespace MedicalBilingBackEnd.Persistence.EntityConfigurations.Tariffs {
                         CreatedBy = Constants.Administrator,
                         CreatedDate = DateTime.Now,
                         UpdatedBy = Constants.Administrator,
-                        UpdatedDate = DateTime.Now
+                        UpdatedDate = DateTime.Now,
+                        ValidFrom = new DateTime (1900, 01, 01),
+                        ValidTo = new DateTime (2018, 03, 31,23,59,59)
+
                 },
                 new VatType {
                     Id = 2,
@@ -37,7 +40,9 @@ namespace MedicalBilingBackEnd.Persistence.EntityConfigurations.Tariffs {
                         CreatedBy = Constants.Administrator,
                         CreatedDate = DateTime.Now,
                         UpdatedBy = Constants.Administrator,
-                        UpdatedDate = DateTime.Now
+                        UpdatedDate = DateTime.Now,
+                        ValidFrom = new DateTime (2018, 04, 01,00,00,00),
+                        ValidTo = null
                 });
         }
     }

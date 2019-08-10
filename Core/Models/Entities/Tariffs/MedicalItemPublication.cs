@@ -8,5 +8,7 @@ namespace MedicalBilingMicroservice.Core.Models.Entities.Tariffs {
         public PublicationType PublicationType { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
+        public double Quantity { get; set; }
+
     }
 }
