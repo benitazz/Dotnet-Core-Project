@@ -23,8 +23,8 @@ namespace MedicalBilingMicroservice.Common.Extensions {
             services.AddScoped<IInvoiceStatusRepository, InvoiceStatusRepository> ();
             services.AddScoped<IMedicalItemRepository, MedicalItemRepository> ();
             services.AddScoped<IMedicalItemTypeRepository, MedicalItemTypeRepository> ();
-            services.AddScoped<IMedicalItemDescriptionRepository, MedicalItemDescriptionRepository> ();
-            services.AddScoped<IMedicalItemPublicationRepository, MedicalItemPublicationRepository> ();
+            services.AddScoped<IMedicalItemPublicationRepository, MedicalItemDescriptionRepository> ();
+            services.AddScoped<IMedicalItemPublicationPeriodRepository, MedicalItemPublicationPeriodRepository> ();
             services.AddScoped<IPublicationTypeRepository, PublicationTypeRepository> ();
             services.AddScoped<IPractitionerTypeRepository, PractitionerTypeRepository> ();
             services.AddScoped<IPractitionerPractitionerTypeRepository, PractitionerPractitionerTypeRepository> ();

@@ -4,8 +4,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace MedicalBilingMicroservice.Persistence.EntityConfigurations.Tariffs {
-    public class MedicalItemDescriptionConfiguration : IEntityTypeConfiguration<MedicalItemDescription> {
-        public void Configure (EntityTypeBuilder<MedicalItemDescription> builder) {
+    public class MedicalItemPublicationPeriodConfiguration : IEntityTypeConfiguration<MedicalItemPublicationPeriod> {
+        public void Configure (EntityTypeBuilder<MedicalItemPublicationPeriod> builder) {
             builder.ConfigureEntity ();
         }
     }

@@ -12,9 +12,6 @@ namespace MedicalBilingMicroservice.Persistence.EntityConfigurations.Tariffs {
             builder.Property (medicalItem => medicalItem.Code)
                 .HasMaxLength (10);
 
-            builder.Property (medicalItem => medicalItem.Name)
-                .HasMaxLength (255);
-
             /* builder.Property (medicalItem => medicalItem.ValidFrom)
                 .IsRequired ()
                 .HasColumnType (Constants.DateTime2Type);

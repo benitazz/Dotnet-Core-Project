@@ -20,9 +20,9 @@ namespace MedicalBilingBackEnd.Common.Extensions {
 
             //Tariffs
             modelBuilder.ApplyConfiguration (new MedicalItemConfiguration ());
-            modelBuilder.ApplyConfiguration (new MedicalItemDescriptionConfiguration ());
-            modelBuilder.ApplyConfiguration (new MedicalItemTypeConfiguration ());
             modelBuilder.ApplyConfiguration (new MedicalItemPublicationConfiguration ());
+            modelBuilder.ApplyConfiguration (new MedicalItemTypeConfiguration ());
+            modelBuilder.ApplyConfiguration (new MedicalItemPublicationPeriodConfiguration ());
             modelBuilder.ApplyConfiguration (new SectionTypeConfiguration ());
             modelBuilder.ApplyConfiguration (new PublicationTypeConfiguration ());
             modelBuilder.ApplyConfiguration (new PractitionerTypeConfiguration ());

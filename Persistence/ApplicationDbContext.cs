@@ -15,8 +15,9 @@ namespace MedicalBilingMicroservice.Persistence {
             public DbSet<InvoiceStatus> InvoiceStatuses { get; set; }
             public DbSet<MedicalItem> MedicalItems { get; set; }
             public DbSet<MedicalItemType> MedicalItemTypes { get; set; }
-            public DbSet<MedicalItemDescription> MedicalItemDescriptions { get; set; }
             public DbSet<MedicalItemPublication> MedicalItemPublications { get; set; }
+            public DbSet<MedicalItemPublicationPeriod> MedicalItemPublicationPeriods { get; set; }
+            public DbSet<NappiCodeType> NappiCodeTypes { get; set; }
             public DbSet<PractitionerType> PractitionerTypes { get; set; }
             public DbSet<PractitionerGroupType> PractitionerGroupTypes { get; set; }
             public DbSet<PractitionerPractitionerType> PractitionerPractitionerTypes { get; set; }
