@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
 using MedicalBilingBackEnd.Common.Attributes;
-using MedicalBilingBackEnd.Core.Models.Entities.Tariffs;
+using MedicalBilingBackEnd.Core.Models.Entities.Lookups;
 using MedicalBilingBackEnd.Core.Repositories.Lookups;
 using MedicalBilingBackEnd.Resources.DomainToApiResource.Lookups;
 using Microsoft.AspNet.OData;

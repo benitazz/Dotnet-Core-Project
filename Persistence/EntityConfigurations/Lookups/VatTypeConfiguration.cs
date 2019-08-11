@@ -1,11 +1,11 @@
 using System;
 using MedicalBilingBackEnd.Common;
 using MedicalBilingBackEnd.Common.Extensions;
-using MedicalBilingBackEnd.Core.Models.Entities.Tariffs;
+using MedicalBilingBackEnd.Core.Models.Entities.Lookups;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace MedicalBilingBackEnd.Persistence.EntityConfigurations.Tariffs {
+namespace MedicalBilingBackEnd.Persistence.EntityConfigurations.Lookups {
     public class VatTypeConfiguration : IEntityTypeConfiguration<VatType> {
         public void Configure (EntityTypeBuilder<VatType> builder) {
             builder.ConfigureEntity ();
@@ -16,10 +16,10 @@ namespace MedicalBilingBackEnd.Persistence.EntityConfigurations.Tariffs {
             builder.Property (vatType => vatType.Description)
                 .HasMaxLength (255);
 
-            this.SeedTariffTypes (builder);
+            this.SeedVatTypes (builder);
         }
 
-        private void SeedTariffTypes (EntityTypeBuilder<VatType> modelBuilder) {
+        private void SeedVatTypes (EntityTypeBuilder<VatType> modelBuilder) {
             modelBuilder.HasData (
                 new VatType {
                     Id = 1,

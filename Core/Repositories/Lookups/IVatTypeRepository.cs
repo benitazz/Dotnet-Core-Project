@@ -1,4 +1,5 @@
-using MedicalBilingBackEnd.Core.Models.Entities.Tariffs;
+
+using MedicalBilingBackEnd.Core.Models.Entities.Lookups;
 using switch_api.Core.Repositories;
 
 namespace MedicalBilingBackEnd.Core.Repositories.Lookups

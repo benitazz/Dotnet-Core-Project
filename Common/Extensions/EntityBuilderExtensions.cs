@@ -11,22 +11,22 @@ namespace MedicalBilingBackEnd.Common.Extensions {
                      builder.Property (t => t.CreatedBy)
                             .IsRequired ()
                             .HasMaxLength (255)
-                            .HasDefaultValueSql ("'Administrator'");
+                            .HasDefaultValueSql ($"'{Constants.Administrator}'");
 
                      builder.Property (t => t.CreatedDate)
                             .IsRequired ()
-                            .HasColumnType ("DATETIME2")
-                            .HasDefaultValueSql ("GetDate()");
+                            .HasColumnType ($"{Constants.DateTime2}")
+                            .HasDefaultValueSql ($"{Constants.GetDate}");
 
                      builder.Property (t => t.UpdatedBy)
                             .IsRequired ()
                             .HasMaxLength (255)
-                            .HasDefaultValueSql ("'Administrator'");
+                            .HasDefaultValueSql ($"'{Constants.Administrator}'");
 
                      builder.Property (t => t.UpdatedDate)
                             .IsRequired ()
-                            .HasColumnType ("DATETIME2")
-                            .HasDefaultValueSql ("GetDate()");
+                            .HasColumnType ($"{Constants.DateTime2}")
+                            .HasDefaultValueSql ($"{Constants.GetDate}");
 
                      builder.Property (t => t.IsDeleted)
                             .IsRequired ()

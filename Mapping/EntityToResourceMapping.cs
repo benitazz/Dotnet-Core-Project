@@ -1,6 +1,6 @@
 using System.Linq;
 using AutoMapper;
-using MedicalBilingBackEnd.Core.Models.Entities.Tariffs;
+using MedicalBilingBackEnd.Core.Models.Entities.Lookups;
 using MedicalBilingBackEnd.Resources.DomainToApiResource.Lookups;
 using MedicalBilingMicroservice.Core.Models.Entities.Users;
 using MedicalBilingMicroservice.Resources.DomainToApiResource;

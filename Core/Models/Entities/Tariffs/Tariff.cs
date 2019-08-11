@@ -1,4 +1,5 @@
 using System;
+using MedicalBilingBackEnd.Core.Models.Entities.Lookups;
 using MedicalBilingMicroservice.Core.Models.Entities.Tariffs;
 
 namespace MedicalBilingBackEnd.Core.Models.Entities.Tariffs {

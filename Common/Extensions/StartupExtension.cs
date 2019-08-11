@@ -8,9 +8,11 @@ using MedicalBilingMicroservice.Common.Auth;
 using MedicalBilingMicroservice.Common.Helpers.RenderViews;
 using MedicalBilingMicroservice.Core;
 using MedicalBilingMicroservice.Core.Repositories;
+using MedicalBilingMicroservice.Core.Repositories.Lookups;
 using MedicalBilingMicroservice.Core.Repositories.Tariffs;
 using MedicalBilingMicroservice.Persistence;
 using MedicalBilingMicroservice.Persistence.Repositories;
+using MedicalBilingMicroservice.Persistence.Repositories.Lookups;
 using MedicalBilingMicroservice.Persistence.Repositories.Tariffs;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -25,6 +27,7 @@ namespace MedicalBilingMicroservice.Common.Extensions {
             services.AddScoped<IMedicalItemTypeRepository, MedicalItemTypeRepository> ();
             services.AddScoped<IMedicalItemPublicationRepository, MedicalItemDescriptionRepository> ();
             services.AddScoped<IMedicalItemPublicationPeriodRepository, MedicalItemPublicationPeriodRepository> ();
+            services.AddScoped<IManufactureTypeRepository, ManufactureTypeRepository> ();
             services.AddScoped<INappiCodeTypeRepository, NappiCodeTypeRepository> ();
 
             services.AddScoped<IPublicationTypeRepository, PublicationTypeRepository> ();
@@ -32,6 +35,7 @@ namespace MedicalBilingMicroservice.Common.Extensions {
             services.AddScoped<IPractitionerPractitionerTypeRepository, PractitionerPractitionerTypeRepository> ();
             services.AddScoped<IPractitionerGroupTypeRepository, PractitionerGroupTypeRepository> ();
             services.AddScoped<IPractitionerRepository, PractitionerRepository> ();
+            services.AddScoped<IProductRepository, ProductRepository> ();
 
             services.AddScoped<ISectionTypeRepository, SectionTypeRepository> ();
             services.AddScoped<ITariffTypeRepository, TariffTypeRepository> ();

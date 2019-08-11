@@ -47,7 +47,7 @@ namespace MedicalBilingBackEnd.Mapping.CsvMapping
             var amount = double.Parse(vatAmount);
             var fourteenPercent = 0.14;
             var fifteenPercent = 0.15;
-            return vatId == (int)Common.Enums.VatType.FifteenPercentage
+            return vatId == (int)Common.Enums.Vat.FifteenPercentage
                     ? (amount - amount * fifteenPercent)
                     : (amount - amount * fourteenPercent);
         }

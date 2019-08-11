@@ -1,5 +1,7 @@
 using MedicalBilingBackEnd.Persistence.EntityConfigurations.Lookups;
 using MedicalBilingBackEnd.Persistence.EntityConfigurations.Tariffs;
+using MedicalBilingMicroservice.Persistence.EntityConfigurations;
+using MedicalBilingMicroservice.Persistence.EntityConfigurations.Lookups;
 using MedicalBilingMicroservice.Persistence.EntityConfigurations.Tariffs;
 using MedicalBilingMicroservice.Persistence.EntityConfigurations.Users;
 using Microsoft.EntityFrameworkCore;
@@ -23,6 +25,7 @@ namespace MedicalBilingBackEnd.Common.Extensions {
             modelBuilder.ApplyConfiguration (new MedicalItemPublicationConfiguration ());
             modelBuilder.ApplyConfiguration (new MedicalItemTypeConfiguration ());
             modelBuilder.ApplyConfiguration (new MedicalItemPublicationPeriodConfiguration ());
+            modelBuilder.ApplyConfiguration (new ManufactureTypeConfiguration ());
             modelBuilder.ApplyConfiguration (new NappiCodeTypeConfiguration ());
 
             modelBuilder.ApplyConfiguration (new SectionTypeConfiguration ());
@@ -32,6 +35,7 @@ namespace MedicalBilingBackEnd.Common.Extensions {
             modelBuilder.ApplyConfiguration (new PractitionerGroupTypeConfiguration ());
             modelBuilder.ApplyConfiguration (new PractitionerPractitionerTypeConfiguration ());
             modelBuilder.ApplyConfiguration (new PractitionerConfiguration ());
+            modelBuilder.ApplyConfiguration (new ProductConfiguration ());
 
             modelBuilder.ApplyConfiguration (new TariffConfiguration ());
             modelBuilder.ApplyConfiguration (new TariffBaseUnitCostConfiguration ());

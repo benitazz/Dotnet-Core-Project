@@ -1,6 +1,8 @@
 using MedicalBilingBackEnd.Common.Extensions;
 using MedicalBilingBackEnd.Core.Models.Entities.Lookups;
 using MedicalBilingBackEnd.Core.Models.Entities.Tariffs;
+using MedicalBilingMicroservice.Core.Models.Entities;
+using MedicalBilingMicroservice.Core.Models.Entities.Lookups;
 using MedicalBilingMicroservice.Core.Models.Entities.Tariffs;
 using MedicalBilingMicroservice.Core.Models.Entities.Users;
 using Microsoft.AspNetCore.Identity;
@@ -17,20 +19,25 @@ namespace MedicalBilingMicroservice.Persistence {
             public DbSet<MedicalItemType> MedicalItemTypes { get; set; }
             public DbSet<MedicalItemPublication> MedicalItemPublications { get; set; }
             public DbSet<MedicalItemPublicationPeriod> MedicalItemPublicationPeriods { get; set; }
-            
+            public DbSet<ManufactureType> ManufactureTypes { get; set; }
+
             public DbSet<NappiCodeType> NappiCodeTypes { get; set; }
 
             public DbSet<PractitionerType> PractitionerTypes { get; set; }
             public DbSet<PractitionerGroupType> PractitionerGroupTypes { get; set; }
             public DbSet<PractitionerPractitionerType> PractitionerPractitionerTypes { get; set; }
             public DbSet<Practitioner> Practitioners { get; set; }
+            public DbSet<Product> Products { get; set; }
             public DbSet<PublicationType> PublicationTypes { get; set; }
+
             public DbSet<Tariff> Tariffs { get; set; }
             public DbSet<TariffType> TariffTypes { get; set; }
             public DbSet<TariffBaseUnitCost> TariffBaseUnitCosts { get; set; }
             public DbSet<TariffBaseUnitCostType> TariffBaseUnitCostTypes { get; set; }
+
             public DbSet<VatType> VatTypes { get; set; }
             public DbSet<SectionType> SectionTypes { get; set; }
+            
             public ApplicationDbContext (DbContextOptions options) : base (options) {
 
             }
