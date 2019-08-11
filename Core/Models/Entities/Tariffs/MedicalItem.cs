@@ -6,7 +6,7 @@ namespace MedicalBilingMicroservice.Core.Models.Entities.Tariffs {
         public string Code { get; set; }
         public int MedicalItemTypeId { get; set; }
         public MedicalItemType MedicalItemType { get; set; }
-        public int NappiCodeTypeId { get; set; }
-        public NappiCodeType NappiCodeType { get; set; }
+        public int NappiCodeId { get; set; }
+        public NappiCode NappiCode { get; set; }
     }
 }

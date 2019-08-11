@@ -28,7 +28,7 @@ namespace MedicalBilingBackEnd.Common.Extensions {
             modelBuilder.ApplyConfiguration (new MedicalItemTypeConfiguration ());
             modelBuilder.ApplyConfiguration (new MedicalItemPublicationPeriodConfiguration ());
             modelBuilder.ApplyConfiguration (new ManufactureTypeConfiguration ());
-            modelBuilder.ApplyConfiguration (new NappiCodeTypeConfiguration ());
+            modelBuilder.ApplyConfiguration (new NappiCodeConfiguration ());
 
             modelBuilder.ApplyConfiguration (new SectionTypeConfiguration ());
 

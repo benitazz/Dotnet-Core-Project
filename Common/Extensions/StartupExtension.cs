@@ -29,7 +29,7 @@ namespace MedicalBilingMicroservice.Common.Extensions {
             services.AddScoped<IMedicalItemPublicationRepository, MedicalItemDescriptionRepository> ();
             services.AddScoped<IMedicalItemPublicationPeriodRepository, MedicalItemPublicationPeriodRepository> ();
             services.AddScoped<IManufactureTypeRepository, ManufactureTypeRepository> ();
-            services.AddScoped<INappiCodeTypeRepository, NappiCodeTypeRepository> ();
+            services.AddScoped<INappiCodeRepository, NappiCodeRepository> ();
 
             services.AddScoped<IPublicationTypeRepository, PublicationTypeRepository> ();
             services.AddScoped<IPractitionerTypeRepository, PractitionerTypeRepository> ();
