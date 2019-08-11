@@ -13,6 +13,8 @@ namespace MedicalBilingMicroservice.Persistence {
     public class ApplicationDbContext:
         IdentityDbContext<ApplicationUser, ApplicationRole, string, IdentityUserClaim<string>, ApplicationUserRole, IdentityUserLogin<string>, IdentityRoleClaim<string>, IdentityUserToken<string>> {
 
+            public DbSet<DosageType> DosageTypes { get; set; }
+
             public DbSet<FileStatus> FileStatuses { get; set; }
             public DbSet<InvoiceStatus> InvoiceStatuses { get; set; }
             public DbSet<MedicalItem> MedicalItems { get; set; }
@@ -37,7 +39,7 @@ namespace MedicalBilingMicroservice.Persistence {
 
             public DbSet<VatType> VatTypes { get; set; }
             public DbSet<SectionType> SectionTypes { get; set; }
-            
+
             public ApplicationDbContext (DbContextOptions options) : base (options) {
 
             }

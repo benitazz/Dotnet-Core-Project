@@ -13,7 +13,7 @@ namespace MedicalBilingMicroservic.Core.Models
             UserManager<ApplicationUser> userManager,
             RoleManager<ApplicationRole> roleManager)
         {
-            context.Database.EnsureCreated();
+            //context.Database.EnsureCreated();
 
             string adminRole = "Admin";
             string managerRole = "Manager";

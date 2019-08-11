@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace switchapi.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20190811134347_AddedProductUnknownData")]
-    partial class AddedProductUnknownData
+    [Migration("20190811143335_RemovedColumnsOnNappiCodes2")]
+    partial class RemovedColumnsOnNappiCodes2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -77,92 +77,92 @@ namespace switchapi.Migrations
                         {
                             Id = 1,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 104, DateTimeKind.Local).AddTicks(8820),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 713, DateTimeKind.Local).AddTicks(7030),
                             Description = "Successfully uploaded the file",
                             IsDeleted = false,
                             Name = "Uploaded",
                             NormalizedDescription = "SUCCESSFULLYUPLOADEDTHEFILE",
                             NormalizedName = "UPLOADED",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 106, DateTimeKind.Local).AddTicks(8464)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 715, DateTimeKind.Local).AddTicks(1728)
                         },
                         new
                         {
                             Id = 2,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 106, DateTimeKind.Local).AddTicks(9426),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 715, DateTimeKind.Local).AddTicks(2471),
                             Description = "The manager rejected the file",
                             IsDeleted = false,
                             Name = "Rejected",
                             NormalizedDescription = "THEMANAGERREJECTEDTHEFILE",
                             NormalizedName = "REJECTED",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 106, DateTimeKind.Local).AddTicks(9442)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 715, DateTimeKind.Local).AddTicks(2478)
                         },
                         new
                         {
                             Id = 3,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 106, DateTimeKind.Local).AddTicks(9457),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 715, DateTimeKind.Local).AddTicks(2486),
                             Description = "Ready to submit to the Fund",
                             IsDeleted = false,
                             Name = "Approved",
                             NormalizedDescription = "READYTOSUBMITTOTHEFUND",
                             NormalizedName = "APPROVED",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 106, DateTimeKind.Local).AddTicks(9461)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 715, DateTimeKind.Local).AddTicks(2490)
                         },
                         new
                         {
                             Id = 4,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 106, DateTimeKind.Local).AddTicks(9465),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 715, DateTimeKind.Local).AddTicks(2494),
                             Description = "File successfully submitted to the Fund",
                             IsDeleted = false,
                             Name = "Submitted",
                             NormalizedDescription = "FILESUCCESSFULLYSUBMITTEDTOTHEFUND",
                             NormalizedName = "SUBMITTED",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 106, DateTimeKind.Local).AddTicks(9469)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 715, DateTimeKind.Local).AddTicks(2494)
                         },
                         new
                         {
                             Id = 5,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 106, DateTimeKind.Local).AddTicks(9476),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 715, DateTimeKind.Local).AddTicks(2498),
                             Description = "Not all invoices were paid",
                             IsDeleted = false,
                             Name = "Partially Paid",
                             NormalizedDescription = "NOTALLINVOICESWEREPAID",
                             NormalizedName = "PARTIALLY PAID",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 106, DateTimeKind.Local).AddTicks(9476)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 715, DateTimeKind.Local).AddTicks(2498)
                         },
                         new
                         {
                             Id = 6,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 106, DateTimeKind.Local).AddTicks(9480),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 715, DateTimeKind.Local).AddTicks(2501),
                             Description = "All invoices were successfully paid",
                             IsDeleted = false,
                             Name = "Paid",
                             NormalizedDescription = "ALLINVOICESWERESUCCESSFULLYPAID",
                             NormalizedName = "PAID",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 106, DateTimeKind.Local).AddTicks(9484)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 715, DateTimeKind.Local).AddTicks(2501)
                         },
                         new
                         {
                             Id = 7,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 106, DateTimeKind.Local).AddTicks(9488),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 715, DateTimeKind.Local).AddTicks(2505),
                             Description = "File Overdue",
                             IsDeleted = false,
                             Name = "Overdue",
                             NormalizedDescription = "FILEOVERDUE",
                             NormalizedName = "OVERDUE",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 106, DateTimeKind.Local).AddTicks(9492)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 715, DateTimeKind.Local).AddTicks(2505)
                         });
                 });
 
@@ -222,79 +222,79 @@ namespace switchapi.Migrations
                         {
                             Id = 1,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 113, DateTimeKind.Local).AddTicks(7604),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 719, DateTimeKind.Local).AddTicks(563),
                             Description = "Pending",
                             IsDeleted = false,
                             Name = "Pending",
                             NormalizedDescription = "PENDING",
                             NormalizedName = "PENDING",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 113, DateTimeKind.Local).AddTicks(7623)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 719, DateTimeKind.Local).AddTicks(579)
                         },
                         new
                         {
                             Id = 2,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 113, DateTimeKind.Local).AddTicks(7662),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 719, DateTimeKind.Local).AddTicks(609),
                             Description = "Approved",
                             IsDeleted = false,
                             Name = "Approved",
                             NormalizedDescription = "APPROVED",
                             NormalizedName = "APPROVED",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 113, DateTimeKind.Local).AddTicks(7666)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 719, DateTimeKind.Local).AddTicks(609)
                         },
                         new
                         {
                             Id = 3,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 113, DateTimeKind.Local).AddTicks(7670),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 719, DateTimeKind.Local).AddTicks(613),
                             Description = "Payment rejected",
                             IsDeleted = false,
                             Name = "Rejected",
                             NormalizedDescription = "PAYMENTREJECTED",
                             NormalizedName = "REJECTED",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 113, DateTimeKind.Local).AddTicks(7670)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 719, DateTimeKind.Local).AddTicks(617)
                         },
                         new
                         {
                             Id = 4,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 113, DateTimeKind.Local).AddTicks(7673),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 719, DateTimeKind.Local).AddTicks(621),
                             Description = "Invoice submitted to the fund",
                             IsDeleted = false,
                             Name = "Submitted",
                             NormalizedDescription = "INVOICESUBMITTEDTOTHEFUND",
                             NormalizedName = "SUBMITTED",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 113, DateTimeKind.Local).AddTicks(7677)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 719, DateTimeKind.Local).AddTicks(621)
                         },
                         new
                         {
                             Id = 5,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 113, DateTimeKind.Local).AddTicks(7681),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 719, DateTimeKind.Local).AddTicks(625),
                             Description = "Invoice paid",
                             IsDeleted = false,
                             Name = "Paid",
                             NormalizedDescription = "INVOICEPAID",
                             NormalizedName = "PAID",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 113, DateTimeKind.Local).AddTicks(7681)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 719, DateTimeKind.Local).AddTicks(625)
                         },
                         new
                         {
                             Id = 6,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 113, DateTimeKind.Local).AddTicks(7685),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 719, DateTimeKind.Local).AddTicks(629),
                             Description = "Invoice Overdue",
                             IsDeleted = false,
                             Name = "Overdue",
                             NormalizedDescription = "INVOICEOVERDUE",
                             NormalizedName = "OVERDUE",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 113, DateTimeKind.Local).AddTicks(7685)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 719, DateTimeKind.Local).AddTicks(632)
                         });
                 });
 
@@ -349,12 +349,12 @@ namespace switchapi.Migrations
                         {
                             Id = 1,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 129, DateTimeKind.Local).AddTicks(4564),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 727, DateTimeKind.Local).AddTicks(1105),
                             Description = "14% Percent VAT",
                             IsDeleted = false,
                             Percentage = 0.14000000000000001,
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 129, DateTimeKind.Local).AddTicks(4591),
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 727, DateTimeKind.Local).AddTicks(1124),
                             ValidFrom = new DateTime(1900, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ValidTo = new DateTime(2018, 3, 31, 23, 59, 59, 0, DateTimeKind.Unspecified)
                         },
@@ -362,12 +362,12 @@ namespace switchapi.Migrations
                         {
                             Id = 2,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 129, DateTimeKind.Local).AddTicks(6254),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 727, DateTimeKind.Local).AddTicks(2537),
                             Description = "15% Percent VAT",
                             IsDeleted = false,
                             Percentage = 0.14999999999999999,
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 129, DateTimeKind.Local).AddTicks(6262),
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 727, DateTimeKind.Local).AddTicks(2541),
                             ValidFrom = new DateTime(2018, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
@@ -543,27 +543,27 @@ namespace switchapi.Migrations
                         {
                             Id = 1,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 120, DateTimeKind.Local).AddTicks(3829),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 722, DateTimeKind.Local).AddTicks(3754),
                             Description = "Coid Tariffs",
                             IsDeleted = false,
                             Name = "Coida",
                             NormalizedDescription = "COIDTARIFFS",
                             NormalizedName = "COIDA",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 120, DateTimeKind.Local).AddTicks(3848)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 722, DateTimeKind.Local).AddTicks(3773)
                         },
                         new
                         {
                             Id = 2,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 120, DateTimeKind.Local).AddTicks(3887),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 722, DateTimeKind.Local).AddTicks(3793),
                             Description = "None Coid Tariffs",
                             IsDeleted = false,
                             Name = "NoneCoid",
                             NormalizedDescription = "NONECOIDTARIFFS",
                             NormalizedName = "NONECOID",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 120, DateTimeKind.Local).AddTicks(3891)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 722, DateTimeKind.Local).AddTicks(3793)
                         });
                 });
 
@@ -1007,79 +1007,79 @@ namespace switchapi.Migrations
                         {
                             Id = 1,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 147, DateTimeKind.Local).AddTicks(8869),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 736, DateTimeKind.Local).AddTicks(9763),
                             Description = "Unknown",
                             IsDeleted = false,
                             Name = "-",
                             NormalizedDescription = "UNKNOWN",
                             NormalizedName = "-",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 147, DateTimeKind.Local).AddTicks(8896)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 736, DateTimeKind.Local).AddTicks(9782)
                         },
                         new
                         {
                             Id = 2,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 147, DateTimeKind.Local).AddTicks(8938),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 736, DateTimeKind.Local).AddTicks(9805),
                             Description = "Treatment or Procedure Code",
                             IsDeleted = true,
                             Name = "IT",
                             NormalizedDescription = "TREATMENTORPROCEDURECODE",
                             NormalizedName = "IT",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 147, DateTimeKind.Local).AddTicks(8942)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 736, DateTimeKind.Local).AddTicks(9809)
                         },
                         new
                         {
                             Id = 3,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 147, DateTimeKind.Local).AddTicks(8946),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 736, DateTimeKind.Local).AddTicks(9809),
                             Description = "Drug or Pharmaceutical Item (NAPPI)",
                             IsDeleted = true,
                             Name = "ID",
                             NormalizedDescription = "DRUGORPHARMACEUTICALITEM(NAPPI)",
                             NormalizedName = "ID",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 147, DateTimeKind.Local).AddTicks(8946)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 736, DateTimeKind.Local).AddTicks(9809)
                         },
                         new
                         {
                             Id = 4,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 147, DateTimeKind.Local).AddTicks(8950),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 736, DateTimeKind.Local).AddTicks(9813),
                             Description = "Modifier",
                             IsDeleted = false,
                             Name = "M",
                             NormalizedDescription = "MODIFIER",
                             NormalizedName = "M",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 147, DateTimeKind.Local).AddTicks(8950)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 736, DateTimeKind.Local).AddTicks(9813)
                         },
                         new
                         {
                             Id = 5,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 147, DateTimeKind.Local).AddTicks(8953),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 736, DateTimeKind.Local).AddTicks(9813),
                             Description = "Rule",
                             IsDeleted = false,
                             Name = "R",
                             NormalizedDescription = "RULE",
                             NormalizedName = "R",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 147, DateTimeKind.Local).AddTicks(8953)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 736, DateTimeKind.Local).AddTicks(9817)
                         },
                         new
                         {
                             Id = 6,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 147, DateTimeKind.Local).AddTicks(8957),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 736, DateTimeKind.Local).AddTicks(9817),
                             Description = "Note",
                             IsDeleted = false,
                             Name = "N",
                             NormalizedDescription = "NOTE",
                             NormalizedName = "N",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 147, DateTimeKind.Local).AddTicks(8957)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 736, DateTimeKind.Local).AddTicks(9817)
                         });
                 });
 
@@ -1106,15 +1106,9 @@ namespace switchapi.Migrations
                         .ValueGeneratedOnAdd()
                         .HasDefaultValueSql("0");
 
-                    b.Property<string>("ManufacturerCode");
-
                     b.Property<string>("NappiCode");
 
-                    b.Property<string>("ProductName");
-
-                    b.Property<int?>("ProductPackSize");
-
-                    b.Property<int?>("ProductStrength");
+                    b.Property<int>("ProductId");
 
                     b.Property<int?>("Schedule");
 
@@ -1130,6 +1124,8 @@ namespace switchapi.Migrations
                         .HasDefaultValueSql("GetDate()");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
 
                     b.ToTable("NappiCodeTypes");
                 });
@@ -1254,40 +1250,40 @@ namespace switchapi.Migrations
                         {
                             Id = 1,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 188, DateTimeKind.Local).AddTicks(4183),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 758, DateTimeKind.Local).AddTicks(8613),
                             Description = "ALL discipline",
                             IsDeleted = false,
                             Name = "ALL",
                             NormalizedDescription = "ALL DISCIPLINE",
                             NormalizedName = "ALL",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 188, DateTimeKind.Local).AddTicks(4207)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 758, DateTimeKind.Local).AddTicks(8629)
                         },
                         new
                         {
                             Id = 2,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 188, DateTimeKind.Local).AddTicks(4237),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 758, DateTimeKind.Local).AddTicks(8648),
                             Description = "SPC discipline",
                             IsDeleted = false,
                             Name = "SPC",
                             NormalizedDescription = "SPC DISCIPLINE",
                             NormalizedName = "SPC",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 188, DateTimeKind.Local).AddTicks(4237)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 758, DateTimeKind.Local).AddTicks(8648)
                         },
                         new
                         {
                             Id = 3,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 188, DateTimeKind.Local).AddTicks(4241),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 758, DateTimeKind.Local).AddTicks(8652),
                             Description = "GPH discipline",
                             IsDeleted = false,
                             Name = "GPH",
                             NormalizedDescription = "GPH DISCIPLINE",
                             NormalizedName = "GPH",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 188, DateTimeKind.Local).AddTicks(4245)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 758, DateTimeKind.Local).AddTicks(8652)
                         });
                 });
 
@@ -1392,79 +1388,79 @@ namespace switchapi.Migrations
                         {
                             Id = 1,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 182, DateTimeKind.Local).AddTicks(4449),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 755, DateTimeKind.Local).AddTicks(8413),
                             Description = "Hospital",
                             IsDeleted = false,
                             Name = "Hospital",
                             NormalizedDescription = "HOSPITAL",
                             NormalizedName = "HOSPITAL",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 182, DateTimeKind.Local).AddTicks(4476)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 755, DateTimeKind.Local).AddTicks(8428)
                         },
                         new
                         {
                             Id = 2,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 182, DateTimeKind.Local).AddTicks(4530),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 755, DateTimeKind.Local).AddTicks(8448),
                             Description = "Dentist",
                             IsDeleted = false,
                             Name = "Dentist",
                             NormalizedDescription = "DENTIST",
                             NormalizedName = "DENTIST",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 182, DateTimeKind.Local).AddTicks(4533)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 755, DateTimeKind.Local).AddTicks(8451)
                         },
                         new
                         {
                             Id = 3,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 182, DateTimeKind.Local).AddTicks(4549),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 755, DateTimeKind.Local).AddTicks(8451),
                             Description = "Ambulance",
                             IsDeleted = false,
                             Name = "Ambulance",
                             NormalizedDescription = "AMBULANCE",
                             NormalizedName = "AMBULANCE",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 182, DateTimeKind.Local).AddTicks(4549)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 755, DateTimeKind.Local).AddTicks(8451)
                         },
                         new
                         {
                             Id = 4,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 182, DateTimeKind.Local).AddTicks(4553),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 755, DateTimeKind.Local).AddTicks(8455),
                             Description = "Specialist",
                             IsDeleted = false,
                             Name = "Specialist",
                             NormalizedDescription = "SPECIALIST",
                             NormalizedName = "SPECIALIST",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 182, DateTimeKind.Local).AddTicks(4553)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 755, DateTimeKind.Local).AddTicks(8455)
                         },
                         new
                         {
                             Id = 5,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 182, DateTimeKind.Local).AddTicks(4557),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 755, DateTimeKind.Local).AddTicks(8455),
                             Description = "Anaesthetist",
                             IsDeleted = false,
                             Name = "Anaesthetist",
                             NormalizedDescription = "ANAESTHETIST",
                             NormalizedName = "ANAESTHETIST",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 182, DateTimeKind.Local).AddTicks(4557)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 755, DateTimeKind.Local).AddTicks(8459)
                         },
                         new
                         {
                             Id = 6,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 182, DateTimeKind.Local).AddTicks(4560),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 755, DateTimeKind.Local).AddTicks(8459),
                             Description = "General Practitioner",
                             IsDeleted = false,
                             Name = "GP",
                             NormalizedDescription = "GENERALPRACTITIONER",
                             NormalizedName = "GP",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 182, DateTimeKind.Local).AddTicks(4560)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 755, DateTimeKind.Local).AddTicks(8459)
                         });
                 });
 
@@ -2481,7 +2477,7 @@ namespace switchapi.Migrations
                         {
                             Id = 1,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 175, DateTimeKind.Local).AddTicks(2468),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 751, DateTimeKind.Local).AddTicks(8154),
                             Description = "Chiropractor Tariffs",
                             IsDeleted = false,
                             Name = "Chiropractor",
@@ -2489,13 +2485,13 @@ namespace switchapi.Migrations
                             NormalizedName = "CHIROPRACTOR",
                             PublicationNo = "11111",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 175, DateTimeKind.Local).AddTicks(2488)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 751, DateTimeKind.Local).AddTicks(8177)
                         },
                         new
                         {
                             Id = 2,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 175, DateTimeKind.Local).AddTicks(3750),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 751, DateTimeKind.Local).AddTicks(9151),
                             Description = "Radiologists Tariffs",
                             IsDeleted = false,
                             Name = "Radiologist",
@@ -2503,13 +2499,13 @@ namespace switchapi.Migrations
                             NormalizedName = "RADIOLOGIST",
                             PublicationNo = "11111",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 175, DateTimeKind.Local).AddTicks(3754)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 751, DateTimeKind.Local).AddTicks(9155)
                         },
                         new
                         {
                             Id = 3,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 175, DateTimeKind.Local).AddTicks(3770),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 751, DateTimeKind.Local).AddTicks(9182),
                             Description = "Dentists tarrifs",
                             IsDeleted = false,
                             Name = "Dentist",
@@ -2517,13 +2513,13 @@ namespace switchapi.Migrations
                             NormalizedName = "DENTIST",
                             PublicationNo = "11111",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 175, DateTimeKind.Local).AddTicks(3774)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 751, DateTimeKind.Local).AddTicks(9205)
                         },
                         new
                         {
                             Id = 4,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 175, DateTimeKind.Local).AddTicks(3777),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 751, DateTimeKind.Local).AddTicks(9209),
                             Description = "Physiotherapist tariffs",
                             IsDeleted = false,
                             Name = "Physiotherapist",
@@ -2531,13 +2527,13 @@ namespace switchapi.Migrations
                             NormalizedName = "PHYSIOTHERAPIST",
                             PublicationNo = "11111",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 175, DateTimeKind.Local).AddTicks(3777)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 751, DateTimeKind.Local).AddTicks(9209)
                         },
                         new
                         {
                             Id = 5,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 175, DateTimeKind.Local).AddTicks(3781),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 751, DateTimeKind.Local).AddTicks(9209),
                             Description = "Private Ambulance Tariffs",
                             IsDeleted = false,
                             Name = "Private Ambulance",
@@ -2545,13 +2541,13 @@ namespace switchapi.Migrations
                             NormalizedName = "PRIVATEAMBULANCE",
                             PublicationNo = "11111",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 175, DateTimeKind.Local).AddTicks(3785)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 751, DateTimeKind.Local).AddTicks(9213)
                         },
                         new
                         {
                             Id = 6,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 175, DateTimeKind.Local).AddTicks(3785),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 751, DateTimeKind.Local).AddTicks(9213),
                             Description = "General Practioner Tariffs",
                             IsDeleted = false,
                             Name = "General Practioner",
@@ -2559,13 +2555,13 @@ namespace switchapi.Migrations
                             NormalizedName = "GENERALPRACTIONER",
                             PublicationNo = "11111",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 175, DateTimeKind.Local).AddTicks(3785)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 751, DateTimeKind.Local).AddTicks(9213)
                         },
                         new
                         {
                             Id = 7,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 175, DateTimeKind.Local).AddTicks(3789),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 751, DateTimeKind.Local).AddTicks(9216),
                             Description = "Renal Care Tariffs",
                             IsDeleted = false,
                             Name = "Renal Care",
@@ -2573,13 +2569,13 @@ namespace switchapi.Migrations
                             NormalizedName = "RENALCARE",
                             PublicationNo = "11111",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 175, DateTimeKind.Local).AddTicks(3793)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 751, DateTimeKind.Local).AddTicks(9216)
                         },
                         new
                         {
                             Id = 8,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 175, DateTimeKind.Local).AddTicks(3793),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 751, DateTimeKind.Local).AddTicks(9220),
                             Description = "Social Worker Tariffs",
                             IsDeleted = false,
                             Name = "Social Worker",
@@ -2587,13 +2583,13 @@ namespace switchapi.Migrations
                             NormalizedName = "SOCIALWORKER",
                             PublicationNo = "11111",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 175, DateTimeKind.Local).AddTicks(3797)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 751, DateTimeKind.Local).AddTicks(9220)
                         },
                         new
                         {
                             Id = 9,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 175, DateTimeKind.Local).AddTicks(3797),
+                            CreatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 751, DateTimeKind.Local).AddTicks(9224),
                             Description = "Wound Care Tariffs",
                             IsDeleted = false,
                             Name = "Wound Care",
@@ -2601,7 +2597,7 @@ namespace switchapi.Migrations
                             NormalizedName = "WOUNDCARE",
                             PublicationNo = "11111",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 11, 15, 43, 45, 175, DateTimeKind.Local).AddTicks(3800)
+                            UpdatedDate = new DateTime(2019, 8, 11, 16, 33, 34, 751, DateTimeKind.Local).AddTicks(9224)
                         });
                 });
 
@@ -2667,6 +2663,14 @@ namespace switchapi.Migrations
                     b.HasOne("MedicalBilingMicroservice.Core.Models.Entities.Tariffs.MedicalItemPublication", "MedicalItemPublication")
                         .WithMany()
                         .HasForeignKey("MedicalItemPublicationId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("MedicalBilingMicroservice.Core.Models.Entities.Tariffs.NappiCodeType", b =>
+                {
+                    b.HasOne("MedicalBilingMicroservice.Core.Models.Entities.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

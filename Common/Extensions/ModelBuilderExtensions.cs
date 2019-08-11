@@ -14,6 +14,8 @@ namespace MedicalBilingBackEnd.Common.Extensions {
             modelBuilder.ApplyConfiguration (new ApplicationUserConfiguration ());
             modelBuilder.ApplyConfiguration (new ApplicationUserRoleConfiguration ());
 
+            modelBuilder.ApplyConfiguration (new DosageTypeConfiguration ());
+
             // Lookups
             modelBuilder.ApplyConfiguration (new FileStatusConfiguration ());
             modelBuilder.ApplyConfiguration (new InvoiceStatusConfiguration ());

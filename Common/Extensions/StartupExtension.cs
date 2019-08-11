@@ -19,6 +19,7 @@ using Microsoft.Extensions.DependencyInjection;
 namespace MedicalBilingMicroservice.Common.Extensions {
     public static class StartupExtension {
         public static IServiceCollection ConfigureServices (this IServiceCollection services) {
+            services.AddScoped<IDosageTypeRepository, DosageTypeRepository> ();
             services.AddScoped<IFileStatusRepository, FileStatusRepository> ();
             services.AddSingleton<IJwtFactory, JwtFactory> ();
 
