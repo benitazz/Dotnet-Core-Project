@@ -1,7 +1,7 @@
 using FluentValidation;
-using MedicalBilingBackEnd.Resources.ApiToDomainResource.Lookups;
+using MedicalEngineMicroService.Resources.ApiToDomainResource.Lookups;
 
-namespace MedicalBilingBackEnd.Resources.Validations.Lookups
+namespace MedicalEngineMicroService.Resources.Validations.Lookups
 {
     public class SaveLookupValidator : AbstractValidator<SaveLookupResource>
     {

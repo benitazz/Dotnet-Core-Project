@@ -1,6 +1,6 @@
 using System;
 
-namespace MedicalBilingBackEnd.Core.Models.Entities.Lookups
+namespace MedicalEngineMicroService.Core.Models.Entities.Lookups
 {
     public class VatType: EntityBase
     {

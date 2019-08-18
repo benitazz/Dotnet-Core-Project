@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-    <DocumentationFile>bin\MedicalBiling.XML</DocumentationFile>
+    <DocumentationFile>bin\MedicalEngineMicroService.XML</DocumentationFile>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <noWarn>1591</noWarn>
   </PropertyGroup>

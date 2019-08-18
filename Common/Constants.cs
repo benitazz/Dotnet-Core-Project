@@ -1,4 +1,4 @@
-namespace MedicalBilingBackEnd.Common {
+namespace MedicalEngineMicroService.Common {
     public class Constants {
         public const string Administrator = "Administrator";
 
@@ -29,5 +29,16 @@ namespace MedicalBilingBackEnd.Common {
         public const string NoneCoid = "NoneCoid";
         public const string DateTime2 = "DATETIME2";
         public const string GetDate = "GetDate()";
+
+        public static class Strings {
+            public static class JwtClaimIdentifiers {
+                public const string Rol = "rol",
+                    Id = "id";
+            }
+
+            public static class JwtClaims {
+                public const string ApiAccess = "api_access";
+            }
+        }
     }
 }

@@ -1,8 +1,8 @@
-using MedicalBilingMicroservice.Core.Models.Entities.Users;
+using MedicalEngineMicroService.Core.Models.Entities.Users;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace MedicalBilingMicroservice.Persistence.EntityConfigurations.Users
+namespace MedicalEngineMicroService.Persistence.EntityConfigurations.Users
 {
     public class ApplicationRoleConfiguration : IEntityTypeConfiguration<ApplicationRole>
     {

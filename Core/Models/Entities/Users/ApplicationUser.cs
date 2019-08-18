@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using Microsoft.AspNetCore.Identity;
 
-namespace MedicalBilingMicroservice.Core.Models.Entities.Users
+namespace MedicalEngineMicroService.Core.Models.Entities.Users
 {
     public class ApplicationUser : IdentityUser
     {

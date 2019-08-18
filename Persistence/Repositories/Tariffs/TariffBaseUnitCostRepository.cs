@@ -1,9 +1,9 @@
-using MedicalBilingBackEnd.Core.Models.Entities.Tariffs;
-using MedicalBilingBackEnd.Core.Repositories.Tariffs;
-using MedicalBilingMicroservice.Persistence;
-using switch_api.Persistence.Repositories;
+using MedicalEngineMicroService.Core.Models.Entities.Tariffs;
+using MedicalEngineMicroService.Core.Repositories.Tariffs;
+using MedicalEngineMicroService.Persistence;
+using MedicalEngineMicroService.Persistence.Repositories;
 
-namespace MedicalBilingBackEnd.Persistence.Repositories.Tariffs
+namespace MedicalEngineMicroService.Persistence.Repositories.Tariffs
 {
     public class TariffBaseUnitCostRepository : Repository<TariffBaseUnitCost>, ITariffBaseUnitCostRepository {
         public TariffBaseUnitCostRepository (ApplicationDbContext dbContext) : base (dbContext) { }

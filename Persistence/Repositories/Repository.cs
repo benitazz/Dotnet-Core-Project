@@ -4,9 +4,9 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using switch_api.Core.Repositories;
+using MedicalEngineMicroService.Core.Repositories;
 
-namespace switch_api.Persistence.Repositories
+namespace MedicalEngineMicroService.Persistence.Repositories
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {

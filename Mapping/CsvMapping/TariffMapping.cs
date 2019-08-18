@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
 using CsvHelper.Configuration;
-using MedicalBilingBackEnd.Core;
-using MedicalBilingBackEnd.Core.Models.Entities.Tariffs;
-using MedicalBilingBackEnd.Resources.ApiToDomainResource.FileUploads;
-using MedicalBilingBackEnd.Common.Enums;
+using MedicalEngineMicroService.Core;
+using MedicalEngineMicroService.Core.Models.Entities.Tariffs;
+using MedicalEngineMicroService.Resources.ApiToDomainResource.FileUploads;
+using MedicalEngineMicroService.Common.Enums;
 using CsvHelper;
 
-namespace MedicalBilingBackEnd.Mapping.CsvMapping
+namespace MedicalEngineMicroService.Mapping.CsvMapping
 {
     public class TariffMapping : ClassMap<Tariff>
     {

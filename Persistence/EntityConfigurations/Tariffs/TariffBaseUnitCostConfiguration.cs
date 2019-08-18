@@ -1,10 +1,10 @@
-using MedicalBilingBackEnd.Common;
-using MedicalBilingBackEnd.Common.Extensions;
-using MedicalBilingBackEnd.Core.Models.Entities.Tariffs;
+using MedicalEngineMicroService.Common;
+using MedicalEngineMicroService.Common.Extensions;
+using MedicalEngineMicroService.Core.Models.Entities.Tariffs;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace MedicalBilingBackEnd.Persistence.EntityConfigurations.Tariffs {
+namespace MedicalEngineMicroService.Persistence.EntityConfigurations.Tariffs {
     public class TariffBaseUnitCostConfiguration : IEntityTypeConfiguration<TariffBaseUnitCost> {
         public void Configure (EntityTypeBuilder<TariffBaseUnitCost> builder) {
             builder.ConfigureEntity ();

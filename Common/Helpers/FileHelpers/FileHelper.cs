@@ -5,7 +5,7 @@ using System.Text;
 using TinyCsvParser;
 using TinyCsvParser.Mapping;
 
-namespace MedicalBilingBackEnd.Common.Helpers.FileHelpers
+namespace MedicalEngineMicroService.Common.Helpers.FileHelpers
 {
     public class FileHelper : IFileHelper
     {

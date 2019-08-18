@@ -1,7 +1,7 @@
-using MedicalBilingMicroservice.Core.Models.Entities.Lookups;
-using switch_api.Core.Repositories;
+using MedicalEngineMicroService.Core.Models.Entities.Lookups;
+using MedicalEngineMicroService.Core.Repositories;
 
-namespace MedicalBilingMicroservice.Core.Repositories.Lookups
+namespace MedicalEngineMicroService.Core.Repositories.Lookups
 {
     public interface IDosageTypeRepository: IRepository<DosageType>
     {

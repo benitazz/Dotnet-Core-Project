@@ -3,13 +3,13 @@ using System.Linq;
 using System.Text;
 using AutoMapper;
 using FluentValidation.AspNetCore;
-using MedicalBilingBackEnd.Common.Extensions;
+using MedicalEngineMicroService.Common.Extensions;
 using MedicalBilingMicroservic.Core.Models;
-using MedicalBilingMicroservice.Common.Extensions;
-using MedicalBilingMicroservice.Core.Models;
-using MedicalBilingMicroservice.Core.Models.Auth;
-using MedicalBilingMicroservice.Core.Models.Entities.Users;
-using MedicalBilingMicroservice.Persistence;
+using MedicalEngineMicroService.Common.Extensions;
+using MedicalEngineMicroService.Core.Models;
+using MedicalEngineMicroService.Core.Models.Auth;
+using MedicalEngineMicroService.Core.Models.Entities.Users;
+using MedicalEngineMicroService.Persistence;
 using Microsoft.AspNet.OData.Builder;
 using Microsoft.AspNet.OData.Extensions;
 using Microsoft.AspNet.OData.Formatter;
@@ -27,7 +27,7 @@ using Microsoft.Net.Http.Headers;
 using Microsoft.OData;
 using Microsoft.OData.UriParser;
 
-namespace MedicalBilingMicroservice {
+namespace MedicalEngineMicroService {
     public class Startup {
         private const string SecretKey = "iNivDmHLpUA223sqsfhqGbMRdRj1PVkH"; // todo: get this from somewhere secure
         private readonly SymmetricSecurityKey _signingKey = new SymmetricSecurityKey (Encoding.ASCII.GetBytes (SecretKey));

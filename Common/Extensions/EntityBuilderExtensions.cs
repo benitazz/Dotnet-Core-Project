@@ -1,9 +1,9 @@
-using MedicalBilingBackEnd.Core.Models.Entities;
-using MedicalBilingBackEnd.Core.Models.Entities.Lookups;
+using MedicalEngineMicroService.Core.Models.Entities;
+using MedicalEngineMicroService.Core.Models.Entities.Lookups;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace MedicalBilingBackEnd.Common.Extensions {
+namespace MedicalEngineMicroService.Common.Extensions {
        public static class EntityBuilderExtensions {
               public static void ConfigureEntity<T> (this EntityTypeBuilder<T> builder) where T : EntityBase {
                      builder.HasKey (t => t.Id);

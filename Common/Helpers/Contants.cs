@@ -1,4 +1,4 @@
-namespace MedicalBilingMicroservice.Common.Helpers {
+namespace MedicalEngineMicroService.Common.Helpers {
     public static class Constants {
         public static class Strings {
             public static class JwtClaimIdentifiers {

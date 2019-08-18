@@ -1,18 +1,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using MedicalBilingMicroservice.Core.Models.Entities.Users;
-using MedicalBilingMicroservice.Core.Repositories;
+using MedicalEngineMicroService.Core.Models.Entities.Users;
+using MedicalEngineMicroService.Core.Repositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using switch_api.Persistence.Repositories;
 
-namespace MedicalBilingMicroservice.Persistence.Repositories {
+namespace MedicalEngineMicroService.Persistence.Repositories
+{
     public class UserRepository : Repository<ApplicationUser>, IUserRepository {
         private readonly UserManager<ApplicationUser> _userManager;
 
-        public UserRepository (ApplicationDbContext switchDataContext,
-            UserManager<ApplicationUser> UserManager) : base (switchDataContext) {
+        public UserRepository (ApplicationDbContext medicalEngineDataContext,
+            UserManager<ApplicationUser> UserManager) : base (medicalEngineDataContext) {
             _userManager = UserManager;
         }
 

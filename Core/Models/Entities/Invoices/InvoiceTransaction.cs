@@ -1,6 +1,6 @@
 using System;
 
-namespace MedicalBilingBackEnd.Core.Models.Entities.Invoices
+namespace MedicalEngineMicroService.Core.Models.Entities.Invoices
 {
     public class InvoiceTransaction
     {

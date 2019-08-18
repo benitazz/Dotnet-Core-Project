@@ -1,11 +1,11 @@
 using System;
-using MedicalBilingBackEnd.Common;
-using MedicalBilingBackEnd.Common.Extensions;
-using MedicalBilingBackEnd.Core.Models.Entities.Lookups;
+using MedicalEngineMicroService.Common;
+using MedicalEngineMicroService.Common.Extensions;
+using MedicalEngineMicroService.Core.Models.Entities.Lookups;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace MedicalBilingBackEnd.Persistence.EntityConfigurations.Lookups
+namespace MedicalEngineMicroService.Persistence.EntityConfigurations.Lookups
 {
     public class FileStatusConfiguration : IEntityTypeConfiguration<FileStatus>
     {

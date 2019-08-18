@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace switchapi.Migrations
+namespace MedicalEngineMicroService.Migrations
 {
     public partial class FixedPrimaryKeyOrder : Migration
     {

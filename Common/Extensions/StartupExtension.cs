@@ -1,22 +1,19 @@
-using MedicalBilingBackEnd.Common.Helpers;
-using MedicalBilingBackEnd.Common.Helpers.FileHelpers;
-using MedicalBilingBackEnd.Core.Repositories.Lookups;
-using MedicalBilingBackEnd.Core.Repositories.Tariffs;
-using MedicalBilingBackEnd.Persistence.Repositories.Lookups;
-using MedicalBilingBackEnd.Persistence.Repositories.Tariffs;
-using MedicalBilingMicroservice.Common.Auth;
-using MedicalBilingMicroservice.Common.Helpers.RenderViews;
-using MedicalBilingMicroservice.Core;
-using MedicalBilingMicroservice.Core.Repositories;
-using MedicalBilingMicroservice.Core.Repositories.Lookups;
-using MedicalBilingMicroservice.Core.Repositories.Tariffs;
-using MedicalBilingMicroservice.Persistence;
-using MedicalBilingMicroservice.Persistence.Repositories;
-using MedicalBilingMicroservice.Persistence.Repositories.Lookups;
-using MedicalBilingMicroservice.Persistence.Repositories.Tariffs;
+using MedicalEngineMicroService.Common.Helpers;
+using MedicalEngineMicroService.Common.Helpers.FileHelpers;
+using MedicalEngineMicroService.Core.Repositories.Lookups;
+using MedicalEngineMicroService.Core.Repositories.Tariffs;
+using MedicalEngineMicroService.Persistence.Repositories.Lookups;
+using MedicalEngineMicroService.Persistence.Repositories.Tariffs;
+using MedicalEngineMicroService.Common.Auth;
+using MedicalEngineMicroService.Common.Helpers.RenderViews;
+using MedicalEngineMicroService.Core;
+using MedicalEngineMicroService.Core.Repositories;
+using MedicalEngineMicroService.Persistence;
+using MedicalEngineMicroService.Persistence.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace MedicalBilingMicroservice.Common.Extensions {
+namespace MedicalEngineMicroService.Common.Extensions
+{
     public static class StartupExtension {
         public static IServiceCollection ConfigureServices (this IServiceCollection services) {
             services.AddScoped<IDosageTypeRepository, DosageTypeRepository> ();

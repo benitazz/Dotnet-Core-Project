@@ -1,4 +1,4 @@
-namespace MedicalBilingMicroservice.Resources.ApiToDomainResource {
+namespace MedicalEngineMicroService.Resources.ApiToDomainResource {
     public class RegistrationResource {
         public string Email { get; set; }
         public string Password { get; set; }

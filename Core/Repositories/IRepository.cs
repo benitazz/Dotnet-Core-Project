@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace switch_api.Core.Repositories
+namespace MedicalEngineMicroService.Core.Repositories
 {
     public interface IRepository<TEntity> where TEntity: class
     {

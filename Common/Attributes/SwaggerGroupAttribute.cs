@@ -1,6 +1,6 @@
 using System;
 
-namespace MedicalBilingBackEnd.Common.Attributes
+namespace MedicalEngineMicroService.Common.Attributes
 {
     public class SwaggerGroupAttribute : Attribute
     {

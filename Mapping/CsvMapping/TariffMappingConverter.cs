@@ -1,8 +1,8 @@
 using System;
-using MedicalBilingBackEnd.Core.Models.Entities.Tariffs;
+using MedicalEngineMicroService.Core.Models.Entities.Tariffs;
 using TinyCsvParser.TypeConverter;
 
-namespace MedicalBilingBackEnd.Mapping.CsvMapping
+namespace MedicalEngineMicroService.Mapping.CsvMapping
 {
     public class TariffMappingConverter : ITypeConverter<TariffBaseUnitCost>
     {

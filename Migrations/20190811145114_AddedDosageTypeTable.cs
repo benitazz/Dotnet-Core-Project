@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace switchapi.Migrations
+namespace MedicalEngineMicroService.Migrations
 {
     public partial class AddedDosageTypeTable : Migration
     {

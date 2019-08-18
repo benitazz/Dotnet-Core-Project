@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Reflection;
-using MedicalBilingMicroservice;
+using MedicalEngineMicroService;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Server.HttpSys;
 using Microsoft.Extensions.Configuration;
 
-namespace MedicalBilingMicroservice {
+namespace MedicalEngineMicroService {
     public class Program {
         public static void Main (string[] args) {
             CreateWebHostBuilder (args).

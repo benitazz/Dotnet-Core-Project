@@ -1,7 +1,7 @@
 using System.Linq;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 
-namespace MedicalBilingBackEnd.Common.Extensions
+namespace MedicalEngineMicroService.Common.Extensions
 {
     public class ApiExplorerGroupPerVersionConvention : IControllerModelConvention
     {

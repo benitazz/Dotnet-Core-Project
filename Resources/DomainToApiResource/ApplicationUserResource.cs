@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
-namespace MedicalBilingMicroservice.Resources.DomainToApiResource {
+namespace MedicalEngineMicroService.Resources.DomainToApiResource {
     public class ApplicationUserResource {
         public Guid Id { get; set; }
         public string Username { get; set; }

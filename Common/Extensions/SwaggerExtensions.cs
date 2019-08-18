@@ -1,6 +1,6 @@
 using System;
 using System.Linq;
-using MedicalBilingBackEnd.Common.Attributes;
+using MedicalEngineMicroService.Common.Attributes;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.AspNetCore.Mvc.Controllers;
@@ -8,7 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Swagger;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace MedicalBilingMicroservice.Common.Extensions {
+namespace MedicalEngineMicroService.Common.Extensions {
     public static class SwaggerExtensions {
         public static IServiceCollection ConfigureSwaggerServices (this IServiceCollection services) {
             services.AddSwaggerGen (c => {

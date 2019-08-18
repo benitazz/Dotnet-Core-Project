@@ -1,15 +1,15 @@
 using System;
-using MedicalBilingMicroservice.Common.Helpers;
-using MedicalBilingMicroservice.Core.Models.Auth;
-using MedicalBilingMicroservice.Core.Models.Entities.Users;
-using MedicalBilingMicroservice.Persistence;
+using MedicalEngineMicroService.Common.Helpers;
+using MedicalEngineMicroService.Core.Models.Auth;
+using MedicalEngineMicroService.Core.Models.Entities.Users;
+using MedicalEngineMicroService.Persistence;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 
-namespace MedicalBilingMicroservice.Common.Extensions
+namespace MedicalEngineMicroService.Common.Extensions
 {
     public static class JwtExtension {
         public static IServiceCollection ConfigureJwtServices (this IServiceCollection services,

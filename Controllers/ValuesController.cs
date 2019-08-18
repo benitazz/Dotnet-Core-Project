@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.OData;
 using Microsoft.AspNetCore.Mvc;
 
-namespace switch_api.Controllers
+namespace MedicalEngineMicroService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

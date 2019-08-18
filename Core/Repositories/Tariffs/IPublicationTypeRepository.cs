@@ -1,6 +1,6 @@
-using switch_api.Core.Repositories;
+using MedicalEngineMicroService.Core.Repositories;
 
-namespace MedicalBilingMicroservice.Core.Repositories.Tariffs {
+namespace MedicalEngineMicroService.Core.Repositories.Tariffs {
     public interface IPublicationTypeRepository : IRepository<PublicationType> {
 
     }

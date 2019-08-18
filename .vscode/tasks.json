@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/switch-api.csproj"
+                "${workspaceFolder}/MedicalEngineMicroService.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

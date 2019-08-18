@@ -1,10 +1,10 @@
-using MedicalBilingBackEnd.Core.Models.Entities.Tariffs;
-using MedicalBilingBackEnd.Core.Repositories.Tariffs;
-using MedicalBilingMicroservice.Persistence;
+using MedicalEngineMicroService.Core.Models.Entities.Tariffs;
+using MedicalEngineMicroService.Core.Repositories.Tariffs;
+using MedicalEngineMicroService.Persistence;
 using Microsoft.EntityFrameworkCore;
-using switch_api.Persistence.Repositories;
+using MedicalEngineMicroService.Persistence.Repositories;
 
-namespace MedicalBilingBackEnd.Persistence.Repositories.Tariffs
+namespace MedicalEngineMicroService.Persistence.Repositories.Tariffs
 {
     public class TariffRepository : Repository<Tariff>, ITariffRepository
     {

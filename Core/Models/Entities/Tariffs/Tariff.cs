@@ -1,8 +1,8 @@
 using System;
-using MedicalBilingBackEnd.Core.Models.Entities.Lookups;
-using MedicalBilingMicroservice.Core.Models.Entities.Tariffs;
+using MedicalEngineMicroService.Core.Models.Entities.Lookups;
+using MedicalEngineMicroService.Core.Models.Entities.Tariffs;
 
-namespace MedicalBilingBackEnd.Core.Models.Entities.Tariffs {
+namespace MedicalEngineMicroService.Core.Models.Entities.Tariffs {
     public class Tariff : EntityBase {
         public Double RecommendedUnit { get; set; }
         public DateTime ValidFrom { get; set; }

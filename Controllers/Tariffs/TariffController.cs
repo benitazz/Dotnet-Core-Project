@@ -5,21 +5,21 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using CsvHelper;
-using MedicalBilingBackEnd.Common.Attributes;
-using MedicalBilingBackEnd.Common.Helpers.FileHelpers;
-using MedicalBilingBackEnd.Core.Models.Entities.Tariffs;
-using MedicalBilingBackEnd.Core.Repositories.Tariffs;
-using MedicalBilingBackEnd.Mapping.CsvMapping;
-using MedicalBilingBackEnd.Resources.ApiToDomainResource.FileUploads;
-using MedicalBilingBackEnd.Resources.ApiToDomainResource.Tariffs;
-using MedicalBilingMicroservice.Core;
+using MedicalEngineMicroService.Common.Attributes;
+using MedicalEngineMicroService.Common.Helpers.FileHelpers;
+using MedicalEngineMicroService.Core.Models.Entities.Tariffs;
+using MedicalEngineMicroService.Core.Repositories.Tariffs;
+using MedicalEngineMicroService.Mapping.CsvMapping;
+using MedicalEngineMicroService.Resources.ApiToDomainResource.FileUploads;
+using MedicalEngineMicroService.Resources.ApiToDomainResource.Tariffs;
+using MedicalEngineMicroService.Core;
 using Microsoft.AspNet.OData;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using TinyCsvParser;
 using TinyCsvParser.Tokenizer;
 
-namespace MedicalBilingBackEnd.Controllers.Tariffs {
+namespace MedicalEngineMicroService.Controllers.Tariffs {
     [Route ("api/tariffs/[controller]")]
     [SwaggerGroup ("/api/tariffs/Tariffs")]
     [ApiExplorerSettings (GroupName = "Values")]

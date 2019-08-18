@@ -1,17 +1,17 @@
 using System.Security.Claims;
 using System.Threading.Tasks;
-using MedicalBilingBackEnd.Common.Attributes;
-using MedicalBilingMicroservice.Common.Auth;
-using MedicalBilingMicroservice.Common.Helpers;
-using MedicalBilingMicroservice.Core.Models.Auth;
-using MedicalBilingMicroservice.Core.Models.Entities.Users;
-using MedicalBilingMicroservice.Resources.ApiToDomainResource;
+using MedicalEngineMicroService.Common.Attributes;
+using MedicalEngineMicroService.Common.Auth;
+using MedicalEngineMicroService.Common.Helpers;
+using MedicalEngineMicroService.Core.Models.Auth;
+using MedicalEngineMicroService.Core.Models.Entities.Users;
+using MedicalEngineMicroService.Resources.ApiToDomainResource;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 
-namespace MedicalBilingMicroservice.Controllers.Users
+namespace MedicalEngineMicroService.Controllers.Users
 {
     [Route("api/users/Auth")]
     [SwaggerGroup("/api/users/Auth")]

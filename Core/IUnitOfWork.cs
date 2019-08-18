@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace MedicalBilingMicroservice.Core
+namespace MedicalEngineMicroService.Core
 {
     public interface IUnitOfWork
     {

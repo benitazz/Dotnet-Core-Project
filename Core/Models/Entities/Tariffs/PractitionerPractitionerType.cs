@@ -1,6 +1,6 @@
-using MedicalBilingBackEnd.Core.Models.Entities;
+using MedicalEngineMicroService.Core.Models.Entities;
 
-namespace MedicalBilingMicroservice.Core.Models.Entities.Tariffs {
+namespace MedicalEngineMicroService.Core.Models.Entities.Tariffs {
     public class PractitionerPractitionerType : EntityBase {
         public int PractitionerId { get; set; }
         public Practitioner Practitioner { get; set; }

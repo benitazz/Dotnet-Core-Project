@@ -1,9 +1,9 @@
-using MedicalBilingBackEnd.Common.Extensions;
-using MedicalBilingMicroservice.Core.Models.Entities.Lookups;
+using MedicalEngineMicroService.Common.Extensions;
+using MedicalEngineMicroService.Core.Models.Entities.Lookups;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace MedicalBilingMicroservice.Persistence.EntityConfigurations.Lookups {
+namespace MedicalEngineMicroService.Persistence.EntityConfigurations.Lookups {
     public class DosageTypeConfiguration : IEntityTypeConfiguration<DosageType> {
         public void Configure (EntityTypeBuilder<DosageType> builder) {
             builder.ConfigureLookup ();

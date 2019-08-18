@@ -1,6 +1,6 @@
-using MedicalBilingBackEnd.Common.Helpers;
+using MedicalEngineMicroService.Common.Helpers;
 
-namespace MedicalBilingBackEnd.Resources.ApiToDomainResource.Tariffs
+namespace MedicalEngineMicroService.Resources.ApiToDomainResource.Tariffs
 {
     public class SaveTariffResource
     {

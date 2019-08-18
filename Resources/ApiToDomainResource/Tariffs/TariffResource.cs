@@ -1,4 +1,4 @@
-namespace MedicalBilingBackEnd.Resources.ApiToDomainResource.Tariffs
+namespace MedicalEngineMicroService.Resources.ApiToDomainResource.Tariffs
 {
     public class TariffResource
     {

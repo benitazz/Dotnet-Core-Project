@@ -1,4 +1,4 @@
-namespace MedicalBilingBackEnd.Core.Models.Entities.Doctors
+namespace MedicalEngineMicroService.Core.Models.Entities.Doctors
 {
     public class Doctor
     {

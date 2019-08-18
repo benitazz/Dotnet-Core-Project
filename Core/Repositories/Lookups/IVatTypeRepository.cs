@@ -1,8 +1,8 @@
 
-using MedicalBilingBackEnd.Core.Models.Entities.Lookups;
-using switch_api.Core.Repositories;
+using MedicalEngineMicroService.Core.Models.Entities.Lookups;
+using MedicalEngineMicroService.Core.Repositories;
 
-namespace MedicalBilingBackEnd.Core.Repositories.Lookups
+namespace MedicalEngineMicroService.Core.Repositories.Lookups
 {
     public interface IVatTypeRepository:  IRepository<VatType>
     {

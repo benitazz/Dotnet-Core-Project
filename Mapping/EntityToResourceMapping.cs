@@ -1,11 +1,11 @@
 using System.Linq;
 using AutoMapper;
-using MedicalBilingBackEnd.Core.Models.Entities.Lookups;
-using MedicalBilingBackEnd.Resources.DomainToApiResource.Lookups;
-using MedicalBilingMicroservice.Core.Models.Entities.Users;
-using MedicalBilingMicroservice.Resources.DomainToApiResource;
+using MedicalEngineMicroService.Core.Models.Entities.Lookups;
+using MedicalEngineMicroService.Resources.DomainToApiResource.Lookups;
+using MedicalEngineMicroService.Core.Models.Entities.Users;
+using MedicalEngineMicroService.Resources.DomainToApiResource;
 
-namespace MedicalBilingMicroservice.Mapping
+namespace MedicalEngineMicroService.Mapping
 {
     public class EntityToResourceMapping : Profile
     {

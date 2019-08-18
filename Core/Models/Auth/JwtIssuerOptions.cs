@@ -2,7 +2,7 @@ using System;
 using System.Threading.Tasks;
 using Microsoft.IdentityModel.Tokens;
 
-namespace MedicalBilingMicroservice.Core.Models.Auth {
+namespace MedicalEngineMicroService.Core.Models.Auth {
     public class JwtIssuerOptions {
         /// <summary>
         /// 4.1.1.  "iss" (Issuer) Claim - The "iss" (issuer) claim identifies the principal that issued the JWT.

@@ -2,15 +2,15 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
-using MedicalBilingBackEnd.Common.Attributes;
-using MedicalBilingBackEnd.Core.Models.Entities.Lookups;
-using MedicalBilingBackEnd.Core.Repositories.Lookups;
-using MedicalBilingBackEnd.Resources.DomainToApiResource.Lookups;
+using MedicalEngineMicroService.Common.Attributes;
+using MedicalEngineMicroService.Core.Models.Entities.Lookups;
+using MedicalEngineMicroService.Core.Repositories.Lookups;
+using MedicalEngineMicroService.Resources.DomainToApiResource.Lookups;
 using Microsoft.AspNet.OData;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace MedicalBilingBackEnd.Controllers.Lookups
+namespace MedicalEngineMicroService.Controllers.Lookups
 {
     [Route("api/lookups/[controller]")]
     [SwaggerGroup("/api/lookups/VatTypes")]

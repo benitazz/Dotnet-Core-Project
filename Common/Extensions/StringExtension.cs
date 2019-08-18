@@ -1,6 +1,6 @@
 using System.Text.RegularExpressions;
 
-namespace MedicalBilingBackEnd.Common.Extensions
+namespace MedicalEngineMicroService.Common.Extensions
 {
     public static class StringExtension
     {

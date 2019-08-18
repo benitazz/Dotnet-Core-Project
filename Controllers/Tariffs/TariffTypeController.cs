@@ -2,18 +2,18 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
-using MedicalBilingBackEnd.Common.Attributes;
-using MedicalBilingBackEnd.Common.Extensions;
-using MedicalBilingBackEnd.Core.Models.Entities.Tariffs;
-using MedicalBilingBackEnd.Core.Repositories.Tariffs;
-using MedicalBilingBackEnd.Resources.ApiToDomainResource.Lookups;
-using MedicalBilingBackEnd.Resources.DomainToApiResource.Lookups;
-using MedicalBilingMicroservice.Core;
+using MedicalEngineMicroService.Common.Attributes;
+using MedicalEngineMicroService.Common.Extensions;
+using MedicalEngineMicroService.Core.Models.Entities.Tariffs;
+using MedicalEngineMicroService.Core.Repositories.Tariffs;
+using MedicalEngineMicroService.Resources.ApiToDomainResource.Lookups;
+using MedicalEngineMicroService.Resources.DomainToApiResource.Lookups;
+using MedicalEngineMicroService.Core;
 using Microsoft.AspNet.OData;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace MedicalBilingBackEnd.Controllers.Lookups {
+namespace MedicalEngineMicroService.Controllers.Lookups {
     [Route ("api/lookups/[controller]")]
     [SwaggerGroup ("/api/lookups/TariffTypes")]
     [ApiExplorerSettings (GroupName = "Values")]

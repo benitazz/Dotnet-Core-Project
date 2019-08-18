@@ -1,8 +1,8 @@
-using MedicalBilingMicroservice.Core.Models.Entities;
-using MedicalBilingMicroservice.Core.Repositories;
-using switch_api.Persistence.Repositories;
+using MedicalEngineMicroService.Core.Models.Entities;
+using MedicalEngineMicroService.Core.Repositories;
+using MedicalEngineMicroService.Persistence.Repositories;
 
-namespace MedicalBilingMicroservice.Persistence.Repositories
+namespace MedicalEngineMicroService.Persistence.Repositories
 {
     public class ProductRepository : Repository<Product>, IProductRepository
     {

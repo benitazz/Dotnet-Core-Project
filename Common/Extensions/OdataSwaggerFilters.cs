@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using Swashbuckle.AspNetCore.Swagger;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace MedicalBilingMicroservice.Common.Extensions
+namespace MedicalEngineMicroService.Common.Extensions
 {
     public class OdataSwaggerFilters : IOperationFilter {
         public void Apply (Operation operation, OperationFilterContext context) {

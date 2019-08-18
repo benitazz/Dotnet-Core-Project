@@ -3,10 +3,10 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Principal;
 using System.Threading.Tasks;
-using MedicalBilingMicroservice.Core.Models.Auth;
+using MedicalEngineMicroService.Core.Models.Auth;
 using Microsoft.Extensions.Options;
 
-namespace MedicalBilingMicroservice.Common.Auth {
+namespace MedicalEngineMicroService.Common.Auth {
     public class JwtFactory : IJwtFactory {
         private readonly JwtIssuerOptions _jwtOptions;
 

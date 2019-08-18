@@ -1,4 +1,4 @@
-namespace MedicalBilingBackEnd.Common.Enums
+namespace MedicalEngineMicroService.Common.Enums
 {
     public enum Vat
     {

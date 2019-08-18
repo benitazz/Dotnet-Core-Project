@@ -1,4 +1,4 @@
-namespace MedicalBilingMicroservice.Resources.ApiToDomainResource
+namespace MedicalEngineMicroService.Resources.ApiToDomainResource
 {
     public class UserInfoResource
     {

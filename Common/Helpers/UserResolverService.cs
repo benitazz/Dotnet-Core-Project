@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Http;
 
-namespace MedicalBilingBackEnd.Common.Helpers
+namespace MedicalEngineMicroService.Common.Helpers
 {
     public class UserResolverService
     {

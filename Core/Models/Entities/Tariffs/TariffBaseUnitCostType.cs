@@ -1,6 +1,6 @@
-using MedicalBilingBackEnd.Core.Models.Entities.Lookups;
+using MedicalEngineMicroService.Core.Models.Entities.Lookups;
 
-namespace MedicalBilingMicroservice.Core.Models.Entities.Tariffs
+namespace MedicalEngineMicroService.Core.Models.Entities.Tariffs
 {
     public class TariffBaseUnitCostType: LookupBase
     {

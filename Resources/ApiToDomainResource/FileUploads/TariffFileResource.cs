@@ -1,6 +1,6 @@
 using System;
 
-namespace MedicalBilingBackEnd.Resources.ApiToDomainResource.FileUploads
+namespace MedicalEngineMicroService.Resources.ApiToDomainResource.FileUploads
 {
     public class TariffFileResource: FileUploadResource
     {

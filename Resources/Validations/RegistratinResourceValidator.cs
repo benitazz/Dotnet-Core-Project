@@ -1,7 +1,7 @@
 using FluentValidation;
-using MedicalBilingMicroservice.Resources.ApiToDomainResource;
+using MedicalEngineMicroService.Resources.ApiToDomainResource;
 
-namespace MedicalBilingMicroservice.Resources.Validations {
+namespace MedicalEngineMicroService.Resources.Validations {
     public class RegistratinResourceValidator : AbstractValidator<RegistrationResource> {
         public RegistratinResourceValidator () {
             RuleFor (resource => resource.Email).NotEmpty ().WithMessage ("Email cannot be empty");

@@ -1,8 +1,8 @@
-using MedicalBilingMicroservice.Core.Models.Entities.Tariffs;
-using MedicalBilingMicroservice.Core.Repositories.Tariffs;
-using switch_api.Persistence.Repositories;
+using MedicalEngineMicroService.Core.Models.Entities.Tariffs;
+using MedicalEngineMicroService.Core.Repositories.Tariffs;
+using MedicalEngineMicroService.Persistence.Repositories;
 
-namespace MedicalBilingMicroservice.Persistence.Repositories.Tariffs {
+namespace MedicalEngineMicroService.Persistence.Repositories.Tariffs {
     public class SectionTypeRepository : Repository<SectionType>, ISectionTypeRepository
     {
         public SectionTypeRepository(ApplicationDbContext dbContext) : base(dbContext)

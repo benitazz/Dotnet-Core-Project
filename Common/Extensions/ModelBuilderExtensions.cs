@@ -1,12 +1,11 @@
-using MedicalBilingBackEnd.Persistence.EntityConfigurations.Lookups;
-using MedicalBilingBackEnd.Persistence.EntityConfigurations.Tariffs;
-using MedicalBilingMicroservice.Persistence.EntityConfigurations;
-using MedicalBilingMicroservice.Persistence.EntityConfigurations.Lookups;
-using MedicalBilingMicroservice.Persistence.EntityConfigurations.Tariffs;
-using MedicalBilingMicroservice.Persistence.EntityConfigurations.Users;
+using MedicalEngineMicroService.Persistence.EntityConfigurations.Lookups;
+using MedicalEngineMicroService.Persistence.EntityConfigurations.Tariffs;
+using MedicalEngineMicroService.Persistence.EntityConfigurations;
+using MedicalEngineMicroService.Persistence.EntityConfigurations.Users;
 using Microsoft.EntityFrameworkCore;
 
-namespace MedicalBilingBackEnd.Common.Extensions {
+namespace MedicalEngineMicroService.Common.Extensions
+{
     public static class ModelBuilderExtensions {
         public static void Seed (this ModelBuilder modelBuilder) {
             // Users

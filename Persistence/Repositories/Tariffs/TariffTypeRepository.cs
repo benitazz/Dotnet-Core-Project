@@ -1,14 +1,14 @@
 using System;
 using System.Linq;
 using System.Threading.Tasks;
-using MedicalBilingBackEnd.Common.Extensions;
-using MedicalBilingBackEnd.Core.Models.Entities.Tariffs;
-using MedicalBilingBackEnd.Core.Repositories.Tariffs;
-using MedicalBilingMicroservice.Persistence;
+using MedicalEngineMicroService.Common.Extensions;
+using MedicalEngineMicroService.Core.Models.Entities.Tariffs;
+using MedicalEngineMicroService.Core.Repositories.Tariffs;
+using MedicalEngineMicroService.Persistence;
 using Microsoft.EntityFrameworkCore;
-using switch_api.Persistence.Repositories;
+using MedicalEngineMicroService.Persistence.Repositories;
 
-namespace MedicalBilingBackEnd.Persistence.Repositories.Tariffs
+namespace MedicalEngineMicroService.Persistence.Repositories.Tariffs
 {
     public class TariffTypeRepository : Repository<TariffType>, ITariffTypeRepository
     {

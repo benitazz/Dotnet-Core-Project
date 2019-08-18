@@ -1,10 +1,10 @@
 using System;
-using MedicalBilingBackEnd.Common.Extensions;
-using MedicalBilingMicroservice.Core.Models.Entities;
+using MedicalEngineMicroService.Common.Extensions;
+using MedicalEngineMicroService.Core.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace MedicalBilingMicroservice.Persistence.EntityConfigurations {
+namespace MedicalEngineMicroService.Persistence.EntityConfigurations {
     public class ProductConfiguration : IEntityTypeConfiguration<Product> {
         public void Configure (EntityTypeBuilder<Product> builder) {
             builder.ConfigureEntity ();

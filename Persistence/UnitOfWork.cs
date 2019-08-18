@@ -1,26 +1,26 @@
 using System.Threading.Tasks;
-using MedicalBilingMicroservice.Core;
-using MedicalBilingMicroservice.Persistence;
+using MedicalEngineMicroService.Core;
+using MedicalEngineMicroService.Persistence;
 
-namespace MedicalBilingMicroservice.Persistence
+namespace MedicalEngineMicroService.Persistence
 {
     public class UnitOfWork: IUnitOfWork
     {
-        private readonly ApplicationDbContext switchApiDataContext;
-        public UnitOfWork(ApplicationDbContext switchApiDataContext)
+        private readonly ApplicationDbContext MedicalEngineMicroServiceDataContext;
+        public UnitOfWork(ApplicationDbContext MedicalEngineMicroServiceDataContext)
         {
-            this.switchApiDataContext = switchApiDataContext;
+            this.MedicalEngineMicroServiceDataContext = MedicalEngineMicroServiceDataContext;
         }
 
         public async Task CompletedAsync()
         {
-            await this.switchApiDataContext.SaveChangesAsync();
+            await this.MedicalEngineMicroServiceDataContext.SaveChangesAsync();
             
         }
 
         public void Dispose()
         {
-            this.switchApiDataContext.Dispose();
+            this.MedicalEngineMicroServiceDataContext.Dispose();
         }
     }
 }

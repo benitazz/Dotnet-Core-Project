@@ -2,16 +2,16 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
-using MedicalBilingBackEnd.Common.Attributes;
-using MedicalBilingBackEnd.Core.Models.Entities.Tariffs;
-using MedicalBilingBackEnd.Core.Repositories.Tariffs;
-using MedicalBilingBackEnd.Resources.ApiToDomainResource.Tariffs;
-using MedicalBilingMicroservice.Core;
+using MedicalEngineMicroService.Common.Attributes;
+using MedicalEngineMicroService.Core.Models.Entities.Tariffs;
+using MedicalEngineMicroService.Core.Repositories.Tariffs;
+using MedicalEngineMicroService.Resources.ApiToDomainResource.Tariffs;
+using MedicalEngineMicroService.Core;
 using Microsoft.AspNet.OData;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace MedicalBilingBackEnd.Controllers.Tariffs
+namespace MedicalEngineMicroService.Controllers.Tariffs
 {
     [Route("api/tariffs/[controller]")]
     [SwaggerGroup("/api/tariffs/TariffUnitCosts")]

@@ -1,8 +1,8 @@
-using MedicalBilingMicroservice.Core.Models.Entities.Lookups;
-using MedicalBilingMicroservice.Core.Repositories.Lookups;
-using switch_api.Persistence.Repositories;
+using MedicalEngineMicroService.Core.Models.Entities.Lookups;
+using MedicalEngineMicroService.Core.Repositories.Lookups;
+using MedicalEngineMicroService.Persistence.Repositories;
 
-namespace MedicalBilingMicroservice.Persistence.Repositories.Lookups
+namespace MedicalEngineMicroService.Persistence.Repositories.Lookups
 {
     public class ManufactureTypeRepository : Repository<ManufactureType>, IManufactureTypeRepository
     {

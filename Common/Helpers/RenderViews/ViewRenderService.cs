@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Routing;
 
-namespace MedicalBilingMicroservice.Common.Helpers.RenderViews {
+namespace MedicalEngineMicroService.Common.Helpers.RenderViews {
     public class ViewRenderService : IViewRenderService {
         private readonly IRazorViewEngine _razorViewEngine;
         private readonly ITempDataProvider _tempDataProvider;

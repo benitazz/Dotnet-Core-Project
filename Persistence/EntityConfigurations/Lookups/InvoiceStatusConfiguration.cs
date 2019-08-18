@@ -1,11 +1,11 @@
-using MedicalBilingBackEnd.Core.Models.Entities.Lookups;
+using MedicalEngineMicroService.Core.Models.Entities.Lookups;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using MedicalBilingBackEnd.Common.Extensions;
-using MedicalBilingBackEnd.Common;
+using MedicalEngineMicroService.Common.Extensions;
+using MedicalEngineMicroService.Common;
 using System;
 
-namespace MedicalBilingBackEnd.Persistence.EntityConfigurations.Lookups
+namespace MedicalEngineMicroService.Persistence.EntityConfigurations.Lookups
 {
     public class InvoiceStatusConfiguration : IEntityTypeConfiguration<InvoiceStatus>
     {

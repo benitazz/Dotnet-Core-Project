@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Web;
 using AutoMapper;
-using MedicalBilingBackEnd.Common.Attributes;
-using MedicalBilingMicroservice.Common.Helpers;
-using MedicalBilingMicroservice.Common.Helpers.RenderViews;
-using MedicalBilingMicroservice.Core.Models.Entities.Users;
-using MedicalBilingMicroservice.Core.Models.Views;
-using MedicalBilingMicroservice.Core.Repositories;
-using MedicalBilingMicroservice.Resources.ApiToDomainResource;
-using MedicalBilingMicroservice.Resources.DomainToApiResource;
-using MedicalBilingMicroservicet.Resources.ApiToDomainResource;
+using MedicalEngineMicroService.Common.Attributes;
+using MedicalEngineMicroService.Common.Helpers;
+using MedicalEngineMicroService.Common.Helpers.RenderViews;
+using MedicalEngineMicroService.Core.Models.Entities.Users;
+using MedicalEngineMicroService.Core.Models.Views;
+using MedicalEngineMicroService.Core.Repositories;
+using MedicalEngineMicroService.Resources.ApiToDomainResource;
+using MedicalEngineMicroService.Resources.DomainToApiResource;
+using MedicalEngineMicroServicet.Resources.ApiToDomainResource;
 using Microsoft.AspNet.OData;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -20,7 +20,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 
-namespace MedicalBilingMicroservice.Controllers.Users {
+namespace MedicalEngineMicroService.Controllers.Users {
 
     [Route ("api/users/[controller]")]
     [SwaggerGroup ("/api/users/Accounts")]

@@ -1,12 +1,12 @@
 using AutoMapper;
-using MedicalBilingBackEnd.Core.Models.Entities.Lookups;
-using MedicalBilingBackEnd.Core.Models.Entities.Tariffs;
-using MedicalBilingBackEnd.Resources.ApiToDomainResource.Lookups;
-using MedicalBilingBackEnd.Resources.DomainToApiResource.Lookups;
-using MedicalBilingMicroservice.Core.Models.Entities.Users;
-using MedicalBilingMicroservice.Resources.ApiToDomainResource;
+using MedicalEngineMicroService.Core.Models.Entities.Lookups;
+using MedicalEngineMicroService.Core.Models.Entities.Tariffs;
+using MedicalEngineMicroService.Resources.ApiToDomainResource.Lookups;
+using MedicalEngineMicroService.Resources.DomainToApiResource.Lookups;
+using MedicalEngineMicroService.Core.Models.Entities.Users;
+using MedicalEngineMicroService.Resources.ApiToDomainResource;
 
-namespace MedicalBilingMicroservice.Mapping {
+namespace MedicalEngineMicroService.Mapping {
     public class ResourceToEntityMapping : Profile {
         public ResourceToEntityMapping () {
             CreateMap<RegistrationResource, ApplicationUser> ()

@@ -1,4 +1,4 @@
-namespace MedicalBilingBackEnd.Resources.DomainToApiResource
+namespace MedicalEngineMicroService.Resources.DomainToApiResource
 {
     public class VatResource
     {

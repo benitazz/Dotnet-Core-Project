@@ -1,7 +1,7 @@
-using MedicalBilingBackEnd.Core.Models.Entities;
-using MedicalBilingMicroservice.Core.Models.Entities.Lookups;
+using MedicalEngineMicroService.Core.Models.Entities;
+using MedicalEngineMicroService.Core.Models.Entities.Lookups;
 
-namespace MedicalBilingMicroservice.Core.Models.Entities.Tariffs {
+namespace MedicalEngineMicroService.Core.Models.Entities.Tariffs {
     public class NappiCode : EntityBase {
         public string Code { get; set; }
         public int? Schedule { get; set; }

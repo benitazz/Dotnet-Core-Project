@@ -1,9 +1,9 @@
-using MedicalBilingMicroservice.Core.Models.Entities.Tariffs;
-using MedicalBilingMicroservice.Core.Repositories.Tariffs;
+using MedicalEngineMicroService.Core.Models.Entities.Tariffs;
+using MedicalEngineMicroService.Core.Repositories.Tariffs;
 using Microsoft.EntityFrameworkCore;
-using switch_api.Persistence.Repositories;
+using MedicalEngineMicroService.Persistence.Repositories;
 
-namespace MedicalBilingMicroservice.Persistence.Repositories.Tariffs {
+namespace MedicalEngineMicroService.Persistence.Repositories.Tariffs {
     public class PractitionerPractitionerTypeRepository : Repository<PractitionerPractitionerType>, IPractitionerPractitionerTypeRepository
     {
         public PractitionerPractitionerTypeRepository(ApplicationDbContext dbContext) : base(dbContext)

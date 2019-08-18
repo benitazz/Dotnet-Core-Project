@@ -1,6 +1,6 @@
 using System;
 
-namespace MedicalBilingBackEnd.Core.Models.Entities.Tariffs
+namespace MedicalEngineMicroService.Core.Models.Entities.Tariffs
 {
     public class TariffBaseUnitCost: EntityBase
     {

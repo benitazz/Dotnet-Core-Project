@@ -1,4 +1,4 @@
-namespace MedicalBilingMicroservicet.Resources.ApiToDomainResource
+namespace MedicalEngineMicroServicet.Resources.ApiToDomainResource
 {
     public class ChangePasswordResource
     {

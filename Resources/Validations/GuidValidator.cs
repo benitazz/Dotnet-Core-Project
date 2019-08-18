@@ -1,7 +1,7 @@
 using System;
 using FluentValidation;
 
-namespace MedicalBilingMicroservice.Resources.Validations
+namespace MedicalEngineMicroService.Resources.Validations
 {
     /// <summary>
     /// https://stackoverflow.com/questions/50042201/how-to-validate-a-list-of-guid-using-fluentvalidation

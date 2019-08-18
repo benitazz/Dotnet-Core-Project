@@ -3,7 +3,7 @@ using System.Linq;
 using Swashbuckle.AspNetCore.Swagger;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace MedicalBilingMicroservice.Common.Extensions {
+namespace MedicalEngineMicroService.Common.Extensions {
     public class SwaggerDocumentFilter : IDocumentFilter {
         public void Apply (SwaggerDocument swaggerDoc, DocumentFilterContext context) {
             var paths = swaggerDoc.Paths.OrderBy (e => e.Key).ToList ();

@@ -1,6 +1,6 @@
 using System;
 
-namespace MedicalBilingBackEnd.Core.Models.Entities {
+namespace MedicalEngineMicroService.Core.Models.Entities {
     public abstract class EntityBase {
         public int Id { get; set; }
         public string CreatedBy { get; set; }

@@ -1,4 +1,4 @@
-namespace MedicalBilingMicroservice.Core.Models
+namespace MedicalEngineMicroService.Core.Models
 {
     public class AuthMessageSenderOptions
     {

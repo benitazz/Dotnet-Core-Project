@@ -1,9 +1,9 @@
-using MedicalBilingMicroservice.Core.Models.Entities.Lookups;
-using MedicalBilingMicroservice.Core.Repositories.Lookups;
+using MedicalEngineMicroService.Core.Models.Entities.Lookups;
+using MedicalEngineMicroService.Core.Repositories.Lookups;
 using Microsoft.EntityFrameworkCore;
-using switch_api.Persistence.Repositories;
+using MedicalEngineMicroService.Persistence.Repositories;
 
-namespace MedicalBilingMicroservice.Persistence.Repositories.Lookups
+namespace MedicalEngineMicroService.Persistence.Repositories.Lookups
 {
     public class DosageTypeRepository : Repository<DosageType>, IDosageTypeRepository
     {

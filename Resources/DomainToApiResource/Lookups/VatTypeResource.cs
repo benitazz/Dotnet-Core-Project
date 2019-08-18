@@ -1,6 +1,6 @@
 using System;
 
-namespace MedicalBilingBackEnd.Resources.DomainToApiResource.Lookups
+namespace MedicalEngineMicroService.Resources.DomainToApiResource.Lookups
 {
     public class VatTypeResource
     {

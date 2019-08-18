@@ -1,8 +1,8 @@
-using MedicalBilingMicroservice.Core.Repositories.Tariffs;
+using MedicalEngineMicroService.Core.Repositories.Tariffs;
 using Microsoft.EntityFrameworkCore;
-using switch_api.Persistence.Repositories;
+using MedicalEngineMicroService.Persistence.Repositories;
 
-namespace MedicalBilingMicroservice.Persistence.Repositories.Tariffs {
+namespace MedicalEngineMicroService.Persistence.Repositories.Tariffs {
     public class PublicationTypeRepository : Repository<PublicationType>, IPublicationTypeRepository {
         public PublicationTypeRepository (ApplicationDbContext dbContext) : base (dbContext) { }
     }

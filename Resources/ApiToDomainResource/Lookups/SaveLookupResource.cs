@@ -1,4 +1,4 @@
-namespace MedicalBilingBackEnd.Resources.ApiToDomainResource.Lookups
+namespace MedicalEngineMicroService.Resources.ApiToDomainResource.Lookups
 {
     public class SaveLookupResource
     {

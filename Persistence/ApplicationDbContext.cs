@@ -1,15 +1,14 @@
-using MedicalBilingBackEnd.Common.Extensions;
-using MedicalBilingBackEnd.Core.Models.Entities.Lookups;
-using MedicalBilingBackEnd.Core.Models.Entities.Tariffs;
-using MedicalBilingMicroservice.Core.Models.Entities;
-using MedicalBilingMicroservice.Core.Models.Entities.Lookups;
-using MedicalBilingMicroservice.Core.Models.Entities.Tariffs;
-using MedicalBilingMicroservice.Core.Models.Entities.Users;
+using MedicalEngineMicroService.Common.Extensions;
+using MedicalEngineMicroService.Core.Models.Entities.Lookups;
+using MedicalEngineMicroService.Core.Models.Entities.Tariffs;
+using MedicalEngineMicroService.Core.Models.Entities;
+using MedicalEngineMicroService.Core.Models.Entities.Users;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace MedicalBilingMicroservice.Persistence {
+namespace MedicalEngineMicroService.Persistence
+{
     public class ApplicationDbContext:
         IdentityDbContext<ApplicationUser, ApplicationRole, string, IdentityUserClaim<string>, ApplicationUserRole, IdentityUserLogin<string>, IdentityRoleClaim<string>, IdentityUserToken<string>> {
 

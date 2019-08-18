@@ -1,10 +1,10 @@
 using System;
-using MedicalBilingBackEnd.Common;
-using MedicalBilingBackEnd.Common.Extensions;
+using MedicalEngineMicroService.Common;
+using MedicalEngineMicroService.Common.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace MedicalBilingMicroservice.Persistence.EntityConfigurations.Tariffs {
+namespace MedicalEngineMicroService.Persistence.EntityConfigurations.Tariffs {
     public class PublicationTypeConfiguration : IEntityTypeConfiguration<PublicationType> {
         public void Configure (EntityTypeBuilder<PublicationType> builder) {
             builder.ConfigureLookup ();

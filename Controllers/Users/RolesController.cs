@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-using MedicalBilingBackEnd.Common.Attributes;
-using MedicalBilingMicroservice.Common.Helpers;
-using MedicalBilingMicroservice.Core.Models.Entities.Users;
-using MedicalBilingMicroservice.Resources.DomainToApiResource;
+using MedicalEngineMicroService.Common.Attributes;
+using MedicalEngineMicroService.Common.Helpers;
+using MedicalEngineMicroService.Core.Models.Entities.Users;
+using MedicalEngineMicroService.Resources.DomainToApiResource;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace MedicalBilingMicroservice.Controllers.Users
+namespace MedicalEngineMicroService.Controllers.Users
 {
 
     [Route("api/users/[controller]")]

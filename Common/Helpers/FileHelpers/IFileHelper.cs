@@ -1,4 +1,4 @@
-namespace MedicalBilingBackEnd.Common.Helpers.FileHelpers
+namespace MedicalEngineMicroService.Common.Helpers.FileHelpers
 {
     public interface IFileHelper
     {

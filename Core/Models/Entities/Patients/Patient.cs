@@ -1,6 +1,6 @@
 using System;
 
-namespace MedicalBilingBackEnd.Core.Models.Entities.Patients
+namespace MedicalEngineMicroService.Core.Models.Entities.Patients
 {
     public class Patient
     {

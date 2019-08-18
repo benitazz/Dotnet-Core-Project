@@ -1,6 +1,6 @@
 using Microsoft.OData.UriParser;
 
-namespace MedicalBilingBackEnd.Common.Extensions
+namespace MedicalEngineMicroService.Common.Extensions
 {
     public class CaseInsensitiveResolver : ODataUriResolver
     {

@@ -1,10 +1,10 @@
 
-using MedicalBilingBackEnd.Core.Models.Entities.Lookups;
-using MedicalBilingBackEnd.Core.Repositories.Lookups;
-using MedicalBilingMicroservice.Persistence;
-using switch_api.Persistence.Repositories;
+using MedicalEngineMicroService.Core.Models.Entities.Lookups;
+using MedicalEngineMicroService.Core.Repositories.Lookups;
+using MedicalEngineMicroService.Persistence;
+using MedicalEngineMicroService.Persistence.Repositories;
 
-namespace MedicalBilingBackEnd.Persistence.Repositories.Lookups
+namespace MedicalEngineMicroService.Persistence.Repositories.Lookups
 {
     public class VatTypeRepository : Repository<VatType>, IVatTypeRepository
     {

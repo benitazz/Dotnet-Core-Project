@@ -1,12 +1,12 @@
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using MedicalBilingMicroservice.Common.Auth;
-using MedicalBilingMicroservice.Core.Models.Auth;
+using MedicalEngineMicroService.Common.Auth;
+using MedicalEngineMicroService.Core.Models.Auth;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 
-namespace MedicalBilingMicroservice.Common.Helpers {
+namespace MedicalEngineMicroService.Common.Helpers {
     public class Tokens {
         public static async Task<string> GenerateJwt (
             ClaimsIdentity identity,

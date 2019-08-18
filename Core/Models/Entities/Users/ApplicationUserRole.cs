@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 
-namespace MedicalBilingMicroservice.Core.Models.Entities.Users
+namespace MedicalEngineMicroService.Core.Models.Entities.Users
 {
     public class ApplicationUserRole : IdentityUserRole<string>
     {

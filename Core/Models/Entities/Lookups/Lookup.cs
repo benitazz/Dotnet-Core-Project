@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace MedicalBilingBackEnd.Core.Models.Entities.Lookups
+namespace MedicalEngineMicroService.Core.Models.Entities.Lookups
 {
     public abstract class LookupBase: EntityBase
     {

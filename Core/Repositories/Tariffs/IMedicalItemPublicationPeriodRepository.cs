@@ -1,7 +1,7 @@
-using MedicalBilingMicroservice.Core.Models.Entities.Tariffs;
-using switch_api.Core.Repositories;
+using MedicalEngineMicroService.Core.Models.Entities.Tariffs;
+using MedicalEngineMicroService.Core.Repositories;
 
-namespace MedicalBilingMicroservice.Core.Repositories.Tariffs {
+namespace MedicalEngineMicroService.Core.Repositories.Tariffs {
     public interface IMedicalItemPublicationPeriodRepository : IRepository<MedicalItemPublicationPeriod> {
 
     }

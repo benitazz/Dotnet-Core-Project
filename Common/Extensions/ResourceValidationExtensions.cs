@@ -1,11 +1,11 @@
 using FluentValidation;
-using MedicalBilingBackEnd.Resources.ApiToDomainResource.Lookups;
-using MedicalBilingBackEnd.Resources.Validations.Lookups;
-using MedicalBilingMicroservice.Resources.ApiToDomainResource;
-using MedicalBilingMicroservice.Resources.Validations;
+using MedicalEngineMicroService.Resources.ApiToDomainResource.Lookups;
+using MedicalEngineMicroService.Resources.Validations.Lookups;
+using MedicalEngineMicroService.Resources.ApiToDomainResource;
+using MedicalEngineMicroService.Resources.Validations;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace MedicalBilingMicroservice.Common.Extensions {
+namespace MedicalEngineMicroService.Common.Extensions {
     public static class ResourceValidationExtensions {
         public static IServiceCollection ConfigureValidationServices (this IServiceCollection services) {
             services.AddTransient<IValidator<CredentialsResource>, CredentialsResourceValidator> ();

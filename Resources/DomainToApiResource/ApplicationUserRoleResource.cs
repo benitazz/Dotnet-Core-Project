@@ -1,4 +1,4 @@
-namespace MedicalBilingMicroservice.Resources.DomainToApiResource
+namespace MedicalEngineMicroService.Resources.DomainToApiResource
 {
     public class ApplicationUserRoleResource
     {

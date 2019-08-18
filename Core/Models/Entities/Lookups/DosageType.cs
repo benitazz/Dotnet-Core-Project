@@ -1,6 +1,6 @@
-using MedicalBilingBackEnd.Core.Models.Entities.Lookups;
+using MedicalEngineMicroService.Core.Models.Entities.Lookups;
 
-namespace MedicalBilingMicroservice.Core.Models.Entities.Lookups {
+namespace MedicalEngineMicroService.Core.Models.Entities.Lookups {
     public class DosageType : LookupBase {
 
     }
