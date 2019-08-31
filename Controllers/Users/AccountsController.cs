@@ -49,8 +49,6 @@ namespace MedicalEngineMicroService.Controllers.Users {
         [HttpPost]
         [AllowAnonymous]
         [Route ("Register", Name = "Register")]
-        //[ApiVersionNeutral]
-        //[ValidateAntiForgeryToken]
         public async Task<IActionResult> Post ([FromBody] RegistrationResource registrationResource) {
             if (!ModelState.IsValid) {
                 return BadRequest (ModelState);
@@ -78,9 +76,6 @@ namespace MedicalEngineMicroService.Controllers.Users {
                 var htmlBody = await _viewRenderService.RenderToStringAsync ("~/Views/Mailer/NewAccount.cshtml", registration);
                 await _emailSender.SendEmailAsync (registrationResource.Email, "Welcome to Medical Invoice Engine! Please Confirm Email", htmlBody);
 
-                //await _userManager.SignInAsync(user, isPersistent: false);
-                //_logger.LogInformation("User created a new account with password.");
-
                 return Ok (new { userId = userIdentity.Id });
             } catch (Exception ex) {
                 return StatusCode (StatusCodes.Status500InternalServerError, ex.Message);
@@ -102,7 +97,6 @@ namespace MedicalEngineMicroService.Controllers.Users {
 
             if (result.Succeeded) {
                 return Redirect (Url.Content ("~/account/registrationcomplete"));
-                // return Ok ();
             }
 
             return new BadRequestObjectResult (Errors.AddErrorsToModelState (result, ModelState));
@@ -219,7 +213,8 @@ namespace MedicalEngineMicroService.Controllers.Users {
 
             // Cannot change passwords for test users
             // Remove following lines for real usage
-            if (User.IsInRole ("Administrator") || User.Identity.Name == "user") {
+            if (User.IsInRole (MedicalEngineMicroService.Common.Constants.Administrator) ||
+             User.Identity.Name == MedicalEngineMicroService.Common.Constants.User) {
                 ModelState.AddModelError ("Unable to change the password",
                     @"Cannot change the admin password in this demo app. 
                     Remove lines in ChangePassword (AccountController) action for real usage");
@@ -310,17 +305,6 @@ namespace MedicalEngineMicroService.Controllers.Users {
 
                 var htmlBody = await _viewRenderService.RenderToStringAsync ("~/Views/Mailer/ResetPassword.cshtml", registration);
                 await _emailSender.SendEmailAsync (model.Email, "Reset password", htmlBody);
-                // var callbackUrl = Url.Content("~/account/resetpassword?email=") + HttpUtility.UrlEncode(model.Email) + "&code=" + HttpUtility.UrlEncode(code);
-
-                /*var notification = new AccountNotificationModel
-				{
-					Url = callbackUrl,
-					DisplayName = user.UserName
-				};
-
-				string body = ViewRenderer.RenderView("~/Views/Mailer/PasswordReset.cshtml", notification);
-				await UserManager.SendEmailAsync(user.Id, "DurandalAuth reset password", body);*/
-
                 return Ok ();
             } catch (Exception ex) {
                 return StatusCode (StatusCodes.Status500InternalServerError, ex.Message);

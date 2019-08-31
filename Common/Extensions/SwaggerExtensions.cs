@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using MedicalEngineMicroService.Common.Attributes;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
@@ -21,14 +23,12 @@ namespace MedicalEngineMicroService.Common.Extensions {
 
                 c.DescribeAllEnumsAsStrings ();
                 c.EnableAnnotations ();
-               // c.OperationFilter();
+                // c.OperationFilter();
                 //c.OrderActionsBy((apiDesc) => $"{apiDesc.ActionDescriptor.RouteValues["controller"]}_{apiDesc.HttpMethod}");
-                c.TagActionsBy(api => api.GroupName);
-                //c.TagActionsBy (api => api.GroupBySwaggerGroupAttribute ());
-                c.IncludeXmlComments (string.Format (@"{0}\MedicalBiling.XML", AppDomain.CurrentDomain.BaseDirectory));
+                c.TagActionsBy (api => api.GroupBySwaggerGroupAttribute ());
+                c.IncludeXmlComments (string.Format (@"{0}\MedicalEngineMicroService.XML", AppDomain.CurrentDomain.BaseDirectory));
                 c.OperationFilter<OdataSwaggerFilters> ();
                 c.DocumentFilter<SwaggerDocumentFilter> ();
-                // c.OrderActionsBy();
                 c.AddSecurityDefinition ("Bearer", new ApiKeyScheme {
                     Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
                         Name = "Authorization",
@@ -56,26 +56,9 @@ namespace MedicalEngineMicroService.Common.Extensions {
         }
 
         public static string GroupBySwaggerGroupAttribute (this ApiDescription api) {
-
-            //var t  = api.GetType().GetCustomAttributes(true).SingleOrDefault(attribute => attribute is SwaggerGroupAttribute);
-
-            /*var globalAttributes = context.ApiDescription.ActionDescriptor.FilterDescriptors.Select(p => p.Filter);
-            var controlerAttributes = context.MethodInfo?.DeclaringType?.GetCustomAttributes(true);
-            var methodAttributes = context.MethodInfo?.GetCustomAttributes(true);
-            var produceAttributes = globalAttributes
-                .Union(controlerAttributes)
-                .Union(methodAttributes)
-                .OfType<ProducesAttribute>(); */
-
-           // var t = api.GroupBySwaggerGroupAttribute ();
-
             var groupNameAttribute =
-                (SwaggerGroupAttribute) api.ControllerAttributes ()
+                (SwaggerGroupAttribute) api.CustomAttributes ()
                 .SingleOrDefault (attribute => attribute is SwaggerGroupAttribute);
-
-            /*var groupNameAttribute =
-                (SwaggerGroupAttribute)api.TryGetMethodInfo()
-                .SingleOrDefault(attribute => attribute is SwaggerGroupAttribute);*/
 
             var actionDescriptor = api.GetProperty<ControllerActionDescriptor> ();
 
@@ -84,19 +67,18 @@ namespace MedicalEngineMicroService.Common.Extensions {
                 api.SetProperty (actionDescriptor);
             }
 
-            return groupNameAttribute != null ? groupNameAttribute.GroupName : actionDescriptor?.ControllerName;
-
-            // return !string.IsNullOrEmpty (t) ? t : actionDescriptor?.ControllerName;
+            return groupNameAttribute != null ?
+                groupNameAttribute.GroupName :
+                actionDescriptor?.ControllerName;
         }
 
-        /*public static bool TryGetControllerTypeInfo(this ApiDescription apiDescription, out ControllerTypeInfo controllerTypeInfo)
-        {
-            var controllerActionDescriptor = apiDescription.ActionDescriptor as ControllerActionDescriptor;
+        public static IEnumerable<object> CustomAttributes (this ApiDescription apiDescription) {
+            if (apiDescription.TryGetMethodInfo (out MethodInfo methodInfo)) {
+                return methodInfo.GetCustomAttributes (true)
+                    .Union (methodInfo.DeclaringType.GetCustomAttributes (true));
+            }
 
-            controllerTypeInfo = controllerActionDescriptor?.ControllerTypeInfo;
-
-            return (controllerTypeInfo != null);
-        }*/
-
+            return Enumerable.Empty<object> ();
+        }
     }
 }

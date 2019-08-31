@@ -4,14 +4,16 @@ using MedicalEngineMicroService.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace MedicalEngineMicroService.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190824172204_practitionerData")]
+    partial class practitionerData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -162,92 +164,92 @@ namespace MedicalEngineMicroService.Migrations
                         {
                             Id = 1,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 680, DateTimeKind.Local).AddTicks(2463),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 280, DateTimeKind.Local).AddTicks(3970),
                             Description = "Successfully uploaded the file",
                             IsDeleted = false,
                             Name = "Uploaded",
                             NormalizedDescription = "SUCCESSFULLYUPLOADEDTHEFILE",
                             NormalizedName = "UPLOADED",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 684, DateTimeKind.Local).AddTicks(7481)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 282, DateTimeKind.Local).AddTicks(2376)
                         },
                         new
                         {
                             Id = 2,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 684, DateTimeKind.Local).AddTicks(8497),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 282, DateTimeKind.Local).AddTicks(3523),
                             Description = "The manager rejected the file",
                             IsDeleted = false,
                             Name = "Rejected",
                             NormalizedDescription = "THEMANAGERREJECTEDTHEFILE",
                             NormalizedName = "REJECTED",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 684, DateTimeKind.Local).AddTicks(8513)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 282, DateTimeKind.Local).AddTicks(3542)
                         },
                         new
                         {
                             Id = 3,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 684, DateTimeKind.Local).AddTicks(8540),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 282, DateTimeKind.Local).AddTicks(3566),
                             Description = "Ready to submit to the Fund",
                             IsDeleted = false,
                             Name = "Approved",
                             NormalizedDescription = "READYTOSUBMITTOTHEFUND",
                             NormalizedName = "APPROVED",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 684, DateTimeKind.Local).AddTicks(8543)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 282, DateTimeKind.Local).AddTicks(3569)
                         },
                         new
                         {
                             Id = 4,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 684, DateTimeKind.Local).AddTicks(8551),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 282, DateTimeKind.Local).AddTicks(3577),
                             Description = "File successfully submitted to the Fund",
                             IsDeleted = false,
                             Name = "Submitted",
                             NormalizedDescription = "FILESUCCESSFULLYSUBMITTEDTOTHEFUND",
                             NormalizedName = "SUBMITTED",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 684, DateTimeKind.Local).AddTicks(8567)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 282, DateTimeKind.Local).AddTicks(3577)
                         },
                         new
                         {
                             Id = 5,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 684, DateTimeKind.Local).AddTicks(8590),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 282, DateTimeKind.Local).AddTicks(3585),
                             Description = "Not all invoices were paid",
                             IsDeleted = false,
                             Name = "Partially Paid",
                             NormalizedDescription = "NOTALLINVOICESWEREPAID",
                             NormalizedName = "PARTIALLY PAID",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 684, DateTimeKind.Local).AddTicks(8593)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 282, DateTimeKind.Local).AddTicks(3585)
                         },
                         new
                         {
                             Id = 6,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 684, DateTimeKind.Local).AddTicks(8613),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 282, DateTimeKind.Local).AddTicks(3593),
                             Description = "All invoices were successfully paid",
                             IsDeleted = false,
                             Name = "Paid",
                             NormalizedDescription = "ALLINVOICESWERESUCCESSFULLYPAID",
                             NormalizedName = "PAID",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 684, DateTimeKind.Local).AddTicks(8617)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 282, DateTimeKind.Local).AddTicks(3593)
                         },
                         new
                         {
                             Id = 7,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 684, DateTimeKind.Local).AddTicks(8636),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 282, DateTimeKind.Local).AddTicks(3600),
                             Description = "File Overdue",
                             IsDeleted = false,
                             Name = "Overdue",
                             NormalizedDescription = "FILEOVERDUE",
                             NormalizedName = "OVERDUE",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 684, DateTimeKind.Local).AddTicks(8640)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 282, DateTimeKind.Local).AddTicks(3600)
                         });
                 });
 
@@ -307,79 +309,79 @@ namespace MedicalEngineMicroService.Migrations
                         {
                             Id = 1,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 694, DateTimeKind.Local).AddTicks(6397),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 295, DateTimeKind.Local).AddTicks(3775),
                             Description = "Pending",
                             IsDeleted = false,
                             Name = "Pending",
                             NormalizedDescription = "PENDING",
                             NormalizedName = "PENDING",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 694, DateTimeKind.Local).AddTicks(6416)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 295, DateTimeKind.Local).AddTicks(3798)
                         },
                         new
                         {
                             Id = 2,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 694, DateTimeKind.Local).AddTicks(6455),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 295, DateTimeKind.Local).AddTicks(3867),
                             Description = "Approved",
                             IsDeleted = false,
                             Name = "Approved",
                             NormalizedDescription = "APPROVED",
                             NormalizedName = "APPROVED",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 694, DateTimeKind.Local).AddTicks(6459)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 295, DateTimeKind.Local).AddTicks(3871)
                         },
                         new
                         {
                             Id = 3,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 694, DateTimeKind.Local).AddTicks(6463),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 295, DateTimeKind.Local).AddTicks(3879),
                             Description = "Payment rejected",
                             IsDeleted = false,
                             Name = "Rejected",
                             NormalizedDescription = "PAYMENTREJECTED",
                             NormalizedName = "REJECTED",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 694, DateTimeKind.Local).AddTicks(6466)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 295, DateTimeKind.Local).AddTicks(3882)
                         },
                         new
                         {
                             Id = 4,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 694, DateTimeKind.Local).AddTicks(6470),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 295, DateTimeKind.Local).AddTicks(3886),
                             Description = "Invoice submitted to the fund",
                             IsDeleted = false,
                             Name = "Submitted",
                             NormalizedDescription = "INVOICESUBMITTEDTOTHEFUND",
                             NormalizedName = "SUBMITTED",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 694, DateTimeKind.Local).AddTicks(6470)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 295, DateTimeKind.Local).AddTicks(3890)
                         },
                         new
                         {
                             Id = 5,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 694, DateTimeKind.Local).AddTicks(6474),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 295, DateTimeKind.Local).AddTicks(3894),
                             Description = "Invoice paid",
                             IsDeleted = false,
                             Name = "Paid",
                             NormalizedDescription = "INVOICEPAID",
                             NormalizedName = "PAID",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 694, DateTimeKind.Local).AddTicks(6478)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 295, DateTimeKind.Local).AddTicks(3894)
                         },
                         new
                         {
                             Id = 6,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 694, DateTimeKind.Local).AddTicks(6482),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 295, DateTimeKind.Local).AddTicks(3898),
                             Description = "Invoice Overdue",
                             IsDeleted = false,
                             Name = "Overdue",
                             NormalizedDescription = "INVOICEOVERDUE",
                             NormalizedName = "OVERDUE",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 694, DateTimeKind.Local).AddTicks(6482)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 295, DateTimeKind.Local).AddTicks(3902)
                         });
                 });
 
@@ -521,12 +523,12 @@ namespace MedicalEngineMicroService.Migrations
                         {
                             Id = 1,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 720, DateTimeKind.Local).AddTicks(6408),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 312, DateTimeKind.Local).AddTicks(1187),
                             Description = "14% Percent VAT",
                             IsDeleted = false,
                             Percentage = 0.14000000000000001,
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 720, DateTimeKind.Local).AddTicks(6427),
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 312, DateTimeKind.Local).AddTicks(1214),
                             ValidFrom = new DateTime(1900, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ValidTo = new DateTime(2018, 3, 31, 23, 59, 59, 0, DateTimeKind.Unspecified)
                         },
@@ -534,12 +536,12 @@ namespace MedicalEngineMicroService.Migrations
                         {
                             Id = 2,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 720, DateTimeKind.Local).AddTicks(8121),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 312, DateTimeKind.Local).AddTicks(3058),
                             Description = "15% Percent VAT",
                             IsDeleted = false,
                             Percentage = 0.14999999999999999,
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 720, DateTimeKind.Local).AddTicks(8125),
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 312, DateTimeKind.Local).AddTicks(3066),
                             ValidFrom = new DateTime(2018, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
@@ -897,79 +899,79 @@ namespace MedicalEngineMicroService.Migrations
                         {
                             Id = 1,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 746, DateTimeKind.Local).AddTicks(9641),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 342, DateTimeKind.Local).AddTicks(26),
                             Description = "Unknown",
                             IsDeleted = false,
                             Name = "-",
                             NormalizedDescription = "UNKNOWN",
                             NormalizedName = "-",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 746, DateTimeKind.Local).AddTicks(9668)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 342, DateTimeKind.Local).AddTicks(57)
                         },
                         new
                         {
                             Id = 2,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 746, DateTimeKind.Local).AddTicks(9722),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 342, DateTimeKind.Local).AddTicks(115),
                             Description = "Treatment or Procedure Code",
                             IsDeleted = true,
                             Name = "IT",
                             NormalizedDescription = "TREATMENTORPROCEDURECODE",
                             NormalizedName = "IT",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 746, DateTimeKind.Local).AddTicks(9726)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 342, DateTimeKind.Local).AddTicks(119)
                         },
                         new
                         {
                             Id = 3,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 746, DateTimeKind.Local).AddTicks(9730),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 342, DateTimeKind.Local).AddTicks(122),
                             Description = "Drug or Pharmaceutical Item (NAPPI)",
                             IsDeleted = true,
                             Name = "ID",
                             NormalizedDescription = "DRUGORPHARMACEUTICALITEM(NAPPI)",
                             NormalizedName = "ID",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 746, DateTimeKind.Local).AddTicks(9730)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 342, DateTimeKind.Local).AddTicks(122)
                         },
                         new
                         {
                             Id = 4,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 746, DateTimeKind.Local).AddTicks(9734),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 342, DateTimeKind.Local).AddTicks(126),
                             Description = "Modifier",
                             IsDeleted = false,
                             Name = "M",
                             NormalizedDescription = "MODIFIER",
                             NormalizedName = "M",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 746, DateTimeKind.Local).AddTicks(9734)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 342, DateTimeKind.Local).AddTicks(130)
                         },
                         new
                         {
                             Id = 5,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 746, DateTimeKind.Local).AddTicks(9738),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 342, DateTimeKind.Local).AddTicks(134),
                             Description = "Rule",
                             IsDeleted = false,
                             Name = "R",
                             NormalizedDescription = "RULE",
                             NormalizedName = "R",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 746, DateTimeKind.Local).AddTicks(9742)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 342, DateTimeKind.Local).AddTicks(134)
                         },
                         new
                         {
                             Id = 6,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 746, DateTimeKind.Local).AddTicks(9742),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 342, DateTimeKind.Local).AddTicks(138),
                             Description = "Note",
                             IsDeleted = false,
                             Name = "N",
                             NormalizedDescription = "NOTE",
                             NormalizedName = "N",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 746, DateTimeKind.Local).AddTicks(9742)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 342, DateTimeKind.Local).AddTicks(138)
                         });
                 });
 
@@ -5106,92 +5108,92 @@ namespace MedicalEngineMicroService.Migrations
                         {
                             Id = 1,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 808, DateTimeKind.Local).AddTicks(3938),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 427, DateTimeKind.Local).AddTicks(1715),
                             Description = "ALL discipline",
                             IsDeleted = false,
                             Name = "ALL",
                             NormalizedDescription = "ALL DISCIPLINE",
                             NormalizedName = "ALL",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 808, DateTimeKind.Local).AddTicks(3965)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 427, DateTimeKind.Local).AddTicks(1738)
                         },
                         new
                         {
                             Id = 2,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 808, DateTimeKind.Local).AddTicks(4011),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 427, DateTimeKind.Local).AddTicks(1780),
                             Description = "SPC discipline",
                             IsDeleted = false,
                             Name = "SPC",
                             NormalizedDescription = "SPC DISCIPLINE",
                             NormalizedName = "SPC",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 808, DateTimeKind.Local).AddTicks(4011)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 427, DateTimeKind.Local).AddTicks(1780)
                         },
                         new
                         {
                             Id = 3,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 808, DateTimeKind.Local).AddTicks(4015),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 427, DateTimeKind.Local).AddTicks(1784),
                             Description = "GPH discipline",
                             IsDeleted = false,
                             Name = "GPH",
                             NormalizedDescription = "GPH DISCIPLINE",
                             NormalizedName = "GPH",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 808, DateTimeKind.Local).AddTicks(4015)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 427, DateTimeKind.Local).AddTicks(1784)
                         },
                         new
                         {
                             Id = 4,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 808, DateTimeKind.Local).AddTicks(4019),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 427, DateTimeKind.Local).AddTicks(1788),
                             Description = "HOS discipline",
                             IsDeleted = false,
                             Name = "HOS",
                             NormalizedDescription = "HOS DISCIPLINE",
                             NormalizedName = "HOS",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 808, DateTimeKind.Local).AddTicks(4019)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 427, DateTimeKind.Local).AddTicks(1788)
                         },
                         new
                         {
                             Id = 5,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 808, DateTimeKind.Local).AddTicks(4023),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 427, DateTimeKind.Local).AddTicks(1792),
                             Description = "PHR discipline",
                             IsDeleted = false,
                             Name = "PHR",
                             NormalizedDescription = "PHR DISCIPLINE",
                             NormalizedName = "PHR",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 808, DateTimeKind.Local).AddTicks(4023)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 427, DateTimeKind.Local).AddTicks(1792)
                         },
                         new
                         {
                             Id = 6,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 808, DateTimeKind.Local).AddTicks(4027),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 427, DateTimeKind.Local).AddTicks(1796),
                             Description = "PRS discipline",
                             IsDeleted = false,
                             Name = "PRS",
                             NormalizedDescription = "PRS DISCIPLINE",
                             NormalizedName = "PRS",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 808, DateTimeKind.Local).AddTicks(4027)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 427, DateTimeKind.Local).AddTicks(1796)
                         },
                         new
                         {
                             Id = 7,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 808, DateTimeKind.Local).AddTicks(4031),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 427, DateTimeKind.Local).AddTicks(1796),
                             Description = "RAD discipline",
                             IsDeleted = false,
                             Name = "RAD",
                             NormalizedDescription = "RAD DISCIPLINE",
                             NormalizedName = "RAD",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 808, DateTimeKind.Local).AddTicks(4031)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 427, DateTimeKind.Local).AddTicks(1799)
                         });
                 });
 
@@ -5238,1250 +5240,6 @@ namespace MedicalEngineMicroService.Migrations
                     b.HasIndex("PractitionerTypeId");
 
                     b.ToTable("PractitionerPractitionerTypes");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 4,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 4,
-                            PractitionerTypeId = 5,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 5,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 6,
-                            PractitionerTypeId = 3,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 5,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 7,
-                            PractitionerTypeId = 6,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 6,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 8,
-                            PractitionerTypeId = 6,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 7,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 9,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 8,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 10,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 9,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 11,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 10,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 12,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 11,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 13,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 12,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 14,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 13,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 15,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 14,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 16,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 15,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 18,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 16,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 19,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 17,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 20,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 18,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 21,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 19,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 22,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 20,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 23,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 21,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 24,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 22,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 25,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 23,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 26,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 24,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 27,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 25,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 28,
-                            PractitionerTypeId = 2,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 26,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 29,
-                            PractitionerTypeId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 27,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 30,
-                            PractitionerTypeId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 28,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 31,
-                            PractitionerTypeId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 29,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 33,
-                            PractitionerTypeId = 2,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 30,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 34,
-                            PractitionerTypeId = 2,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 31,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 42,
-                            PractitionerTypeId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 32,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 43,
-                            PractitionerTypeId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 33,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 51,
-                            PractitionerTypeId = 2,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 34,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 52,
-                            PractitionerTypeId = 2,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 35,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 54,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 36,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 55,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 37,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 56,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 38,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 57,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 39,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 58,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 40,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 59,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 41,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 60,
-                            PractitionerTypeId = 2,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 42,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 61,
-                            PractitionerTypeId = 3,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 43,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 62,
-                            PractitionerTypeId = 3,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 44,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 63,
-                            PractitionerTypeId = 2,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 45,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 69,
-                            PractitionerTypeId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 46,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 72,
-                            PractitionerTypeId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 47,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 73,
-                            PractitionerTypeId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 48,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 79,
-                            PractitionerTypeId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 49,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 84,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 50,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 85,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 51,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 86,
-                            PractitionerTypeId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 52,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 87,
-                            PractitionerTypeId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 53,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 88,
-                            PractitionerTypeId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 54,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 89,
-                            PractitionerTypeId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 55,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 90,
-                            PractitionerTypeId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 56,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 91,
-                            PractitionerTypeId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 57,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 92,
-                            PractitionerTypeId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 58,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 93,
-                            PractitionerTypeId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 59,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 94,
-                            PractitionerTypeId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 60,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 95,
-                            PractitionerTypeId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 61,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 96,
-                            PractitionerTypeId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 62,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 97,
-                            PractitionerTypeId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 63,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 98,
-                            PractitionerTypeId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 64,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 99,
-                            PractitionerTypeId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 65,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 100,
-                            PractitionerTypeId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 66,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 101,
-                            PractitionerTypeId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 67,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 102,
-                            PractitionerTypeId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 68,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 103,
-                            PractitionerTypeId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 69,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 104,
-                            PractitionerTypeId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 70,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 128,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 71,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 129,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 72,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 130,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 73,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 131,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 74,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 132,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 75,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 133,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 76,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 134,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 77,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 135,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 78,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 136,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 79,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 137,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 80,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 138,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 81,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 139,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 82,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 140,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 83,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 141,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 84,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 142,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 85,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 143,
-                            PractitionerTypeId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 86,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 150,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 87,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 151,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 88,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 152,
-                            PractitionerTypeId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 89,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 154,
-                            PractitionerTypeId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 90,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 160,
-                            PractitionerTypeId = 2,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 91,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 161,
-                            PractitionerTypeId = 2,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 92,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 163,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 93,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 176,
-                            PractitionerTypeId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 94,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 178,
-                            PractitionerTypeId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 95,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 184,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 96,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 188,
-                            PractitionerTypeId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 97,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 189,
-                            PractitionerTypeId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 98,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 190,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 99,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 192,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 100,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 193,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 101,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 194,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 102,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 195,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 103,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 196,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 104,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 197,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 105,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 198,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 106,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 199,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 107,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 200,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 108,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 214,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 109,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 215,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 110,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 216,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 111,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 217,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 112,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 218,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 113,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 219,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 114,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 220,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 115,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 221,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 116,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 222,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 117,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 223,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 118,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 224,
-                            PractitionerTypeId = 6,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 119,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 225,
-                            PractitionerTypeId = 3,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 120,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 226,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 121,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 227,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 122,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 228,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 123,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 229,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 124,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 230,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 125,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 231,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 126,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 232,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 127,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 233,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 128,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 234,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 129,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 235,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 130,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 236,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 131,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 239,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 132,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 240,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 133,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 243,
-                            PractitionerTypeId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 134,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 246,
-                            PractitionerTypeId = 3,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 135,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 248,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 136,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 249,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 137,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 250,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 138,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            PractitionerId = 251,
-                            PractitionerTypeId = 4,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        });
                 });
 
             modelBuilder.Entity("MedicalEngineMicroService.Core.Models.Entities.Tariffs.PractitionerType", b =>
@@ -6540,79 +5298,79 @@ namespace MedicalEngineMicroService.Migrations
                         {
                             Id = 1,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 799, DateTimeKind.Local).AddTicks(7483),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 416, DateTimeKind.Local).AddTicks(3201),
                             Description = "Hospital",
                             IsDeleted = false,
                             Name = "Hospital",
                             NormalizedDescription = "HOSPITAL",
                             NormalizedName = "HOSPITAL",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 799, DateTimeKind.Local).AddTicks(7522)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 416, DateTimeKind.Local).AddTicks(3229)
                         },
                         new
                         {
                             Id = 2,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 799, DateTimeKind.Local).AddTicks(7575),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 416, DateTimeKind.Local).AddTicks(3309),
                             Description = "Dentist",
                             IsDeleted = false,
                             Name = "Dentist",
                             NormalizedDescription = "DENTIST",
                             NormalizedName = "DENTIST",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 799, DateTimeKind.Local).AddTicks(7575)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 416, DateTimeKind.Local).AddTicks(3313)
                         },
                         new
                         {
                             Id = 3,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 799, DateTimeKind.Local).AddTicks(7579),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 416, DateTimeKind.Local).AddTicks(3321),
                             Description = "Ambulance",
                             IsDeleted = false,
                             Name = "Ambulance",
                             NormalizedDescription = "AMBULANCE",
                             NormalizedName = "AMBULANCE",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 799, DateTimeKind.Local).AddTicks(7579)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 416, DateTimeKind.Local).AddTicks(3321)
                         },
                         new
                         {
                             Id = 4,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 799, DateTimeKind.Local).AddTicks(7583),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 416, DateTimeKind.Local).AddTicks(3325),
                             Description = "Specialist",
                             IsDeleted = false,
                             Name = "Specialist",
                             NormalizedDescription = "SPECIALIST",
                             NormalizedName = "SPECIALIST",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 799, DateTimeKind.Local).AddTicks(7583)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 416, DateTimeKind.Local).AddTicks(3325)
                         },
                         new
                         {
                             Id = 5,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 799, DateTimeKind.Local).AddTicks(7587),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 416, DateTimeKind.Local).AddTicks(3325),
                             Description = "Anaesthetist",
                             IsDeleted = false,
                             Name = "Anaesthetist",
                             NormalizedDescription = "ANAESTHETIST",
                             NormalizedName = "ANAESTHETIST",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 799, DateTimeKind.Local).AddTicks(7587)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 416, DateTimeKind.Local).AddTicks(3329)
                         },
                         new
                         {
                             Id = 6,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 799, DateTimeKind.Local).AddTicks(7591),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 416, DateTimeKind.Local).AddTicks(3332),
                             Description = "General Practitioner",
                             IsDeleted = false,
                             Name = "GP",
                             NormalizedDescription = "GENERALPRACTITIONER",
                             NormalizedName = "GP",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 799, DateTimeKind.Local).AddTicks(7595)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 416, DateTimeKind.Local).AddTicks(3332)
                         });
                 });
 
@@ -7533,27 +6291,27 @@ namespace MedicalEngineMicroService.Migrations
                         {
                             Id = 1,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 710, DateTimeKind.Local).AddTicks(8970),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 302, DateTimeKind.Local).AddTicks(7068),
                             Description = "Coid Tariffs",
                             IsDeleted = false,
                             Name = "Coida",
                             NormalizedDescription = "COIDTARIFFS",
                             NormalizedName = "COIDA",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 710, DateTimeKind.Local).AddTicks(8986)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 302, DateTimeKind.Local).AddTicks(7087)
                         },
                         new
                         {
                             Id = 2,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 710, DateTimeKind.Local).AddTicks(9036),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 302, DateTimeKind.Local).AddTicks(7126),
                             Description = "None Coid Tariffs",
                             IsDeleted = false,
                             Name = "NoneCoid",
                             NormalizedDescription = "NONECOIDTARIFFS",
                             NormalizedName = "NONECOID",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 710, DateTimeKind.Local).AddTicks(9036)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 302, DateTimeKind.Local).AddTicks(7130)
                         });
                 });
 
@@ -7824,7 +6582,7 @@ namespace MedicalEngineMicroService.Migrations
                         {
                             Id = 1,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 784, DateTimeKind.Local).AddTicks(8499),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 409, DateTimeKind.Local).AddTicks(3103),
                             Description = "Chiropractor Tariffs",
                             IsDeleted = false,
                             Name = "Chiropractor",
@@ -7832,13 +6590,13 @@ namespace MedicalEngineMicroService.Migrations
                             NormalizedName = "CHIROPRACTOR",
                             PublicationNo = "11111",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 784, DateTimeKind.Local).AddTicks(8518)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 409, DateTimeKind.Local).AddTicks(3122)
                         },
                         new
                         {
                             Id = 2,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 784, DateTimeKind.Local).AddTicks(9761),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 409, DateTimeKind.Local).AddTicks(4386),
                             Description = "Radiologists Tariffs",
                             IsDeleted = false,
                             Name = "Radiologist",
@@ -7846,13 +6604,13 @@ namespace MedicalEngineMicroService.Migrations
                             NormalizedName = "RADIOLOGIST",
                             PublicationNo = "11111",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 784, DateTimeKind.Local).AddTicks(9765)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 409, DateTimeKind.Local).AddTicks(4389)
                         },
                         new
                         {
                             Id = 3,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 784, DateTimeKind.Local).AddTicks(9781),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 409, DateTimeKind.Local).AddTicks(4409),
                             Description = "Dentists tarrifs",
                             IsDeleted = false,
                             Name = "Dentist",
@@ -7860,13 +6618,13 @@ namespace MedicalEngineMicroService.Migrations
                             NormalizedName = "DENTIST",
                             PublicationNo = "11111",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 784, DateTimeKind.Local).AddTicks(9781)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 409, DateTimeKind.Local).AddTicks(4409)
                         },
                         new
                         {
                             Id = 4,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 784, DateTimeKind.Local).AddTicks(9788),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 409, DateTimeKind.Local).AddTicks(4609),
                             Description = "Physiotherapist tariffs",
                             IsDeleted = false,
                             Name = "Physiotherapist",
@@ -7874,13 +6632,13 @@ namespace MedicalEngineMicroService.Migrations
                             NormalizedName = "PHYSIOTHERAPIST",
                             PublicationNo = "11111",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 784, DateTimeKind.Local).AddTicks(9788)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 409, DateTimeKind.Local).AddTicks(4609)
                         },
                         new
                         {
                             Id = 5,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 784, DateTimeKind.Local).AddTicks(9792),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 409, DateTimeKind.Local).AddTicks(4617),
                             Description = "Private Ambulance Tariffs",
                             IsDeleted = false,
                             Name = "Private Ambulance",
@@ -7888,13 +6646,13 @@ namespace MedicalEngineMicroService.Migrations
                             NormalizedName = "PRIVATEAMBULANCE",
                             PublicationNo = "11111",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 784, DateTimeKind.Local).AddTicks(9792)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 409, DateTimeKind.Local).AddTicks(4617)
                         },
                         new
                         {
                             Id = 6,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 784, DateTimeKind.Local).AddTicks(9796),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 409, DateTimeKind.Local).AddTicks(4617),
                             Description = "General Practioner Tariffs",
                             IsDeleted = false,
                             Name = "General Practioner",
@@ -7902,13 +6660,13 @@ namespace MedicalEngineMicroService.Migrations
                             NormalizedName = "GENERALPRACTIONER",
                             PublicationNo = "11111",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 784, DateTimeKind.Local).AddTicks(9796)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 409, DateTimeKind.Local).AddTicks(4620)
                         },
                         new
                         {
                             Id = 7,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 784, DateTimeKind.Local).AddTicks(9800),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 409, DateTimeKind.Local).AddTicks(4620),
                             Description = "Renal Care Tariffs",
                             IsDeleted = false,
                             Name = "Renal Care",
@@ -7916,13 +6674,13 @@ namespace MedicalEngineMicroService.Migrations
                             NormalizedName = "RENALCARE",
                             PublicationNo = "11111",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 784, DateTimeKind.Local).AddTicks(9800)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 409, DateTimeKind.Local).AddTicks(4624)
                         },
                         new
                         {
                             Id = 8,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 784, DateTimeKind.Local).AddTicks(9804),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 409, DateTimeKind.Local).AddTicks(4624),
                             Description = "Social Worker Tariffs",
                             IsDeleted = false,
                             Name = "Social Worker",
@@ -7930,13 +6688,13 @@ namespace MedicalEngineMicroService.Migrations
                             NormalizedName = "SOCIALWORKER",
                             PublicationNo = "11111",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 784, DateTimeKind.Local).AddTicks(9804)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 409, DateTimeKind.Local).AddTicks(4628)
                         },
                         new
                         {
                             Id = 9,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 784, DateTimeKind.Local).AddTicks(9808),
+                            CreatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 409, DateTimeKind.Local).AddTicks(4628),
                             Description = "Wound Care Tariffs",
                             IsDeleted = false,
                             Name = "Wound Care",
@@ -7944,7 +6702,7 @@ namespace MedicalEngineMicroService.Migrations
                             NormalizedName = "WOUNDCARE",
                             PublicationNo = "11111",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 8, 31, 2, 36, 21, 784, DateTimeKind.Local).AddTicks(9808)
+                            UpdatedDate = new DateTime(2019, 8, 24, 19, 22, 1, 409, DateTimeKind.Local).AddTicks(4628)
                         });
                 });
 

@@ -1,7 +1,6 @@
 namespace MedicalEngineMicroService.Common {
     public class Constants {
         public const string Administrator = "Administrator";
-
         public const string Uploaded = "Uploaded";
         public const string Rejected = "Rejected";
         public const string Approved = "Approved";
@@ -29,6 +28,7 @@ namespace MedicalEngineMicroService.Common {
         public const string NoneCoid = "NoneCoid";
         public const string DateTime2 = "DATETIME2";
         public const string GetDate = "GetDate()";
+        public const string User = "user";
 
         public static class Strings {
             public static class JwtClaimIdentifiers {

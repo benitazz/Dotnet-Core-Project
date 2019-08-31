@@ -68,7 +68,6 @@ namespace MedicalEngineMicroService.Controllers.Lookups {
                 var tariffTypes = await this._repository.GetAll ();
 
                 if (tariffTypes == null) {
-                    // return NotFound();
                     return Ok (new List<LookupResource> ());
                 }
 
@@ -110,11 +109,9 @@ namespace MedicalEngineMicroService.Controllers.Lookups {
                 this._repository.Add (tariffType);
                 await this._unitOfWork.CompletedAsync ();
 
-                // tariffType = await _repository.Get(tariffType.Id);
                 var results = this._mapper.Map<TariffType, LookupResource> (tariffType);
 
                 return Created (tariffType.Id.ToString (), results);
-                //return StatusCode(StatusCodes.Status201Created, results);
             } catch (System.Exception ex) {
                 return StatusCode (StatusCodes.Status500InternalServerError, ex.ToString ());
             }
@@ -147,7 +144,6 @@ namespace MedicalEngineMicroService.Controllers.Lookups {
                 }
 
                 tariffType = this._mapper.Map<SaveLookupResource, TariffType> (saveLookupResource, tariffType);
-                // tariffType.UpdatedBy = "";
                 tariffType.UpdatedDate = DateTime.Now;
                 await this._unitOfWork.CompletedAsync ();
 
@@ -174,9 +170,6 @@ namespace MedicalEngineMicroService.Controllers.Lookups {
                 }
 
                 this._repository.Remove (tariffType);
-
-                /*tariffType.IsDeleted = true;
-                tariffType.UpdatedDate = DateTime.Now;*/
                 await this._unitOfWork.CompletedAsync ();
                 return Ok (id);
             } catch (Exception ex) {

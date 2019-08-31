@@ -75,7 +75,6 @@ namespace MedicalEngineMicroService.Controllers.Tariffs
 
                 if (tariffUnitCosts == null)
                 {
-                    // return NotFound();
                     return Ok(new List<TariffUnitCostResource>());
                 }
 
