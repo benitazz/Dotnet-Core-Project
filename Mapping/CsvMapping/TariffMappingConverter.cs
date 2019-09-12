@@ -12,7 +12,7 @@ namespace MedicalEngineMicroService.Mapping.CsvMapping
         {
             result = new TariffBaseUnitCost
             {
-                ActualAmount = double.Parse(value)
+                UnitPrice = double.Parse(value)
             };
             return true;
         }

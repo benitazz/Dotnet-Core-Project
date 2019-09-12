@@ -1,3 +1,4 @@
+using MedicalBilingMicroservice.Core.Models.Entities.Lookups;
 using MedicalEngineMicroService.Core.Models.Entities;
 using MedicalEngineMicroService.Core.Models.Entities.Lookups;
 using Microsoft.EntityFrameworkCore;
@@ -50,6 +51,16 @@ namespace MedicalEngineMicroService.Common.Extensions {
                      builder.Property (t => t.NormalizedDescription)
                             .IsRequired ()
                             .HasMaxLength (255);
+              }
+
+              public static void ConfigureLookupDescription<T> (this EntityTypeBuilder<T> builder) where T : LookupDescriptionBase {
+                     ConfigureEntity (builder);
+
+                     builder.Property (t => t.Description)
+                            .IsRequired();
+                          
+                     builder.Property (t => t.NormalizedDescription)
+                            .IsRequired ();
               }
        }
 }

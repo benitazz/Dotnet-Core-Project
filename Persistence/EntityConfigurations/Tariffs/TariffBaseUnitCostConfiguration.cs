@@ -19,7 +19,7 @@ namespace MedicalEngineMicroService.Persistence.EntityConfigurations.Tariffs {
                 .HasColumnType (Constants.DateTime2Type)
                 .HasDefaultValueSql (Constants.DefaultSqlDate);
 
-            builder.Property (tariffUnitCost => tariffUnitCost.ActualAmount)
+            builder.Property (tariffUnitCost => tariffUnitCost.UnitPrice)
                 .HasColumnType (Constants.MoneyFormat);
 
             /*builder.Property (tariffUnitCost => tariffUnitCost.VatAmount)

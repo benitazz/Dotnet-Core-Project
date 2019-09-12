@@ -1,4 +1,3 @@
-using MedicalEngineMicroService.Common;
 using MedicalEngineMicroService.Common.Extensions;
 using MedicalEngineMicroService.Core.Models.Entities.Tariffs;
 using Microsoft.EntityFrameworkCore;
@@ -10,18 +9,8 @@ namespace MedicalEngineMicroService.Persistence.EntityConfigurations.Tariffs {
             builder.ConfigureEntity ();
 
             builder.Property (medicalItem => medicalItem.Code)
-                .HasMaxLength (10);
-
-            /* builder.Property (medicalItem => medicalItem.ValidFrom)
-                .IsRequired ()
-                .HasColumnType (Constants.DateTime2Type);
-
-            builder.Property (medicalItem => medicalItem.ValidTo)
-                .IsRequired ()
-                .HasColumnType (Constants.DateTime2Type);
-    
-            builder.Property (medicalItem => medicalItem.Description)
-                .HasMaxLength (255);*/
+                .HasMaxLength (10)
+                .IsRequired(); 
         }
     }
 }

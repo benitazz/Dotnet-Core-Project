@@ -8,8 +8,7 @@ namespace MedicalEngineMicroService.Persistence.EntityConfigurations.Tariffs {
         public void Configure (EntityTypeBuilder<MedicalItemPublication> builder) {
             builder.ConfigureEntity ();
 
-            builder.Property (medicalItem => medicalItem.Name)
-                .HasMaxLength (255);
+            builder.Property(medicalItem => medicalItem.Description).IsRequired();
 
             builder.HasIndex (medicalItem => new { medicalItem.MedicalItemId, medicalItem.PublicationTypeId })
                 .IsUnique (true);
