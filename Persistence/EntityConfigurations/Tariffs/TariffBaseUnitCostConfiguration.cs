@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 namespace MedicalEngineMicroService.Persistence.EntityConfigurations.Tariffs {
     public class TariffBaseUnitCostConfiguration : IEntityTypeConfiguration<TariffBaseUnitCost> {
         public void Configure (EntityTypeBuilder<TariffBaseUnitCost> builder) {
-            builder.ConfigureEntity ();
+            builder.ConfigureLookupDescription();
 
             builder.Property (tariffUnitCost => tariffUnitCost.ValidFrom)
                 .IsRequired ()
