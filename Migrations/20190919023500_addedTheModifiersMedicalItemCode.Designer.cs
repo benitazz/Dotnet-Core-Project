@@ -4,14 +4,16 @@ using MedicalEngineMicroService.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace MedicalEngineMicroService.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190919023500_addedTheModifiersMedicalItemCode")]
+    partial class addedTheModifiersMedicalItemCode
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -162,92 +164,92 @@ namespace MedicalEngineMicroService.Migrations
                         {
                             Id = 1,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 558, DateTimeKind.Local).AddTicks(8350),
+                            CreatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 906, DateTimeKind.Local).AddTicks(4327),
                             Description = "Successfully uploaded the file",
                             IsDeleted = false,
                             Name = "Uploaded",
                             NormalizedDescription = "SUCCESSFULLYUPLOADEDTHEFILE",
                             NormalizedName = "UPLOADED",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 560, DateTimeKind.Local).AddTicks(4233)
+                            UpdatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 911, DateTimeKind.Local).AddTicks(6827)
                         },
                         new
                         {
                             Id = 2,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 560, DateTimeKind.Local).AddTicks(5014),
+                            CreatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 911, DateTimeKind.Local).AddTicks(7617),
                             Description = "The manager rejected the file",
                             IsDeleted = false,
                             Name = "Rejected",
                             NormalizedDescription = "THEMANAGERREJECTEDTHEFILE",
                             NormalizedName = "REJECTED",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 560, DateTimeKind.Local).AddTicks(5030)
+                            UpdatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 911, DateTimeKind.Local).AddTicks(7632)
                         },
                         new
                         {
                             Id = 3,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 560, DateTimeKind.Local).AddTicks(5041),
+                            CreatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 911, DateTimeKind.Local).AddTicks(7647),
                             Description = "Ready to submit to the Fund",
                             IsDeleted = false,
                             Name = "Approved",
                             NormalizedDescription = "READYTOSUBMITTOTHEFUND",
                             NormalizedName = "APPROVED",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 560, DateTimeKind.Local).AddTicks(5045)
+                            UpdatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 911, DateTimeKind.Local).AddTicks(7647)
                         },
                         new
                         {
                             Id = 4,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 560, DateTimeKind.Local).AddTicks(5049),
+                            CreatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 911, DateTimeKind.Local).AddTicks(7655),
                             Description = "File successfully submitted to the Fund",
                             IsDeleted = false,
                             Name = "Submitted",
                             NormalizedDescription = "FILESUCCESSFULLYSUBMITTEDTOTHEFUND",
                             NormalizedName = "SUBMITTED",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 560, DateTimeKind.Local).AddTicks(5049)
+                            UpdatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 911, DateTimeKind.Local).AddTicks(7659)
                         },
                         new
                         {
                             Id = 5,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 560, DateTimeKind.Local).AddTicks(5057),
+                            CreatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 911, DateTimeKind.Local).AddTicks(7663),
                             Description = "Not all invoices were paid",
                             IsDeleted = false,
                             Name = "Partially Paid",
                             NormalizedDescription = "NOTALLINVOICESWEREPAID",
                             NormalizedName = "PARTIALLY PAID",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 560, DateTimeKind.Local).AddTicks(5057)
+                            UpdatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 911, DateTimeKind.Local).AddTicks(7663)
                         },
                         new
                         {
                             Id = 6,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 560, DateTimeKind.Local).AddTicks(5061),
+                            CreatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 911, DateTimeKind.Local).AddTicks(7667),
                             Description = "All invoices were successfully paid",
                             IsDeleted = false,
                             Name = "Paid",
                             NormalizedDescription = "ALLINVOICESWERESUCCESSFULLYPAID",
                             NormalizedName = "PAID",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 560, DateTimeKind.Local).AddTicks(5061)
+                            UpdatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 911, DateTimeKind.Local).AddTicks(7671)
                         },
                         new
                         {
                             Id = 7,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 560, DateTimeKind.Local).AddTicks(5068),
+                            CreatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 911, DateTimeKind.Local).AddTicks(7674),
                             Description = "File Overdue",
                             IsDeleted = false,
                             Name = "Overdue",
                             NormalizedDescription = "FILEOVERDUE",
                             NormalizedName = "OVERDUE",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 560, DateTimeKind.Local).AddTicks(5068)
+                            UpdatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 911, DateTimeKind.Local).AddTicks(7674)
                         });
                 });
 
@@ -307,79 +309,79 @@ namespace MedicalEngineMicroService.Migrations
                         {
                             Id = 1,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 568, DateTimeKind.Local).AddTicks(6526),
+                            CreatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 917, DateTimeKind.Local).AddTicks(6108),
                             Description = "Pending",
                             IsDeleted = false,
                             Name = "Pending",
                             NormalizedDescription = "PENDING",
                             NormalizedName = "PENDING",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 568, DateTimeKind.Local).AddTicks(6561)
+                            UpdatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 917, DateTimeKind.Local).AddTicks(6128)
                         },
                         new
                         {
                             Id = 2,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 568, DateTimeKind.Local).AddTicks(6695),
+                            CreatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 917, DateTimeKind.Local).AddTicks(6170),
                             Description = "Approved",
                             IsDeleted = false,
                             Name = "Approved",
                             NormalizedDescription = "APPROVED",
                             NormalizedName = "APPROVED",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 568, DateTimeKind.Local).AddTicks(6695)
+                            UpdatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 917, DateTimeKind.Local).AddTicks(6170)
                         },
                         new
                         {
                             Id = 3,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 568, DateTimeKind.Local).AddTicks(6719),
+                            CreatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 917, DateTimeKind.Local).AddTicks(6174),
                             Description = "Payment rejected",
                             IsDeleted = false,
                             Name = "Rejected",
                             NormalizedDescription = "PAYMENTREJECTED",
                             NormalizedName = "REJECTED",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 568, DateTimeKind.Local).AddTicks(6722)
+                            UpdatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 917, DateTimeKind.Local).AddTicks(6178)
                         },
                         new
                         {
                             Id = 4,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 568, DateTimeKind.Local).AddTicks(6746),
+                            CreatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 917, DateTimeKind.Local).AddTicks(6182),
                             Description = "Invoice submitted to the fund",
                             IsDeleted = false,
                             Name = "Submitted",
                             NormalizedDescription = "INVOICESUBMITTEDTOTHEFUND",
                             NormalizedName = "SUBMITTED",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 568, DateTimeKind.Local).AddTicks(6757)
+                            UpdatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 917, DateTimeKind.Local).AddTicks(6185)
                         },
                         new
                         {
                             Id = 5,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 568, DateTimeKind.Local).AddTicks(6784),
+                            CreatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 917, DateTimeKind.Local).AddTicks(6189),
                             Description = "Invoice paid",
                             IsDeleted = false,
                             Name = "Paid",
                             NormalizedDescription = "INVOICEPAID",
                             NormalizedName = "PAID",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 568, DateTimeKind.Local).AddTicks(6784)
+                            UpdatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 917, DateTimeKind.Local).AddTicks(6189)
                         },
                         new
                         {
                             Id = 6,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 568, DateTimeKind.Local).AddTicks(6807),
+                            CreatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 917, DateTimeKind.Local).AddTicks(6193),
                             Description = "Invoice Overdue",
                             IsDeleted = false,
                             Name = "Overdue",
                             NormalizedDescription = "INVOICEOVERDUE",
                             NormalizedName = "OVERDUE",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 568, DateTimeKind.Local).AddTicks(6807)
+                            UpdatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 917, DateTimeKind.Local).AddTicks(6197)
                         });
                 });
 
@@ -521,12 +523,12 @@ namespace MedicalEngineMicroService.Migrations
                         {
                             Id = 1,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 601, DateTimeKind.Local).AddTicks(6966),
+                            CreatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 944, DateTimeKind.Local).AddTicks(4580),
                             Description = "14% Percent VAT",
                             IsDeleted = false,
                             Percentage = 0.14000000000000001,
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 601, DateTimeKind.Local).AddTicks(7013),
+                            UpdatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 944, DateTimeKind.Local).AddTicks(4607),
                             ValidFrom = new DateTime(1900, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ValidTo = new DateTime(2018, 3, 31, 23, 59, 59, 0, DateTimeKind.Unspecified)
                         },
@@ -534,12 +536,12 @@ namespace MedicalEngineMicroService.Migrations
                         {
                             Id = 2,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 601, DateTimeKind.Local).AddTicks(9923),
+                            CreatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 945, DateTimeKind.Local).AddTicks(1921),
                             Description = "15% Percent VAT",
                             IsDeleted = false,
                             Percentage = 0.14999999999999999,
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 601, DateTimeKind.Local).AddTicks(9931),
+                            UpdatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 945, DateTimeKind.Local).AddTicks(1929),
                             ValidFrom = new DateTime(2018, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
@@ -1420,9 +1422,6 @@ namespace MedicalEngineMicroService.Migrations
 
                     b.Property<int>("MedicalItemId");
 
-                    b.Property<string>("NormalizedDescription")
-                        .IsRequired();
-
                     b.Property<int>("PublicationId");
 
                     b.Property<double>("Quantity")
@@ -1448,882 +1447,6 @@ namespace MedicalEngineMicroService.Migrations
                         .IsUnique();
 
                     b.ToTable("MedicalItemPublications");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Written report on X-rays: The lowest level code for a new patient office (consulting rooms) visit, is applicable only where a radiologist is requested to give a written report on X-rays taken elsewhere and submitted to him. The above mentioned item and the lowest level initial hospital visit code, as appropriate are not to be used for routine reporting of X-rays taken elsewhere",
-                            IsDeleted = false,
-                            MedicalItemId = 1,
-                            NormalizedDescription = "WRITTENREPORTONX-RAYS:THELOWESTLEVELCODEFORANEWPATIENTOFFICE(CONSULTINGROOMS)VISIT,ISAPPLICABLEONLYWHEREARADIOLOGISTISREQUESTEDTOGIVEAWRITTENREPORTONX-RAYSTAKENELSEWHEREANDSUBMITTEDTOHIM.THEABOVEMENTIONEDITEMANDTHELOWESTLEVELINITIALHOSPITALVISITCODE,ASAPPROPRIATEARENOTTOBEUSEDFORROUTINEREPORTINGOFX-RAYSTAKENELSEWHERE",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Procedures performed in own procedure rooms: Procedures performed in doctors' own procedure rooms instead of in a hospital theatre or unattached theatre unit: as per fee for procedure + 100% (the value of modifier 0004 equals 100% of the value of the procedure performed). See Section V (Section G in SAMA's DBT) for a list of procedures, which are often done in rooms to which Modifier 0004 should not be applied. Please note: Only the medical practitioner who owns the facility and the equipment may charge modifier 0004. Only one person may claim this modifier for procedures performed in doctors' own procedure rooms",
-                            IsDeleted = false,
-                            MedicalItemId = 2,
-                            NormalizedDescription = "PROCEDURESPERFORMEDINOWNPROCEDUREROOMS:PROCEDURESPERFORMEDINDOCTORS'OWNPROCEDUREROOMSINSTEADOFINAHOSPITALTHEATREORUNATTACHEDTHEATREUNIT:ASPERFEEFORPROCEDURE+100%(THEVALUEOFMODIFIER0004EQUALS100%OFTHEVALUEOFTHEPROCEDUREPERFORMED).SEESECTIONV(SECTIONGINSAMA'SDBT)FORALISTOFPROCEDURES,WHICHAREOFTENDONEINROOMSTOWHICHMODIFIER0004SHOULDNOTBEAPPLIED.PLEASENOTE:ONLYTHEMEDICALPRACTITIONERWHOOWNSTHEFACILITYANDTHEEQUIPMENTMAYCHARGEMODIFIER0004.ONLYONEPERSONMAYCLAIMTHISMODIFIERFORPROCEDURESPERFORMEDINDOCTORS'OWNPROCEDUREROOMS",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Multiple therapeutic procedures/operations under the same anaesthetic:\\r\\na) Unless otherwise identified in the tariff when multiple therapeutic procedures/operations add significant time and/or complexity, and when each procedure/operation is clearly identified and defined, the following values shall prevail:  100% (full value) for the first or major procedure/operation, 75% for the second procedure/operation, 50% for the third procedure/operation, 25% for the fourth and subsequent procedures/operations. This modifier does not apply to purely diagnostic procedures.\\r\\nb) In the case of multiple fractures and/or dislocations the above values shall prevail.\\r\\nc) When purely diagnostic endoscopic procedures or diagnostic endoscopic procedures unrelated to any therapeutic procedures performed, are performed under the same general anaesthetic, Modifier 0005 is not applicable to the fees for such diagnostic endoscopic procedures as the fees for endoscopic procedures do not provide for after-care. Specify unrelated endoscopic procedure and provide diagnosis to indicate diagnostic endoscopic procedure(s) unrelated to other (therapeutic) procedures performed under the same anaesthetic.\\r\\nd) Please note:  When more than one small procedure is performed and the tariff makes provision for items for \"subsequent\" or \"maximum for multiple additional procedures\" (see Section 2. Integumentary System) Modifier 0005 is not applicable as the fee is already a reduced fee.\\r\\ne) ?+? Means that this item is used in addition to another definitive procedure and is therefore not subject to reduction according to Modifier 0005 (see also Modifier 0082)",
-                            IsDeleted = false,
-                            MedicalItemId = 3,
-                            NormalizedDescription = @"
-                    MULTIPLETHERAPEUTICPROCEDURES / OPERATIONSUNDERTHESAMEANAESTHETIC: \R\ NA) UNLESSOTHERWISEIDENTIFIEDINTHETARIFFWHENMULTIPLETHERAPEUTICPROCEDURES / OPERATIONSADDSIGNIFICANTTIMEAND / ORCOMPLEXITY, ANDWHENEACHPROCEDURE / OPERATIONISCLEARLYIDENTIFIEDANDDEFINED, THEFOLLOWINGVALUESSHALLPREVAIL : 100 % (FULLVALUE) FORTHEFIRSTORMAJORPROCEDURE / OPERATION, 75 % FORTHESECONDPROCEDURE / OPERATION, 50 % FORTHETHIRDPROCEDURE / OPERATION, 25 % FORTHEFOURTHANDSUBSEQUENTPROCEDURES / OPERATIONS.THISMODIFIERDOESNOTAPPLYTOPURELYDIAGNOSTICPROCEDURES.\R\ NB) INTHECASEOFMULTIPLEFRACTURESAND / ORDISLOCATIONSTHEABOVEVALUESSHALLPREVAIL.\R\ NC) WHENPURELYDIAGNOSTICENDOSCOPICPROCEDURESORDIAGNOSTICENDOSCOPICPROCEDURESUNRELATEDTOANYTHERAPEUTICPROCEDURESPERFORMED,
-        AREPERFORMEDUNDERTHESAMEGENERALANAESTHETIC,
-        MODIFIER0005ISNOTAPPLICABLETOTHEFEESFORSUCHDIAGNOSTICENDOSCOPICPROCEDURESASTHEFEESFORENDOSCOPICPROCEDURESDONOTPROVIDEFORAFTER - CARE.SPECIFYUNRELATEDENDOSCOPICPROCEDUREANDPROVIDEDIAGNOSISTOINDICATEDIAGNOSTICENDOSCOPICPROCEDURE (S) UNRELATEDTOOTHER (THERAPEUTIC) PROCEDURESPERFORMEDUNDERTHESAMEANAESTHETIC.\R\ ND) PLEASENOTE : WHENMORETHANONESMALLPROCEDUREISPERFORMEDANDTHETARIFFMAKESPROVISIONFORITEMSFOR ""
-    SUBSEQUENT ""
-    OR ""
-    MAXIMUMFORMULTIPLEADDITIONALPROCEDURES "" (SEESECTION2.INTEGUMENTARYSYSTEM) MODIFIER0005ISNOTAPPLICABLEASTHEFEEISALREADYAREDUCEDFEE.\R\ NE) ? + ? MEANSTHATTHISITEMISUSEDINADDITIONTOANOTHERDEFINITIVEPROCEDUREANDISTHEREFORENOTSUBJECTTOREDUCTIONACCORDINGTOMODIFIER0005 (SEEALSOMODIFIER0082)
-",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Visiting specialists performing procedures:  Where specialists visit smaller centres to perform procedures, fees for these particular procedures are exclusive of after-care. The referring practitioner will then be entitled to subsequent hospital visits for after-care. If the referring practitioner is not available, the specialist shall, on consultation with the patient, choose an appropriate locum tenens. Both the surgeon and the practitioner who handled the after-care, must in such instances quote Modifier 0006 with the particular items which they use",
-                            IsDeleted = false,
-                            MedicalItemId = 4,
-                            NormalizedDescription = "VISITINGSPECIALISTSPERFORMINGPROCEDURES:WHERESPECIALISTSVISITSMALLERCENTRESTOPERFORMPROCEDURES,FEESFORTHESEPARTICULARPROCEDURESAREEXCLUSIVEOFAFTER-CARE.THEREFERRINGPRACTITIONERWILLTHENBEENTITLEDTOSUBSEQUENTHOSPITALVISITSFORAFTER-CARE.IFTHEREFERRINGPRACTITIONERISNOTAVAILABLE,THESPECIALISTSHALL,ONCONSULTATIONWITHTHEPATIENT,CHOOSEANAPPROPRIATELOCUMTENENS.BOTHTHESURGEONANDTHEPRACTITIONERWHOHANDLEDTHEAFTER-CARE,MUSTINSUCHINSTANCESQUOTEMODIFIER0006WITHTHEPARTICULARITEMSWHICHTHEYUSE",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 5,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "a) Use of own monitoring equipment in the rooms:  Remuneration for the use of any type of own monitoring equipment in the rooms for procedures performed under intravenous sedation - 15,00 clinical procedure units irrespective of the number of items of equipment provided.\\r\\nb) Use of own equipment in hospital theatre or unattached theatre unit:  Remuneration for the use of any type of own equipment for procedures performed in a hospital theatre or unattached theatre unit when appropriate equipment is not provided by the hospital - 15,00 clinical procedure units irrespective of the number of items of equipment provided.",
-                            IsDeleted = false,
-                            MedicalItemId = 5,
-                            NormalizedDescription = @"
-    A) USEOFOWNMONITORINGEQUIPMENTINTHEROOMS : REMUNERATIONFORTHEUSEOFANYTYPEOFOWNMONITORINGEQUIPMENTINTHEROOMSFORPROCEDURESPERFORMEDUNDERINTRAVENOUSSEDATION - 15, 00 CLINICALPROCEDUREUNITSIRRESPECTIVEOFTHENUMBEROFITEMSOFEQUIPMENTPROVIDED.\R\ NB) USEOFOWNEQUIPMENTINHOSPITALTHEATREORUNATTACHEDTHEATREUNIT : REMUNERATIONFORTHEUSEOFANYTYPEOFOWNEQUIPMENTFORPROCEDURESPERFORMEDINAHOSPITALTHEATREORUNATTACHEDTHEATREUNITWHENAPPROPRIATEEQUIPMENTISNOTPROVIDEDBYTHEHOSPITAL - 15, 00 CLINICALPROCEDUREUNITSIRRESPECTIVEOFTHENUMBEROFITEMSOFEQUIPMENTPROVIDED.
-",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 6,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Specialist surgeon assistant: Where a procedure requires a registered specialist surgeon assistant, the fee is 33,33% (1/3) of the fee for the specialist surgeon",
-                            IsDeleted = false,
-                            MedicalItemId = 6,
-                            NormalizedDescription = "SPECIALISTSURGEONASSISTANT:WHEREAPROCEDUREREQUIRESAREGISTEREDSPECIALISTSURGEONASSISTANT,THEFEEIS33,33%(1/3)OFTHEFEEFORTHESPECIALISTSURGEON",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 7,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Assistant: The fee for an assistant is 20% of the fee for the specialist surgeon, with a minimum of 36,00 clinical procedure units. The minimum fee payable may not be less than 36,00 clinical procedures units",
-                            IsDeleted = false,
-                            MedicalItemId = 7,
-                            NormalizedDescription = "ASSISTANT:THEFEEFORANASSISTANTIS20%OFTHEFEEFORTHESPECIALISTSURGEON,WITHAMINIMUMOF36,00CLINICALPROCEDUREUNITS.THEMINIMUMFEEPAYABLEMAYNOTBELESSTHAN36,00CLINICALPROCEDURESUNITS",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 8,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Local anaesthetic: (a) A fee for a local anaesthetic administered by the operator may only be charged for (1) an operation or procedure having a value greater than 30,00 clinical procedure units (i.e. 31,00 or more clinical procedure units allocated to a single item) or (2) where more than one operation or procedure is done at the same time with a combined value greater than 50,00 clinical procedure units. (b) The fee shall be calculated according to the basic anaesthetic units for the specific operation. Anaesthetic time may not be charged for, but the minimum fee as per Modifier 0036: Anaesthetic administered by a general practitioner, shall be applicable in such a case. (c) Not applicable to radiological procedures (such as angiography and myelography. (d) No fee may be levied for topical application of local anaesthetic. (e) Please note: Modifier 0010: Local anaesthetic administered by the operator, may not be added on the surgeon?s account for procedures that were performed under general anaesthetic.",
-                            IsDeleted = false,
-                            MedicalItemId = 8,
-                            NormalizedDescription = "LOCALANAESTHETIC:(A)AFEEFORALOCALANAESTHETICADMINISTEREDBYTHEOPERATORMAYONLYBECHARGEDFOR(1)ANOPERATIONORPROCEDUREHAVINGAVALUEGREATERTHAN30,00CLINICALPROCEDUREUNITS(I.E.31,00ORMORECLINICALPROCEDUREUNITSALLOCATEDTOASINGLEITEM)OR(2)WHEREMORETHANONEOPERATIONORPROCEDUREISDONEATTHESAMETIMEWITHACOMBINEDVALUEGREATERTHAN50,00CLINICALPROCEDUREUNITS.(B)THEFEESHALLBECALCULATEDACCORDINGTOTHEBASICANAESTHETICUNITSFORTHESPECIFICOPERATION.ANAESTHETICTIMEMAYNOTBECHARGEDFOR,BUTTHEMINIMUMFEEASPERMODIFIER0036:ANAESTHETICADMINISTEREDBYAGENERALPRACTITIONER,SHALLBEAPPLICABLEINSUCHACASE.(C)NOTAPPLICABLETORADIOLOGICALPROCEDURES(SUCHASANGIOGRAPHYANDMYELOGRAPHY.(D)NOFEEMAYBELEVIEDFORTOPICALAPPLICATIONOFLOCALANAESTHETIC.(E)PLEASENOTE:MODIFIER0010:LOCALANAESTHETICADMINISTEREDBYTHEOPERATOR,MAYNOTBEADDEDONTHESURGEON?SACCOUNTFORPROCEDURESTHATWEREPERFORMEDUNDERGENERALANAESTHETIC.",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 9,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Emergency procedures: Any bona fide, justifiable emergency procedure (all hours) undertaken in an operating theatre and/or in another setting in lieu of an operating theatre, will attract an additional 12,00 clinical procedure units per half-hour or part thereof of the operating time for all members of the surgical team. Modifier 0011 does not apply in respect of patients on scheduled lists. (A medical emergency is any condition where death or irreparable harm to the patient will result if there are undue delays in receiving appropriate medical treatment)",
-                            IsDeleted = false,
-                            MedicalItemId = 9,
-                            NormalizedDescription = "EMERGENCYPROCEDURES:ANYBONAFIDE,JUSTIFIABLEEMERGENCYPROCEDURE(ALLHOURS)UNDERTAKENINANOPERATINGTHEATREAND/ORINANOTHERSETTINGINLIEUOFANOPERATINGTHEATRE,WILLATTRACTANADDITIONAL12,00CLINICALPROCEDUREUNITSPERHALF-HOURORPARTTHEREOFOFTHEOPERATINGTIMEFORALLMEMBERSOFTHESURGICALTEAM.MODIFIER0011DOESNOTAPPLYINRESPECTOFPATIENTSONSCHEDULEDLISTS.(AMEDICALEMERGENCYISANYCONDITIONWHEREDEATHORIRREPARABLEHARMTOTHEPATIENTWILLRESULTIFTHEREAREUNDUEDELAYSINRECEIVINGAPPROPRIATEMEDICALTREATMENT)",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 10,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Endoscopic examinations done at operations: Where a related endoscopic examination is done at an operation by the operating surgeon or the attending anaesthesiologist, only 50% of the fee for the endoscopic examination may be charged",
-                            IsDeleted = false,
-                            MedicalItemId = 10,
-                            NormalizedDescription = "ENDOSCOPICEXAMINATIONSDONEATOPERATIONS:WHEREARELATEDENDOSCOPICEXAMINATIONISDONEATANOPERATIONBYTHEOPERATINGSURGEONORTHEATTENDINGANAESTHESIOLOGIST,ONLY50%OFTHEFEEFORTHEENDOSCOPICEXAMINATIONMAYBECHARGED",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 11,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Operations previously performed by other surgeons: Where an operation is performed which has been previously performed by another surgeon, e.g. a revision or repeat operation, the fee shall be calculated according to the tariff for the full operation plus an additional fee to be negotiated under general Rule J: In exceptional cases where the fee is disproportionately low in relation to actual service rendered, except where already specified in the tariff",
-                            IsDeleted = false,
-                            MedicalItemId = 11,
-                            NormalizedDescription = "OPERATIONSPREVIOUSLYPERFORMEDBYOTHERSURGEONS:WHEREANOPERATIONISPERFORMEDWHICHHASBEENPREVIOUSLYPERFORMEDBYANOTHERSURGEON,E.G.AREVISIONORREPEATOPERATION,THEFEESHALLBECALCULATEDACCORDINGTOTHETARIFFFORTHEFULLOPERATIONPLUSANADDITIONALFEETOBENEGOTIATEDUNDERGENERALRULEJ:INEXCEPTIONALCASESWHERETHEFEEISDISPROPORTIONATELYLOWINRELATIONTOACTUALSERVICERENDERED,EXCEPTWHEREALREADYSPECIFIEDINTHETARIFF",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 12,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Intravenous infusions: Where intravenous infusions (including blood and blood cellular products) are administered as part of the after-treatment after the operation or confinement, no extra fees shall be charged as this is included in the global operative or maternity fees.  Should the practitioner doing the operation or attending to the maternity case prefer to ask another practitioner to perform post-operative or post-confinement intravenous infusions, then the practitioner himself (and not the patient) shall be responsible for remunerating such practitioner for the infusions",
-                            IsDeleted = false,
-                            MedicalItemId = 12,
-                            NormalizedDescription = "INTRAVENOUSINFUSIONS:WHEREINTRAVENOUSINFUSIONS(INCLUDINGBLOODANDBLOODCELLULARPRODUCTS)AREADMINISTEREDASPARTOFTHEAFTER-TREATMENTAFTERTHEOPERATIONORCONFINEMENT,NOEXTRAFEESSHALLBECHARGEDASTHISISINCLUDEDINTHEGLOBALOPERATIVEORMATERNITYFEES.SHOULDTHEPRACTITIONERDOINGTHEOPERATIONORATTENDINGTOTHEMATERNITYCASEPREFERTOASKANOTHERPRACTITIONERTOPERFORMPOST-OPERATIVEORPOST-CONFINEMENTINTRAVENOUSINFUSIONS,THENTHEPRACTITIONERHIMSELF(ANDNOTTHEPATIENT)SHALLBERESPONSIBLEFORREMUNERATINGSUCHPRACTITIONERFORTHEINFUSIONS",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 13,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Injections administered by practitioners: When desensitisation, intravenous, intramuscular or subcutaneous injections are administered by the practitioner him-/herself to patients who attend the consulting rooms, a first injection forms part of the consultation/visit and only all subsequent injections for the same condition should be charged at 7.50 consultative services units using modifier 0017 to reflect the amount (not chargeable together with a consultation item)",
-                            IsDeleted = false,
-                            MedicalItemId = 13,
-                            NormalizedDescription = "INJECTIONSADMINISTEREDBYPRACTITIONERS:WHENDESENSITISATION,INTRAVENOUS,INTRAMUSCULARORSUBCUTANEOUSINJECTIONSAREADMINISTEREDBYTHEPRACTITIONERHIM-/HERSELFTOPATIENTSWHOATTENDTHECONSULTINGROOMS,AFIRSTINJECTIONFORMSPARTOFTHECONSULTATION/VISITANDONLYALLSUBSEQUENTINJECTIONSFORTHESAMECONDITIONSHOULDBECHARGEDAT7.50CONSULTATIVESERVICESUNITSUSINGMODIFIER0017TOREFLECTTHEAMOUNT(NOTCHARGEABLETOGETHERWITHACONSULTATIONITEM)",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 14,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Surgical modifier for persons with a BMI of 35> (calculated according to kg/m2): Fee for procedure +50% for surgeons and a 50% increase in anaesthetic time units for anaesthesiologists",
-                            IsDeleted = false,
-                            MedicalItemId = 14,
-                            NormalizedDescription = "SURGICALMODIFIERFORPERSONSWITHABMIOF35>(CALCULATEDACCORDINGTOKG/M2):FEEFORPROCEDURE+50%FORSURGEONSANDA50%INCREASEINANAESTHETICTIMEUNITSFORANAESTHESIOLOGISTS",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 15,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Surgery on neonates (up to and including 28 days after birth) and low birth weight infants (less than 2500g) under general anaesthesia (excluding circumcision): per fee for procedure + 50% for surgeons and a 50% increase in anaesthetic time units for anaesthesiologists",
-                            IsDeleted = false,
-                            MedicalItemId = 15,
-                            NormalizedDescription = "SURGERYONNEONATES(UPTOANDINCLUDING28DAYSAFTERBIRTH)ANDLOWBIRTHWEIGHTINFANTS(LESSTHAN2500G)UNDERGENERALANAESTHESIA(EXCLUDINGCIRCUMCISION):PERFEEFORPROCEDURE+50%FORSURGEONSANDA50%INCREASEINANAESTHETICTIMEUNITSFORANAESTHESIOLOGISTS",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 16,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Where in the treatment of a specific fracture or dislocation (compound or closed) an initial procedure is followed within one month by an open reduction, internal fixation, external skeletal fixation or bone grafting on the same bone, the fee for the initial treatment of that fracture or dislocation shall be reduced by 50%.   Please note:  This reduction does not include the assistant?s fee where applicable.  After one month, a full fee as for the initial treatment, is applicable",
-                            IsDeleted = false,
-                            MedicalItemId = 16,
-                            NormalizedDescription = "WHEREINTHETREATMENTOFASPECIFICFRACTUREORDISLOCATION(COMPOUNDORCLOSED)ANINITIALPROCEDUREISFOLLOWEDWITHINONEMONTHBYANOPENREDUCTION,INTERNALFIXATION,EXTERNALSKELETALFIXATIONORBONEGRAFTINGONTHESAMEBONE,THEFEEFORTHEINITIALTREATMENTOFTHATFRACTUREORDISLOCATIONSHALLBEREDUCEDBY50%.PLEASENOTE:THISREDUCTIONDOESNOTINCLUDETHEASSISTANT?SFEEWHEREAPPLICABLE.AFTERONEMONTH,AFULLFEEASFORTHEINITIALTREATMENT,ISAPPLICABLE",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 17,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "A fracture NOT requiring reduction shall be charged on a fee per service basis",
-                            IsDeleted = false,
-                            MedicalItemId = 17,
-                            NormalizedDescription = "AFRACTURENOTREQUIRINGREDUCTIONSHALLBECHARGEDONAFEEPERSERVICEBASIS",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 18,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Where in the treatment of a fracture or dislocation, an initial closed reduction is followed within one month by further closed reductions under general anaesthesia, the fee for such subsequent reductions will be 27,00 clinical procedure units (not including after-care)",
-                            IsDeleted = false,
-                            MedicalItemId = 18,
-                            NormalizedDescription = "WHEREINTHETREATMENTOFAFRACTUREORDISLOCATION,ANINITIALCLOSEDREDUCTIONISFOLLOWEDWITHINONEMONTHBYFURTHERCLOSEDREDUCTIONSUNDERGENERALANAESTHESIA,THEFEEFORSUCHSUBSEQUENTREDUCTIONSWILLBE27,00CLINICALPROCEDUREUNITS(NOTINCLUDINGAFTER-CARE)",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 19,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Except where otherwise specified, in cases of compound fractures, 77,00 clinical procedure units (specialists) and 77,00 clinical procedure units (general practitioners) are to be added to the units for the fractures including debridement",
-                            IsDeleted = false,
-                            MedicalItemId = 19,
-                            NormalizedDescription = "EXCEPTWHEREOTHERWISESPECIFIED,INCASESOFCOMPOUNDFRACTURES,77,00CLINICALPROCEDUREUNITS(SPECIALISTS)AND77,00CLINICALPROCEDUREUNITS(GENERALPRACTITIONERS)ARETOBEADDEDTOTHEUNITSFORTHEFRACTURESINCLUDINGDEBRIDEMENT",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 20,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "In cases of a compound fracture where a debridement is followed by internal fixation (excluding fixation with Kirschner wires, as well as  fractures of hands and feet), the full amount according to either Modifier 0049:  Cases of compound fractures, or Modifier 0051:  Fractures requiring open reduction, internal fixation, external skeletal fixation and/or bone grafting, may be added to the fee for the procedure involved, plus half of the amount according to the second modifier (either Modifier 0049: Cases of compound fractures or Modifier 0051: Fractures requiring open reduction, internal fixation, external skeletal fixation and/or bone grafting, as applicable) ",
-                            IsDeleted = false,
-                            MedicalItemId = 20,
-                            NormalizedDescription = "INCASESOFACOMPOUNDFRACTUREWHEREADEBRIDEMENTISFOLLOWEDBYINTERNALFIXATION(EXCLUDINGFIXATIONWITHKIRSCHNERWIRES,ASWELLASFRACTURESOFHANDSANDFEET),THEFULLAMOUNTACCORDINGTOEITHERMODIFIER0049:CASESOFCOMPOUNDFRACTURES,ORMODIFIER0051:FRACTURESREQUIRINGOPENREDUCTION,INTERNALFIXATION,EXTERNALSKELETALFIXATIONAND/ORBONEGRAFTING,MAYBEADDEDTOTHEFEEFORTHEPROCEDUREINVOLVED,PLUSHALFOFTHEAMOUNTACCORDINGTOTHESECONDMODIFIER(EITHERMODIFIER0049:CASESOFCOMPOUNDFRACTURESORMODIFIER0051:FRACTURESREQUIRINGOPENREDUCTION,INTERNALFIXATION,EXTERNALSKELETALFIXATIONAND/ORBONEGRAFTING,ASAPPLICABLE)",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 21,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Fractures requiring open reduction, internal fixation, external skeletal fixation and/or bone grafting: Specialists add 77,00 clinical procedure units. General practitioners add 77,00 clinical procedure units",
-                            IsDeleted = false,
-                            MedicalItemId = 21,
-                            NormalizedDescription = "FRACTURESREQUIRINGOPENREDUCTION,INTERNALFIXATION,EXTERNALSKELETALFIXATIONAND/ORBONEGRAFTING:SPECIALISTSADD77,00CLINICALPROCEDUREUNITS.GENERALPRACTITIONERSADD77,00CLINICALPROCEDUREUNITS",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 22,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Fracture requiring percutaneous internal fixation [insertion and removal of fixatives (wires) in respect of fingers and toes included]: Specialists and general practitioners add 32,00 clinical procedure units",
-                            IsDeleted = false,
-                            MedicalItemId = 22,
-                            NormalizedDescription = "FRACTUREREQUIRINGPERCUTANEOUSINTERNALFIXATION[INSERTIONANDREMOVALOFFIXATIVES(WIRES)INRESPECTOFFINGERSANDTOESINCLUDED]:SPECIALISTSANDGENERALPRACTITIONERSADD32,00CLINICALPROCEDUREUNITS",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 23,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Dislocation requiring open reduction: Units for the specific joint plus 77,00 clinical procedure units for specialists. General practitioners add 77,00 clinical procedure units",
-                            IsDeleted = false,
-                            MedicalItemId = 23,
-                            NormalizedDescription = "DISLOCATIONREQUIRINGOPENREDUCTION:UNITSFORTHESPECIFICJOINTPLUS77,00CLINICALPROCEDUREUNITSFORSPECIALISTS.GENERALPRACTITIONERSADD77,00CLINICALPROCEDUREUNITS",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 24,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Multiple procedures on feet: In multiple procedures on feet, fees for the first foot are calculated according to Modifier 0005: Multiple procedures/operations under the same anaesthetic. Calculate fees for the second foot in the same way, reduce the total to 75% and add to the total for the first foot",
-                            IsDeleted = false,
-                            MedicalItemId = 24,
-                            NormalizedDescription = "MULTIPLEPROCEDURESONFEET:INMULTIPLEPROCEDURESONFEET,FEESFORTHEFIRSTFOOTARECALCULATEDACCORDINGTOMODIFIER0005:MULTIPLEPROCEDURES/OPERATIONSUNDERTHESAMEANAESTHETIC.CALCULATEFEESFORTHESECONDFOOTINTHESAMEWAY,REDUCETHETOTALTO75%ANDADDTOTHETOTALFORTHEFIRSTFOOT",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 25,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Revision operation for total joint replacement and immediate re-substitution (infected or non-infected): per fee for total joint replacement + 100%",
-                            IsDeleted = false,
-                            MedicalItemId = 25,
-                            NormalizedDescription = "REVISIONOPERATIONFORTOTALJOINTREPLACEMENTANDIMMEDIATERE-SUBSTITUTION(INFECTEDORNON-INFECTED):PERFEEFORTOTALJOINTREPLACEMENT+100%",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 26,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Combined procedures on the spine: In cases of combined procedures on the spine, both the orthopaedic surgeon and the neurosurgeon are entitled to the full fee for the relevant part of the operation performed",
-                            IsDeleted = false,
-                            MedicalItemId = 26,
-                            NormalizedDescription = "COMBINEDPROCEDURESONTHESPINE:INCASESOFCOMBINEDPROCEDURESONTHESPINE,BOTHTHEORTHOPAEDICSURGEONANDTHENEUROSURGEONAREENTITLEDTOTHEFULLFEEFORTHERELEVANTPARTOFTHEOPERATIONPERFORMED",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 27,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Where two specialists work together on a replantation procedure, each shall be entitled to two-thirds of the fee for the procedure",
-                            IsDeleted = false,
-                            MedicalItemId = 27,
-                            NormalizedDescription = "WHERETWOSPECIALISTSWORKTOGETHERONAREPLANTATIONPROCEDURE,EACHSHALLBEENTITLEDTOTWO-THIRDSOFTHEFEEFORTHEPROCEDURE",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 28,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Where the replantation is unsuccessful, no further surgical fee is payable for amputation of the non-viable parts",
-                            IsDeleted = false,
-                            MedicalItemId = 28,
-                            NormalizedDescription = "WHERETHEREPLANTATIONISUNSUCCESSFUL,NOFURTHERSURGICALFEEISPAYABLEFORAMPUTATIONOFTHENON-VIABLEPARTS",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 29,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Additional operative procedures by same surgeon, under section 3.8.6: Spinal deformities, within a period of 12 months: 75% of scheduled fee for the lesser procedure, except where otherwise specified elsewhere",
-                            IsDeleted = false,
-                            MedicalItemId = 29,
-                            NormalizedDescription = "ADDITIONALOPERATIVEPROCEDURESBYSAMESURGEON,UNDERSECTION3.8.6:SPINALDEFORMITIES,WITHINAPERIODOF12MONTHS:75%OFSCHEDULEDFEEFORTHELESSERPROCEDURE,EXCEPTWHEREOTHERWISESPECIFIEDELSEWHERE",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 30,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Microsurgery of the fallopian-tubes and ovaries: Where micro-surgical techniques are used, with the aid of a microscope, 25% may be added to the fee",
-                            IsDeleted = false,
-                            MedicalItemId = 30,
-                            NormalizedDescription = "MICROSURGERYOFTHEFALLOPIAN-TUBESANDOVARIES:WHEREMICRO-SURGICALTECHNIQUESAREUSED,WITHTHEAIDOFAMICROSCOPE,25%MAYBEADDEDTOTHEFEE",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 31,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Microsurgery of the larynx: Add 25% to the fee of the operation performed (for other operations requiring the use of an operation microscope, the fee include the use of the microscope, except where otherwise specified elsewhere in the Tariff)",
-                            IsDeleted = false,
-                            MedicalItemId = 31,
-                            NormalizedDescription = "MICROSURGERYOFTHELARYNX:ADD25%TOTHEFEEOFTHEOPERATIONPERFORMED(FOROTHEROPERATIONSREQUIRINGTHEUSEOFANOPERATIONMICROSCOPE,THEFEEINCLUDETHEUSEOFTHEMICROSCOPE,EXCEPTWHEREOTHERWISESPECIFIEDELSEWHEREINTHETARIFF)",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 32,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "When endoscopic instruments are used during intranasal surgery: Add 10% of the fee of the procedure performed. Only applicable to items 1025, 1027, 1030, 1033, 1035, 1036, 1039, 1047, 1054 and 1083",
-                            IsDeleted = false,
-                            MedicalItemId = 32,
-                            NormalizedDescription = "WHENENDOSCOPICINSTRUMENTSAREUSEDDURINGINTRANASALSURGERY:ADD10%OFTHEFEEOFTHEPROCEDUREPERFORMED.ONLYAPPLICABLETOITEMS1025,1027,1030,1033,1035,1036,1039,1047,1054AND1083",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 33,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Add 45,00 clinical procedure units to procedure(s) performed through a thorascope",
-                            IsDeleted = false,
-                            MedicalItemId = 33,
-                            NormalizedDescription = "ADD45,00CLINICALPROCEDUREUNITSTOPROCEDURE(S)PERFORMEDTHROUGHATHORASCOPE",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 34,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Non invasive peripheral vascular tests: The number of tests in a single case is restricted to two (2) per diagnosis. Tests are not justified in cases of uncomplicated varicose veins",
-                            IsDeleted = false,
-                            MedicalItemId = 34,
-                            NormalizedDescription = "NONINVASIVEPERIPHERALVASCULARTESTS:THENUMBEROFTESTSINASINGLECASEISRESTRICTEDTOTWO(2)PERDIAGNOSIS.TESTSARENOTJUSTIFIEDINCASESOFUNCOMPLICATEDVARICOSEVEINS",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 35,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "When item 1288 (Cardiac catheterisation for congenital heart disease: All ages above 1 year old) or item 1289 (Paediatric cardiac catheterisation: Infants below the age of one year) is performed by paediatric cardiologists (?33?): fee for procedure + 100%",
-                            IsDeleted = false,
-                            MedicalItemId = 35,
-                            NormalizedDescription = "WHENITEM1288(CARDIACCATHETERISATIONFORCONGENITALHEARTDISEASE:ALLAGESABOVE1YEAROLD)ORITEM1289(PAEDIATRICCARDIACCATHETERISATION:INFANTSBELOWTHEAGEOFONEYEAR)ISPERFORMEDBYPAEDIATRICCARDIOLOGISTS(?33?):FEEFORPROCEDURE+100%",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 36,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Endoscopic procedures performed with own equipment : The basic procedure fee plus 33.33 % (1 / 3) of that fee (\" + \"codes excluded) will apply where endoscopic procedures are performed with own equipment.",
-                            IsDeleted = false,
-                            MedicalItemId = 36,
-                            NormalizedDescription = @"ENDOSCOPICPROCEDURESPERFORMEDWITHOWNEQUIPMENT : THEBASICPROCEDUREFEEPLUS33 .33 % (1 / 3) OFTHATFEE ("" + ""CODESEXCLUDED) WILLAPPLYWHEREENDOSCOPICPROCEDURESAREPERFORMEDWITHOWNEQUIPMENT.
-    ",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 37,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Endoscopic procedures performed in own procedure room: The fee plus 21,00 clinical procedure units will apply where endoscopic procedures are performed in rooms with own equipment. This fee is chargeable by medical practitioners who own or rent the facility. Please note: Modifier 0075 is not applicable to any of the items for diagnostic procedures in the otorhinolaryngology sections of the tariff.",
-                            IsDeleted = false,
-                            MedicalItemId = 37,
-                            NormalizedDescription = "ENDOSCOPICPROCEDURESPERFORMEDINOWNPROCEDUREROOM:THEFEEPLUS21,00CLINICALPROCEDUREUNITSWILLAPPLYWHEREENDOSCOPICPROCEDURESAREPERFORMEDINROOMSWITHOWNEQUIPMENT.THISFEEISCHARGEABLEBYMEDICALPRACTITIONERSWHOOWNORRENTTHEFACILITY.PLEASENOTE:MODIFIER0075ISNOTAPPLICABLETOANYOFTHEITEMSFORDIAGNOSTICPROCEDURESINTHEOTORHINOLARYNGOLOGYSECTIONSOFTHETARIFF.",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 38,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Physical treatment: When two separate areas are treated simultaneously for totally different conditions, such treatment shall be regarded as two treatments for which separate fees may be charged. (Only applicable if services are provided by a specialist in physical medicine)",
-                            IsDeleted = false,
-                            MedicalItemId = 38,
-                            NormalizedDescription = "PHYSICALTREATMENT:WHENTWOSEPARATEAREASARETREATEDSIMULTANEOUSLYFORTOTALLYDIFFERENTCONDITIONS,SUCHTREATMENTSHALLBEREGARDEDASTWOTREATMENTSFORWHICHSEPARATEFEESMAYBECHARGED.(ONLYAPPLICABLEIFSERVICESAREPROVIDEDBYASPECIALISTINPHYSICALMEDICINE)",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 39,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "When a testis biopsy is done combined with vasogram or seminal vesiculogram or epididymogram, add 50% of the units for the appropriate procedure",
-                            IsDeleted = false,
-                            MedicalItemId = 39,
-                            NormalizedDescription = "WHENATESTISBIOPSYISDONECOMBINEDWITHVASOGRAMORSEMINALVESICULOGRAMOREPIDIDYMOGRAM,ADD50%OFTHEUNITSFORTHEAPPROPRIATEPROCEDURE",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 40,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "When a first consultation/visit proceeds into, or is immediately followed by a medical psychotherapeutic procedure, fees for the procedure are calculated according to the appropriate individual psychotherapy code (items 2957, 2974 or 2975)",
-                            IsDeleted = false,
-                            MedicalItemId = 40,
-                            NormalizedDescription = "WHENAFIRSTCONSULTATION/VISITPROCEEDSINTO,ORISIMMEDIATELYFOLLOWEDBYAMEDICALPSYCHOTHERAPEUTICPROCEDURE,FEESFORTHEPROCEDUREARECALCULATEDACCORDINGTOTHEAPPROPRIATEINDIVIDUALPSYCHOTHERAPYCODE(ITEMS2957,2974OR2975)",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 41,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Multiple examinations: Full Fee",
-                            IsDeleted = false,
-                            MedicalItemId = 41,
-                            NormalizedDescription = "MULTIPLEEXAMINATIONS:FULLFEE",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 42,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Repeat examinations: No reduction",
-                            IsDeleted = false,
-                            MedicalItemId = 42,
-                            NormalizedDescription = "REPEATEXAMINATIONS:NOREDUCTION",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 43,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "\" + \" Means that this item is complementary to a preceding item and is therefore not subject to reduction",
-                            IsDeleted = false,
-                            MedicalItemId = 43,
-                            NormalizedDescription = "\" + \"MEANSTHATTHISITEMISCOMPLEMENTARYTOAPRECEDINGITEMANDISTHEREFORENOTSUBJECTTOREDUCTION",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 44,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "A reduction of 33,33% (1/3) in the fee will apply to radiological examinations as indicated in section 19: Radiology where hospital equipment is used",
-                            IsDeleted = false,
-                            MedicalItemId = 44,
-                            NormalizedDescription = "AREDUCTIONOF33,33%(1/3)INTHEFEEWILLAPPLYTORADIOLOGICALEXAMINATIONSASINDICATEDINSECTION19:RADIOLOGYWHEREHOSPITALEQUIPMENTISUSED",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 45,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Film costs: In the case of radiological items where films are used, practitioners should adjust the fee upwards or downwards in accordance with changes in the price of films in comparison with November 1979",
-                            IsDeleted = false,
-                            MedicalItemId = 45,
-                            NormalizedDescription = "FILMCOSTS:INTHECASEOFRADIOLOGICALITEMSWHEREFILMSAREUSED,PRACTITIONERSSHOULDADJUSTTHEFEEUPWARDSORDOWNWARDSINACCORDANCEWITHCHANGESINTHEPRICEOFFILMSINCOMPARISONWITHNOVEMBER1979",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 46,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Left Side' modifier to be added to when items 6500 to 6519 are used when the left side is examined. Please note that the absence of this modifier indicates that the right side was examined",
-                            IsDeleted = false,
-                            MedicalItemId = 46,
-                            NormalizedDescription = "LEFTSIDE'MODIFIERTOBEADDEDTOWHENITEMS6500TO6519AREUSEDWHENTHELEFTSIDEISEXAMINED.PLEASENOTETHATTHEABSENCEOFTHISMODIFIERINDICATESTHATTHERIGHTSIDEWASEXAMINED",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 47,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Vascular groups: ?Film series? and ?Introduction of Contrast Media? are complementary and together constitute a single examination: neither fee is therefore subject to increase in terms of Modifier 0080: Multiple examinations",
-                            IsDeleted = false,
-                            MedicalItemId = 47,
-                            NormalizedDescription = "VASCULARGROUPS:?FILMSERIES?AND?INTRODUCTIONOFCONTRASTMEDIA?ARECOMPLEMENTARYANDTOGETHERCONSTITUTEASINGLEEXAMINATION:NEITHERFEEISTHEREFORESUBJECTTOINCREASEINTERMSOFMODIFIER0080:MULTIPLEEXAMINATIONS",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 48,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Radiologist?s fee for participation in a team: 30,00 radiology units per ? hour or part thereof for all interventional radiological procedures, excluding any pre- or post-operative angiography, catheterisation, CT-scanning, ultrasound-scanning or x-ray procedures. (Only to be charged if radiologist is hands-on, and not for interpretation of images only)",
-                            IsDeleted = false,
-                            MedicalItemId = 48,
-                            NormalizedDescription = "RADIOLOGIST?SFEEFORPARTICIPATIONINATEAM:30,00RADIOLOGYUNITSPER?HOURORPARTTHEREOFFORALLINTERVENTIONALRADIOLOGICALPROCEDURES,EXCLUDINGANYPRE-ORPOST-OPERATIVEANGIOGRAPHY,CATHETERISATION,CT-SCANNING,ULTRASOUND-SCANNINGORX-RAYPROCEDURES.(ONLYTOBECHARGEDIFRADIOLOGISTISHANDS-ON,ANDNOTFORINTERPRETATIONOFIMAGESONLY)",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 49,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Diagnostic services rendered to hospital inpatients: Quote Modifier 0091 on all accounts for diagnostic services (e.g. MRI, X-rays, pathology tests) performed on patients officially admitted to hospital or day clinic (refer to Rule XX)",
-                            IsDeleted = false,
-                            MedicalItemId = 49,
-                            NormalizedDescription = "DIAGNOSTICSERVICESRENDEREDTOHOSPITALINPATIENTS:QUOTEMODIFIER0091ONALLACCOUNTSFORDIAGNOSTICSERVICES(E.G.MRI,X-RAYS,PATHOLOGYTESTS)PERFORMEDONPATIENTSOFFICIALLYADMITTEDTOHOSPITALORDAYCLINIC(REFERTORULEXX)",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 50,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Diagnostic services rendered to outpatients: Quote Modifier 0092 on all accounts for diagnostic services (e.g. MRI, X-rays, pathology tests) performed on patients NOT officially admitted to hospital or day clinic (could be within the confines of a hospital) (refer to Rule YY)",
-                            IsDeleted = false,
-                            MedicalItemId = 50,
-                            NormalizedDescription = "DIAGNOSTICSERVICESRENDEREDTOOUTPATIENTS:QUOTEMODIFIER0092ONALLACCOUNTSFORDIAGNOSTICSERVICES(E.G.MRI,X-RAYS,PATHOLOGYTESTS)PERFORMEDONPATIENTSNOTOFFICIALLYADMITTEDTOHOSPITALORDAYCLINIC(COULDBEWITHINTHECONFINESOFAHOSPITAL)(REFERTORULEYY)",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 51,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Radiation materials: Exclusively for use where radiation materials supplied by the practice are used by clinical and radiation oncologists, modifier 0095 should be used to identify these materials. A material code list with descriptions and guideline costs for these materials, maintained and updated on a regular basis, will be supplied  by the Society of Clinical and Radiation Oncology.  This modifier is only chargeable by the practice responsible for the cost of this material and where the hospital did not charge therefore. Please note that item 0201 should not be used for these materials",
-                            IsDeleted = false,
-                            MedicalItemId = 51,
-                            NormalizedDescription = "RADIATIONMATERIALS:EXCLUSIVELYFORUSEWHERERADIATIONMATERIALSSUPPLIEDBYTHEPRACTICEAREUSEDBYCLINICALANDRADIATIONONCOLOGISTS,MODIFIER0095SHOULDBEUSEDTOIDENTIFYTHESEMATERIALS.AMATERIALCODELISTWITHDESCRIPTIONSANDGUIDELINECOSTSFORTHESEMATERIALS,MAINTAINEDANDUPDATEDONAREGULARBASIS,WILLBESUPPLIEDBYTHESOCIETYOFCLINICALANDRADIATIONONCOLOGY.THISMODIFIERISONLYCHARGEABLEBYTHEPRACTICERESPONSIBLEFORTHECOSTOFTHISMATERIALANDWHERETHEHOSPITALDIDNOTCHARGETHEREFORE.PLEASENOTETHATITEM0201SHOULDNOTBEUSEDFORTHESEMATERIALS",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 52,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Radio-isotope therapy patients who fail to keep their appointments: Fee will include cost of isotope",
-                            IsDeleted = false,
-                            MedicalItemId = 52,
-                            NormalizedDescription = "RADIO-ISOTOPETHERAPYPATIENTSWHOFAILTOKEEPTHEIRAPPOINTMENTS:FEEWILLINCLUDECOSTOFISOTOPE",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 53,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Pathology tests performed by non-pathologists: Where items under Clinical Pathology (section 21) and Anatomical Pathology (section 22) fall within the province of other specialists or general practitioners, the fee is to be charged at two-thirds of the pathologists fee",
-                            IsDeleted = false,
-                            MedicalItemId = 53,
-                            NormalizedDescription = "PATHOLOGYTESTSPERFORMEDBYNON-PATHOLOGISTS:WHEREITEMSUNDERCLINICALPATHOLOGY(SECTION21)ANDANATOMICALPATHOLOGY(SECTION22)FALLWITHINTHEPROVINCEOFOTHERSPECIALISTSORGENERALPRACTITIONERS,THEFEEISTOBECHARGEDATTWO-THIRDSOFTHEPATHOLOGISTSFEE",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 54,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Aspiration of biopsy procedure performed under direct ultrasound control by an ultrasound aspiration biopsy transducer (Static Realtime): Fee for part examined plus 30% of the units",
-                            IsDeleted = false,
-                            MedicalItemId = 54,
-                            NormalizedDescription = "ASPIRATIONOFBIOPSYPROCEDUREPERFORMEDUNDERDIRECTULTRASOUNDCONTROLBYANULTRASOUNDASPIRATIONBIOPSYTRANSDUCER(STATICREALTIME):FEEFORPARTEXAMINEDPLUS30%OFTHEUNITS",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 55,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Use of contrast during ultrasound study: add 6.00 ultrasound units",
-                            IsDeleted = false,
-                            MedicalItemId = 55,
-                            NormalizedDescription = "USEOFCONTRASTDURINGULTRASOUNDSTUDY:ADD6.00ULTRASOUNDUNITS",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 56,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Ultrasound in pregnancy, multiple gestation, after twenty weeks: plus 30%",
-                            IsDeleted = false,
-                            MedicalItemId = 56,
-                            NormalizedDescription = "ULTRASOUNDINPREGNANCY,MULTIPLEGESTATION,AFTERTWENTYWEEKS:PLUS30%",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 57,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "In order to charge the full fee (600,00 magnetic resonance units) for an examination of a specific single anatomical region, it should be performed with the applicable radio frequency coil including T1 and T2 weighted images on at least two planes",
-                            IsDeleted = false,
-                            MedicalItemId = 57,
-                            NormalizedDescription = "INORDERTOCHARGETHEFULLFEE(600,00MAGNETICRESONANCEUNITS)FORANEXAMINATIONOFASPECIFICSINGLEANATOMICALREGION,ITSHOULDBEPERFORMEDWITHTHEAPPLICABLERADIOFREQUENCYCOILINCLUDINGT1ANDT2WEIGHTEDIMAGESONATLEASTTWOPLANES",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 58,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Where a limited series of a specific anatomical region is performed (except bone tumour), e.g. a T2 weighted image of a bone for an occult stress fracture, not more than two-thirds (2/3) of the fee may be charged. Also applicable to all radiotherapy planning studies, per region",
-                            IsDeleted = false,
-                            MedicalItemId = 58,
-                            NormalizedDescription = "WHEREALIMITEDSERIESOFASPECIFICANATOMICALREGIONISPERFORMED(EXCEPTBONETUMOUR),E.G.AT2WEIGHTEDIMAGEOFABONEFORANOCCULTSTRESSFRACTURE,NOTMORETHANTWO-THIRDS(2/3)OFTHEFEEMAYBECHARGED.ALSOAPPLICABLETOALLRADIOTHERAPYPLANNINGSTUDIES,PERREGION",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 59,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "All post-contrast studies (except bone tumour), including perfusion studies, to be charges at 50% of the fee",
-                            IsDeleted = false,
-                            MedicalItemId = 59,
-                            NormalizedDescription = "ALLPOST-CONTRASTSTUDIES(EXCEPTBONETUMOUR),INCLUDINGPERFUSIONSTUDIES,TOBECHARGESAT50%OFTHEFEE",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 60,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Post-contrast study: Bone tumour: 100% of the fee",
-                            IsDeleted = false,
-                            MedicalItemId = 60,
-                            NormalizedDescription = "POST-CONTRASTSTUDY:BONETUMOUR:100%OFTHEFEE",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 61,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Limited examination of the hypophysis e.g. where a coronal T1 and sagittal T1 series are performed, two-thirds (2/3) of the fee is applicable",
-                            IsDeleted = false,
-                            MedicalItemId = 61,
-                            NormalizedDescription = "LIMITEDEXAMINATIONOFTHEHYPOPHYSISE.G.WHEREACORONALT1ANDSAGITTALT1SERIESAREPERFORMED,TWO-THIRDS(2/3)OFTHEFEEISAPPLICABLE",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 62,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Where, in a limited hypophysis examination, Gadolinium is administered and coronal T1 and sagittal T1 series are repeated, a single full fee for the entire examination is applicable + cost of Gadolinium + disposable items",
-                            IsDeleted = false,
-                            MedicalItemId = 62,
-                            NormalizedDescription = "WHERE,INALIMITEDHYPOPHYSISEXAMINATION,GADOLINIUMISADMINISTEREDANDCORONALT1ANDSAGITTALT1SERIESAREREPEATED,ASINGLEFULLFEEFORTHEENTIREEXAMINATIONISAPPLICABLE+COSTOFGADOLINIUM+DISPOSABLEITEMS",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 63,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Where a magnetic resonance angiography (MRA) of large vessels is performed as primary examination, 100% of the fee is applicable. This modifier is only applicable if the series is performed by use of a recognised angiographic software package with reconstruction capability",
-                            IsDeleted = false,
-                            MedicalItemId = 63,
-                            NormalizedDescription = "WHEREAMAGNETICRESONANCEANGIOGRAPHY(MRA)OFLARGEVESSELSISPERFORMEDASPRIMARYEXAMINATION,100%OFTHEFEEISAPPLICABLE.THISMODIFIERISONLYAPPLICABLEIFTHESERIESISPERFORMEDBYUSEOFARECOGNISEDANGIOGRAPHICSOFTWAREPACKAGEWITHRECONSTRUCTIONCAPABILITY",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 64,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Where a magnetic resonance angiography (MRA) of the vessels is performed additional to an examination of a particular region, 50% of the fee is applicable for the angiography. This modifier is only applicable if the series is performed by use of a recognised angiographic software package with reconstruction capability",
-                            IsDeleted = false,
-                            MedicalItemId = 64,
-                            NormalizedDescription = "WHEREAMAGNETICRESONANCEANGIOGRAPHY(MRA)OFTHEVESSELSISPERFORMEDADDITIONALTOANEXAMINATIONOFAPARTICULARREGION,50%OFTHEFEEISAPPLICABLEFORTHEANGIOGRAPHY.THISMODIFIERISONLYAPPLICABLEIFTHESERIESISPERFORMEDBYUSEOFARECOGNISEDANGIOGRAPHICSOFTWAREPACKAGEWITHRECONSTRUCTIONCAPABILITY",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 65,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Where only a gradient echo series is performed with a machine without a recognised angiographic software package with reconstruction ability, 20% of the full fee is applicable specifying that it is a ?flow sensitive series?",
-                            IsDeleted = false,
-                            MedicalItemId = 65,
-                            NormalizedDescription = "WHEREONLYAGRADIENTECHOSERIESISPERFORMEDWITHAMACHINEWITHOUTARECOGNISEDANGIOGRAPHICSOFTWAREPACKAGEWITHRECONSTRUCTIONABILITY,20%OFTHEFULLFEEISAPPLICABLESPECIFYINGTHATITISA?FLOWSENSITIVESERIES?",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 66,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Very limited studies to be charged at 33,33% of the full fee e.g. MR urography for renal colic, diffusion studies of the brain additional to routine brain",
-                            IsDeleted = false,
-                            MedicalItemId = 66,
-                            NormalizedDescription = "VERYLIMITEDSTUDIESTOBECHARGEDAT33,33%OFTHEFULLFEEE.G.MRUROGRAPHYFORRENALCOLIC,DIFFUSIONSTUDIESOFTHEBRAINADDITIONALTOROUTINEBRAIN",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 67,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "MRI spectroscopy: 50% of fee",
-                            IsDeleted = false,
-                            MedicalItemId = 67,
-                            NormalizedDescription = "MRISPECTROSCOPY:50%OFFEE",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 68,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "If a procedure lasts less than 30 minutes, only 50% of the machine fees for items 3536-3550 will be allowed (specify time of procedure on account)",
-                            IsDeleted = false,
-                            MedicalItemId = 68,
-                            NormalizedDescription = "IFAPROCEDURELASTSLESSTHAN30MINUTES,ONLY50%OFTHEMACHINEFEESFORITEMS3536-3550WILLBEALLOWED(SPECIFYTIMEOFPROCEDUREONACCOUNT)",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 69,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "If a procedure is performed by a radiologist in a facility not owned by himself, the fee will be reduced by 40% (i.e. 60% of the fee will be charged)",
-                            IsDeleted = false,
-                            MedicalItemId = 69,
-                            NormalizedDescription = "IFAPROCEDUREISPERFORMEDBYARADIOLOGISTINAFACILITYNOTOWNEDBYHIMSELF,THEFEEWILLBEREDUCEDBY40%(I.E.60%OFTHEFEEWILLBECHARGED)",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 70,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "When the procedure is performed by a non-radiologist, the fee will be reduced by 40% (i.e. 60% of the fee will be charged)",
-                            IsDeleted = false,
-                            MedicalItemId = 70,
-                            NormalizedDescription = "WHENTHEPROCEDUREISPERFORMEDBYANON-RADIOLOGIST,THEFEEWILLBEREDUCEDBY40%(I.E.60%OFTHEFEEWILLBECHARGED)",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 71,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "When a procedure is performed entirely by a non-radiologist in a facility owned by a radiologist, the radiologist owning the facility may charge 55% of the procedure units used. Modifier 6302 applies to the non radiologist performing the procedure",
-                            IsDeleted = false,
-                            MedicalItemId = 71,
-                            NormalizedDescription = "WHENAPROCEDUREISPERFORMEDENTIRELYBYANON-RADIOLOGISTINAFACILITYOWNEDBYARADIOLOGIST,THERADIOLOGISTOWNINGTHEFACILITYMAYCHARGE55%OFTHEPROCEDUREUNITSUSED.MODIFIER6302APPLIESTOTHENONRADIOLOGISTPERFORMINGTHEPROCEDURE",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 72,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "When multiple catheterisation procedures are used (items 3557, 3559, 3560, 3562) and an angiogram investigation is performed at each level, the unit value of each such multiple procedure will be reduced by 20,00 radiological units for each procedure after the initial catheterisation. The first catheterisation is charged at 100% of the unit value",
-                            IsDeleted = false,
-                            MedicalItemId = 72,
-                            NormalizedDescription = "WHENMULTIPLECATHETERISATIONPROCEDURESAREUSED(ITEMS3557,3559,3560,3562)ANDANANGIOGRAMINVESTIGATIONISPERFORMEDATEACHLEVEL,THEUNITVALUEOFEACHSUCHMULTIPLEPROCEDUREWILLBEREDUCEDBY20,00RADIOLOGICALUNITSFOREACHPROCEDUREAFTERTHEINITIALCATHETERISATION.THEFIRSTCATHETERISATIONISCHARGEDAT100%OFTHEUNITVALUE",
-                            PublicationId = 2,
-                            Quantity = 0.0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        });
                 });
 
             modelBuilder.Entity("MedicalEngineMicroService.Core.Models.Entities.Tariffs.MedicalItemPublicationPeriod", b =>
@@ -2427,79 +1550,79 @@ namespace MedicalEngineMicroService.Migrations
                         {
                             Id = 1,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 680, DateTimeKind.Local).AddTicks(629),
+                            CreatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 996, DateTimeKind.Local).AddTicks(9287),
                             Description = "Unknown",
                             IsDeleted = false,
                             Name = "-",
                             NormalizedDescription = "UNKNOWN",
                             NormalizedName = "-",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 680, DateTimeKind.Local).AddTicks(660)
+                            UpdatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 996, DateTimeKind.Local).AddTicks(9314)
                         },
                         new
                         {
                             Id = 2,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 680, DateTimeKind.Local).AddTicks(718),
+                            CreatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 996, DateTimeKind.Local).AddTicks(9364),
                             Description = "Treatment or Procedure Code",
                             IsDeleted = true,
                             Name = "IT",
                             NormalizedDescription = "TREATMENTORPROCEDURECODE",
                             NormalizedName = "IT",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 680, DateTimeKind.Local).AddTicks(718)
+                            UpdatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 996, DateTimeKind.Local).AddTicks(9368)
                         },
                         new
                         {
                             Id = 3,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 680, DateTimeKind.Local).AddTicks(722),
+                            CreatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 996, DateTimeKind.Local).AddTicks(9368),
                             Description = "Drug or Pharmaceutical Item (NAPPI)",
                             IsDeleted = true,
                             Name = "ID",
                             NormalizedDescription = "DRUGORPHARMACEUTICALITEM(NAPPI)",
                             NormalizedName = "ID",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 680, DateTimeKind.Local).AddTicks(726)
+                            UpdatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 996, DateTimeKind.Local).AddTicks(9372)
                         },
                         new
                         {
                             Id = 4,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 680, DateTimeKind.Local).AddTicks(726),
+                            CreatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 996, DateTimeKind.Local).AddTicks(9376),
                             Description = "Modifier",
                             IsDeleted = false,
                             Name = "M",
                             NormalizedDescription = "MODIFIER",
                             NormalizedName = "M",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 680, DateTimeKind.Local).AddTicks(730)
+                            UpdatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 996, DateTimeKind.Local).AddTicks(9376)
                         },
                         new
                         {
                             Id = 5,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 680, DateTimeKind.Local).AddTicks(730),
+                            CreatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 996, DateTimeKind.Local).AddTicks(9376),
                             Description = "Rule",
                             IsDeleted = false,
                             Name = "R",
                             NormalizedDescription = "RULE",
                             NormalizedName = "R",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 680, DateTimeKind.Local).AddTicks(733)
+                            UpdatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 996, DateTimeKind.Local).AddTicks(9380)
                         },
                         new
                         {
                             Id = 6,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 680, DateTimeKind.Local).AddTicks(737),
+                            CreatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 996, DateTimeKind.Local).AddTicks(9380),
                             Description = "Note",
                             IsDeleted = false,
                             Name = "N",
                             NormalizedDescription = "NOTE",
                             NormalizedName = "N",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 680, DateTimeKind.Local).AddTicks(737)
+                            UpdatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 996, DateTimeKind.Local).AddTicks(9380)
                         });
                 });
 
@@ -6636,92 +5759,92 @@ namespace MedicalEngineMicroService.Migrations
                         {
                             Id = 1,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 763, DateTimeKind.Local).AddTicks(9080),
+                            CreatedDate = new DateTime(2019, 9, 19, 4, 34, 55, 85, DateTimeKind.Local).AddTicks(5412),
                             Description = "ALL discipline",
                             IsDeleted = false,
                             Name = "ALL",
                             NormalizedDescription = "ALL DISCIPLINE",
                             NormalizedName = "ALL",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 763, DateTimeKind.Local).AddTicks(9115)
+                            UpdatedDate = new DateTime(2019, 9, 19, 4, 34, 55, 85, DateTimeKind.Local).AddTicks(5462)
                         },
                         new
                         {
                             Id = 2,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 763, DateTimeKind.Local).AddTicks(9165),
+                            CreatedDate = new DateTime(2019, 9, 19, 4, 34, 55, 85, DateTimeKind.Local).AddTicks(5516),
                             Description = "SPC discipline",
                             IsDeleted = false,
                             Name = "SPC",
                             NormalizedDescription = "SPC DISCIPLINE",
                             NormalizedName = "SPC",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 763, DateTimeKind.Local).AddTicks(9169)
+                            UpdatedDate = new DateTime(2019, 9, 19, 4, 34, 55, 85, DateTimeKind.Local).AddTicks(5520)
                         },
                         new
                         {
                             Id = 3,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 763, DateTimeKind.Local).AddTicks(9169),
+                            CreatedDate = new DateTime(2019, 9, 19, 4, 34, 55, 85, DateTimeKind.Local).AddTicks(5524),
                             Description = "GPH discipline",
                             IsDeleted = false,
                             Name = "GPH",
                             NormalizedDescription = "GPH DISCIPLINE",
                             NormalizedName = "GPH",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 763, DateTimeKind.Local).AddTicks(9172)
+                            UpdatedDate = new DateTime(2019, 9, 19, 4, 34, 55, 85, DateTimeKind.Local).AddTicks(5524)
                         },
                         new
                         {
                             Id = 4,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 763, DateTimeKind.Local).AddTicks(9176),
+                            CreatedDate = new DateTime(2019, 9, 19, 4, 34, 55, 85, DateTimeKind.Local).AddTicks(5528),
                             Description = "HOS discipline",
                             IsDeleted = false,
                             Name = "HOS",
                             NormalizedDescription = "HOS DISCIPLINE",
                             NormalizedName = "HOS",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 763, DateTimeKind.Local).AddTicks(9176)
+                            UpdatedDate = new DateTime(2019, 9, 19, 4, 34, 55, 85, DateTimeKind.Local).AddTicks(5528)
                         },
                         new
                         {
                             Id = 5,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 763, DateTimeKind.Local).AddTicks(9176),
+                            CreatedDate = new DateTime(2019, 9, 19, 4, 34, 55, 85, DateTimeKind.Local).AddTicks(5528),
                             Description = "PHR discipline",
                             IsDeleted = false,
                             Name = "PHR",
                             NormalizedDescription = "PHR DISCIPLINE",
                             NormalizedName = "PHR",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 763, DateTimeKind.Local).AddTicks(9180)
+                            UpdatedDate = new DateTime(2019, 9, 19, 4, 34, 55, 85, DateTimeKind.Local).AddTicks(5532)
                         },
                         new
                         {
                             Id = 6,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 763, DateTimeKind.Local).AddTicks(9180),
+                            CreatedDate = new DateTime(2019, 9, 19, 4, 34, 55, 85, DateTimeKind.Local).AddTicks(5536),
                             Description = "PRS discipline",
                             IsDeleted = false,
                             Name = "PRS",
                             NormalizedDescription = "PRS DISCIPLINE",
                             NormalizedName = "PRS",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 763, DateTimeKind.Local).AddTicks(9184)
+                            UpdatedDate = new DateTime(2019, 9, 19, 4, 34, 55, 85, DateTimeKind.Local).AddTicks(5536)
                         },
                         new
                         {
                             Id = 7,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 763, DateTimeKind.Local).AddTicks(9184),
+                            CreatedDate = new DateTime(2019, 9, 19, 4, 34, 55, 85, DateTimeKind.Local).AddTicks(5539),
                             Description = "RAD discipline",
                             IsDeleted = false,
                             Name = "RAD",
                             NormalizedDescription = "RAD DISCIPLINE",
                             NormalizedName = "RAD",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 763, DateTimeKind.Local).AddTicks(9188)
+                            UpdatedDate = new DateTime(2019, 9, 19, 4, 34, 55, 85, DateTimeKind.Local).AddTicks(5539)
                         });
                 });
 
@@ -8070,79 +7193,79 @@ namespace MedicalEngineMicroService.Migrations
                         {
                             Id = 1,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 751, DateTimeKind.Local).AddTicks(1492),
+                            CreatedDate = new DateTime(2019, 9, 19, 4, 34, 55, 69, DateTimeKind.Local).AddTicks(4625),
                             Description = "Hospital",
                             IsDeleted = false,
                             Name = "Hospital",
                             NormalizedDescription = "HOSPITAL",
                             NormalizedName = "HOSPITAL",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 751, DateTimeKind.Local).AddTicks(1523)
+                            UpdatedDate = new DateTime(2019, 9, 19, 4, 34, 55, 69, DateTimeKind.Local).AddTicks(4652)
                         },
                         new
                         {
                             Id = 2,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 751, DateTimeKind.Local).AddTicks(1573),
+                            CreatedDate = new DateTime(2019, 9, 19, 4, 34, 55, 69, DateTimeKind.Local).AddTicks(4691),
                             Description = "Dentist",
                             IsDeleted = false,
                             Name = "Dentist",
                             NormalizedDescription = "DENTIST",
                             NormalizedName = "DENTIST",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 751, DateTimeKind.Local).AddTicks(1573)
+                            UpdatedDate = new DateTime(2019, 9, 19, 4, 34, 55, 69, DateTimeKind.Local).AddTicks(4695)
                         },
                         new
                         {
                             Id = 3,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 751, DateTimeKind.Local).AddTicks(1577),
+                            CreatedDate = new DateTime(2019, 9, 19, 4, 34, 55, 69, DateTimeKind.Local).AddTicks(4698),
                             Description = "Ambulance",
                             IsDeleted = false,
                             Name = "Ambulance",
                             NormalizedDescription = "AMBULANCE",
                             NormalizedName = "AMBULANCE",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 751, DateTimeKind.Local).AddTicks(1577)
+                            UpdatedDate = new DateTime(2019, 9, 19, 4, 34, 55, 69, DateTimeKind.Local).AddTicks(4698)
                         },
                         new
                         {
                             Id = 4,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 751, DateTimeKind.Local).AddTicks(1581),
+                            CreatedDate = new DateTime(2019, 9, 19, 4, 34, 55, 69, DateTimeKind.Local).AddTicks(4702),
                             Description = "Specialist",
                             IsDeleted = false,
                             Name = "Specialist",
                             NormalizedDescription = "SPECIALIST",
                             NormalizedName = "SPECIALIST",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 751, DateTimeKind.Local).AddTicks(1581)
+                            UpdatedDate = new DateTime(2019, 9, 19, 4, 34, 55, 69, DateTimeKind.Local).AddTicks(4702)
                         },
                         new
                         {
                             Id = 5,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 751, DateTimeKind.Local).AddTicks(1585),
+                            CreatedDate = new DateTime(2019, 9, 19, 4, 34, 55, 69, DateTimeKind.Local).AddTicks(4706),
                             Description = "Anaesthetist",
                             IsDeleted = false,
                             Name = "Anaesthetist",
                             NormalizedDescription = "ANAESTHETIST",
                             NormalizedName = "ANAESTHETIST",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 751, DateTimeKind.Local).AddTicks(1585)
+                            UpdatedDate = new DateTime(2019, 9, 19, 4, 34, 55, 69, DateTimeKind.Local).AddTicks(4706)
                         },
                         new
                         {
                             Id = 6,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 751, DateTimeKind.Local).AddTicks(1588),
+                            CreatedDate = new DateTime(2019, 9, 19, 4, 34, 55, 69, DateTimeKind.Local).AddTicks(4710),
                             Description = "General Practitioner",
                             IsDeleted = false,
                             Name = "GP",
                             NormalizedDescription = "GENERALPRACTITIONER",
                             NormalizedName = "GP",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 751, DateTimeKind.Local).AddTicks(1588)
+                            UpdatedDate = new DateTime(2019, 9, 19, 4, 34, 55, 69, DateTimeKind.Local).AddTicks(4710)
                         });
                 });
 
@@ -9069,27 +8192,27 @@ namespace MedicalEngineMicroService.Migrations
                         {
                             Id = 1,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 577, DateTimeKind.Local).AddTicks(1464),
+                            CreatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 922, DateTimeKind.Local).AddTicks(7412),
                             Description = "Coid Tariffs",
                             IsDeleted = false,
                             Name = "Coida",
                             NormalizedDescription = "COIDTARIFFS",
                             NormalizedName = "COIDA",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 577, DateTimeKind.Local).AddTicks(1484)
+                            UpdatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 922, DateTimeKind.Local).AddTicks(7436)
                         },
                         new
                         {
                             Id = 2,
                             CreatedBy = "Administrator",
-                            CreatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 577, DateTimeKind.Local).AddTicks(1530),
+                            CreatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 922, DateTimeKind.Local).AddTicks(7470),
                             Description = "None Coid Tariffs",
                             IsDeleted = false,
                             Name = "NoneCoid",
                             NormalizedDescription = "NONECOIDTARIFFS",
                             NormalizedName = "NONECOID",
                             UpdatedBy = "Administrator",
-                            UpdatedDate = new DateTime(2019, 9, 21, 3, 51, 58, 577, DateTimeKind.Local).AddTicks(1534)
+                            UpdatedDate = new DateTime(2019, 9, 19, 4, 34, 54, 922, DateTimeKind.Local).AddTicks(7474)
                         });
                 });
 

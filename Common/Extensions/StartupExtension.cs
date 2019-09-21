@@ -28,7 +28,7 @@ namespace MedicalEngineMicroService.Common.Extensions
             services.AddScoped<IManufactureTypeRepository, ManufactureTypeRepository> ();
             services.AddScoped<INappiCodeRepository, NappiCodeRepository> ();
 
-            services.AddScoped<IPublicationTypeRepository, PublicationTypeRepository> ();
+            services.AddScoped<IPublicationRepository, PublicationRepository> ();
             services.AddScoped<IPractitionerTypeRepository, PractitionerTypeRepository> ();
             services.AddScoped<IPractitionerPractitionerTypeRepository, PractitionerPractitionerTypeRepository> ();
             services.AddScoped<IPractitionerGroupTypeRepository, PractitionerGroupTypeRepository> ();

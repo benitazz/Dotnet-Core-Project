@@ -29,7 +29,7 @@ namespace MedicalEngineMicroService.Persistence
             public DbSet<PractitionerPractitionerType> PractitionerPractitionerTypes { get; set; }
             public DbSet<Practitioner> Practitioners { get; set; }
             public DbSet<Product> Products { get; set; }
-            public DbSet<PublicationType> PublicationTypes { get; set; }
+            public DbSet<Publication> Publications { get; set; }
 
             public DbSet<Tariff> Tariffs { get; set; }
             public DbSet<TariffType> TariffTypes { get; set; }

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using MedicalEngineMicroService.Persistence.Repositories;
 
 namespace MedicalEngineMicroService.Persistence.Repositories.Tariffs {
-    public class PublicationTypeRepository : Repository<PublicationType>, IPublicationTypeRepository {
-        public PublicationTypeRepository (ApplicationDbContext dbContext) : base (dbContext) { }
+    public class PublicationRepository : Repository<Publication>, IPublicationRepository {
+        public PublicationRepository (ApplicationDbContext dbContext) : base (dbContext) { }
     }
 }

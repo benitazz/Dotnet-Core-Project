@@ -1,7 +1,7 @@
 using MedicalEngineMicroService.Core.Repositories;
 
 namespace MedicalEngineMicroService.Core.Repositories.Tariffs {
-    public interface IPublicationTypeRepository : IRepository<PublicationType> {
+    public interface IPublicationRepository : IRepository<Publication> {
 
     }
 }
