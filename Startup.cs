@@ -21,6 +21,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.Net.Http.Headers;
+using MedicalBilingMicroservice.Core.Models;
 
 namespace MedicalEngineMicroService
 {
