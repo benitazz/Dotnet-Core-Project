@@ -1,6 +1,7 @@
 using System.Net;
 using System.Net.Mail;
 using System.Threading.Tasks;
+using MedicalEngineMicroService.Core.Models;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.Extensions.Options;
 using SendGrid;
@@ -19,40 +20,42 @@ namespace MedicalBilingMicroservice.Core.Models {
         }
 
         public async Task Execute (string apiKey, string subject, string message, string email) {
-          
+            await Task.Run (() => {
 
-
-           /* var client = new SendGridClient (apiKey);
-            var from = new EmailAddress ("", "Example User");
-            if (string.IsNullOrEmpty(subject)){
-                 subject = "Sending with SendGrid is Fun";
-            }
+                /* var client = new SendGridClient (apiKey);
+             var from = new EmailAddress ("", "Example User");
+             if (string.IsNullOrEmpty(subject)){
+                  subject = "Sending with SendGrid is Fun";
+             }
            
-            var to = new EmailAddress (email, subject);
-            var plainTextContent = message;
-            var htmlContent = message;
-            var msg = MailHelper.CreateSingleEmail (from, to, subject, plainTextContent, htmlContent);
-            var response = await client.SendEmailAsync (msg);*/
+             var to = new EmailAddress (email, subject);
+             var plainTextContent = message;
+             var htmlContent = message;
+             var msg = MailHelper.CreateSingleEmail (from, to, subject, plainTextContent, htmlContent);
+             var response = await client.SendEmailAsync (msg);*/
 
-            /*var client = new SendGridClient (apiKey);
-            var msg = new SendGridMessage () {
-                From = new EmailAddress ("Joe@contoso.com", "Joe Smith"),
-                Subject = subject,
-                PlainTextContent = message,
-                HtmlContent = message
-            };
+                /*var client = new SendGridClient (apiKey);
+                var msg = new SendGridMessage () {
+                    From = new EmailAddress ("Joe@contoso.com", "Joe Smith"),
+                    Subject = subject,
+                    PlainTextContent = message,
+                    HtmlContent = message
+                };
 
-            msg.AddTo (new EmailAddress (email));
+                msg.AddTo (new EmailAddress (email));
 
-            // Disable click tracking.
-            // See https://sendgrid.com/docs/User_Guide/Settings/tracking.html
-            msg.TrackingSettings = new TrackingSettings {
-                ClickTracking = new ClickTracking { Enable = false }
-            };
+                // Disable click tracking.
+                // See https://sendgrid.com/docs/User_Guide/Settings/tracking.html
+                msg.TrackingSettings = new TrackingSettings {
+                    ClickTracking = new ClickTracking { Enable = false }
+                };
 
-            var response = client.SendEmailAsync (msg);
+                var response = client.SendEmailAsync (msg);
 
-            return response;*/
+                return response;*/
+
+            });
+
         }
 
         /*public Task SendEmailAsync(string email, string subject, string htmlMessage)
