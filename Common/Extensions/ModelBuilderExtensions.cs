@@ -1,5 +1,5 @@
 using MedicalEngineMicroService.Persistence.EntityConfigurations.Lookups;
-using MedicalEngineMicroService.Persistence.EntityConfigurations.Tariffs;
+using MedicalEngineMicroService.Persistence.EntityConfigurations.Medical;
 using MedicalEngineMicroService.Persistence.EntityConfigurations;
 using MedicalEngineMicroService.Persistence.EntityConfigurations.Users;
 using Microsoft.EntityFrameworkCore;

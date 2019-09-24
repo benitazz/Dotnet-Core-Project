@@ -1,5 +1,5 @@
 using System;
-using MedicalEngineMicroService.Core.Models.Entities.Tariffs;
+using MedicalEngineMicroService.Core.Models.Entities.Medical;
 using TinyCsvParser.TypeConverter;
 
 namespace MedicalEngineMicroService.Mapping.CsvMapping

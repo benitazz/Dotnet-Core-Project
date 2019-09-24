@@ -1,9 +1,9 @@
 using MedicalEngineMicroService.Common.Helpers;
 using MedicalEngineMicroService.Common.Helpers.FileHelpers;
 using MedicalEngineMicroService.Core.Repositories.Lookups;
-using MedicalEngineMicroService.Core.Repositories.Tariffs;
+using MedicalEngineMicroService.Core.Repositories.Medical;
 using MedicalEngineMicroService.Persistence.Repositories.Lookups;
-using MedicalEngineMicroService.Persistence.Repositories.Tariffs;
+using MedicalEngineMicroService.Persistence.Repositories.Medical;
 using MedicalEngineMicroService.Common.Auth;
 using MedicalEngineMicroService.Common.Helpers.RenderViews;
 using MedicalEngineMicroService.Core;

@@ -1,6 +1,6 @@
 using MedicalEngineMicroService.Common.Extensions;
 using MedicalEngineMicroService.Core.Models.Entities.Lookups;
-using MedicalEngineMicroService.Core.Models.Entities.Tariffs;
+using MedicalEngineMicroService.Core.Models.Entities.Medical;
 using MedicalEngineMicroService.Core.Models.Entities;
 using MedicalEngineMicroService.Core.Models.Entities.Users;
 using Microsoft.AspNetCore.Identity;

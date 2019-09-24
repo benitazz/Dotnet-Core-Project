@@ -1,6 +1,6 @@
 using AutoMapper;
 using MedicalEngineMicroService.Core.Models.Entities.Lookups;
-using MedicalEngineMicroService.Core.Models.Entities.Tariffs;
+using MedicalEngineMicroService.Core.Models.Entities.Medical;
 using MedicalEngineMicroService.Resources.ApiToDomainResource.Lookups;
 using MedicalEngineMicroService.Resources.DomainToApiResource.Lookups;
 using MedicalEngineMicroService.Core.Models.Entities.Users;

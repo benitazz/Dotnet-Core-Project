@@ -136,7 +136,7 @@ namespace MedicalEngineMicroService.Migrations
                     );
                 });
 
-            modelBuilder.Entity("MedicalEngineMicroService.Core.Models.Entities.Tariffs.Tariff", b =>
+            modelBuilder.Entity("MedicalEngineMicroService.Core.Models.Entities.Medical.Tariff", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -185,7 +185,7 @@ namespace MedicalEngineMicroService.Migrations
                     b.ToTable("Tariffs");
                 });
 
-            modelBuilder.Entity("MedicalEngineMicroService.Core.Models.Entities.Tariffs.TariffType", b =>
+            modelBuilder.Entity("MedicalEngineMicroService.Core.Models.Entities.Medical.TariffType", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -245,7 +245,7 @@ namespace MedicalEngineMicroService.Migrations
                     );
                 });
 
-            modelBuilder.Entity("MedicalEngineMicroService.Core.Models.Entities.Tariffs.TariffUnitCost", b =>
+            modelBuilder.Entity("MedicalEngineMicroService.Core.Models.Entities.Medical.TariffUnitCost", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -295,7 +295,7 @@ namespace MedicalEngineMicroService.Migrations
                     b.ToTable("TariffUnitCosts");
                 });
 
-            modelBuilder.Entity("MedicalEngineMicroService.Core.Models.Entities.Tariffs.Vat", b =>
+            modelBuilder.Entity("MedicalEngineMicroService.Core.Models.Entities.Medical.Vat", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -384,7 +384,7 @@ namespace MedicalEngineMicroService.Migrations
                     b.ToTable("Practioners");
                 });
 
-            modelBuilder.Entity("MedicalEngineMicroService.Core.Models.Entities.Tariffs.MedicalItemCode", b =>
+            modelBuilder.Entity("MedicalEngineMicroService.Core.Models.Entities.Medical.MedicalItemCode", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -423,7 +423,7 @@ namespace MedicalEngineMicroService.Migrations
                     b.ToTable("MedicalItemCodes");
                 });
 
-            modelBuilder.Entity("MedicalEngineMicroService.Core.Models.Entities.Tariffs.MedicalItemType", b =>
+            modelBuilder.Entity("MedicalEngineMicroService.Core.Models.Entities.Medical.MedicalItemType", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -731,14 +731,14 @@ namespace MedicalEngineMicroService.Migrations
                     );
                 });
 
-            modelBuilder.Entity("MedicalEngineMicroService.Core.Models.Entities.Tariffs.Tariff", b =>
+            modelBuilder.Entity("MedicalEngineMicroService.Core.Models.Entities.Medical.Tariff", b =>
                 {
-                    b.HasOne("MedicalEngineMicroService.Core.Models.Entities.Tariffs.MedicalItemCode", "MedicalItem")
+                    b.HasOne("MedicalEngineMicroService.Core.Models.Entities.Medical.MedicalItemCode", "MedicalItem")
                         .WithMany()
                         .HasForeignKey("MedicalItemId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("MedicalEngineMicroService.Core.Models.Entities.Tariffs.TariffUnitCost", "TariffUnitCost")
+                    b.HasOne("MedicalEngineMicroService.Core.Models.Entities.Medical.TariffUnitCost", "TariffUnitCost")
                         .WithMany()
                         .HasForeignKey("TariffUnitCostId")
                         .OnDelete(DeleteBehavior.Cascade);

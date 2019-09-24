@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using CsvHelper.Configuration;
 using MedicalEngineMicroService.Core;
-using MedicalEngineMicroService.Core.Models.Entities.Tariffs;
+using MedicalEngineMicroService.Core.Models.Entities.Medical;
 using MedicalEngineMicroService.Resources.ApiToDomainResource.FileUploads;
 using MedicalEngineMicroService.Common.Enums;
 using CsvHelper;
