@@ -35,7 +35,7 @@ namespace MedicalEngineMicroService.Common.Extensions
             services.AddScoped<IPractitionerRepository, PractitionerRepository> ();
             services.AddScoped<IProductRepository, ProductRepository> ();
 
-            services.AddScoped<ISectionTypeRepository, SectionTypeRepository> ();
+            services.AddScoped<ISectionRepository, SectionRepository> ();
             services.AddScoped<ITariffTypeRepository, TariffTypeRepository> ();
             services.AddScoped<ITariffRepository, TariffRepository> ();
             services.AddScoped<ITariffBaseUnitCostRepository, TariffBaseUnitCostRepository> ();

@@ -29,7 +29,7 @@ namespace MedicalEngineMicroService.Common.Extensions
             modelBuilder.ApplyConfiguration (new ManufactureTypeConfiguration ());
             modelBuilder.ApplyConfiguration (new NappiCodeConfiguration ());
 
-            modelBuilder.ApplyConfiguration (new SectionTypeConfiguration ());
+            modelBuilder.ApplyConfiguration (new SectionConfiguration ());
 
             modelBuilder.ApplyConfiguration (new PublicationTypeConfiguration ());
             modelBuilder.ApplyConfiguration (new PractitionerTypeConfiguration ());

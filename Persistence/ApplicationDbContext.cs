@@ -37,7 +37,7 @@ namespace MedicalEngineMicroService.Persistence
             public DbSet<TariffBaseUnitCostType> TariffBaseUnitCostTypes { get; set; }
 
             public DbSet<VatType> VatTypes { get; set; }
-            public DbSet<SectionType> SectionTypes { get; set; }
+            public DbSet<Section> Sections { get; set; }
 
             public ApplicationDbContext (DbContextOptions options) : base (options) {
 
